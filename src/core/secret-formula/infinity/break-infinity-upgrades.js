@@ -92,7 +92,7 @@ export const breakInfinityUpgrades = {
   },
   ipGen: {
     id: "AntimatterBoost",
-    initialCost: new Decimal(1e10),
+    Cost: new Decimal(1e10),
     description: "Antimatter Dimensions are Multiplied by 1.0e50 ",
     effect: DC.E50,
   },
