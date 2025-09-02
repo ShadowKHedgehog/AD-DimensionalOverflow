@@ -1459,15 +1459,59 @@ export const normalAchievements = [
     id: 206,
     name: "Pixels.",
     description: `Unlock The Unnamed.`,
+    get reward() {
+      return `You think you are almost done with this part of your life.`;
+    },
+    effect: () => "Your lifer"
   },
   {
     id: 207,
-    name: "TBA",
-    description: `TBA`,
+    name: "Endgame: Affirmative",
+    description: `Unlock The Permanent Galaxy Generator`,
   },
   {
     id: 208,
-    name: "TBA",
-    description: `TBA`,
+    name: "Shadows Fall",
+    description: `Beat The Unnamed's Reality for the First Time.`,
+  },
+  {
+    id: 211,
+    name: "Faulty Hardware",
+    description: `I dont think you were meant to reach ee25 AM just yet.`,
+  },
+  {
+    id: 212,
+    name: "Supersonic-Seven's Guidance",
+    description: `Unlock Supersonic-Seven's Minigame World.`,
+  },
+  {
+    id: 213,
+    name: "The First Titan Falls",
+    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+  },
+  {
+    id: 214,
+    name: "The Second Titan Falls",
+    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+  },
+  {
+    id: 215,
+    name: "The Third Titan Falls",
+    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+  },
+  {
+    id: 216,
+    name: "The Fourth Titan Falls",
+    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+  },
+  {
+    id: 217,
+    name: "The Fifth Titan Falls",
+    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+  },
+  {
+    id: 218,
+    name: "The Sixth Titan Falls",
+    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
   },
 ];
