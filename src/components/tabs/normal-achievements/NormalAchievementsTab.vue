@@ -121,7 +121,7 @@ export default {
       return this.renderedRowIndices.includes(row);
     },
     isObscured(row) {
-      return this.isDoomed ? false : row === 17;
+      return this.isDoomed ? false : row >= 17;
     },
     timeDisplay,
     timeDisplayNoDecimals,
