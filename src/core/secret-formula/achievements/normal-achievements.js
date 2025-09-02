@@ -1492,26 +1492,26 @@ export const normalAchievements = [
   {
     id: 214,
     name: "The Second Titan Falls",
-    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+    description: `Vanquish the Titan lurking in Effarig's EX reality.`,
   },
   {
     id: 215,
     name: "The Third Titan Falls",
-    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+    description: `Vanquish the Titan lurking in V's EX reality.`,
   },
   {
     id: 216,
     name: "The Fourth Titan Falls",
-    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+    description: `Vanquish the Titan lurking in Ra's EX reality.`,
   },
   {
     id: 217,
     name: "The Fifth Titan Falls",
-    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+    description: `Vanquish the Titan lurking in Lai'tela's EX reality.`,
   },
   {
     id: 218,
     name: "The Sixth Titan Falls",
-    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+    description: `Vanquish the Titan lurking in Pelle's EX reality.`,
   },
 ];
