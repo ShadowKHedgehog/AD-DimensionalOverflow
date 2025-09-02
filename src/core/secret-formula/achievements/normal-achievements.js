@@ -1381,4 +1381,53 @@ export const normalAchievements = [
     checkRequirement: () => GameEnd.endState > END_STATE_MARKERS.GAME_END && !GameEnd.removeAdditionalEnd,
     checkEvent: GAME_EVENT.GAME_TICK_AFTER
   },
+  {
+    id: 189,
+    name: "Shattered Reality",
+    description: `Shatter Reality for the First Time.`,
+  },
+  {
+    id: 190,
+    name: "Its Been Meta",
+    description: `Buy a Remnant Dimension.`,
+    get reward() {
+      return `You feel 30% Better.`;
+    },
+    effect: 1
+  },
+  {
+    id: 191,
+    name: "Energy Overflow",
+    description: `Unlock the Pre-Reality Shatter Upgrade 'PostHaste'.`,
+     get reward() {
+      return `Antimatter Dimensions are boosted by 135%.`;
+    },
+    effect: 1.35
+  },
+  {
+    id: 192,
+    name: "Shattered Reality",
+    description: `Shatter Reality for the First Time.`,
+  },
+  {
+    id: 193,
+    name: "Shattered Reality",
+    description: `Shatter Reality for the First Time.`,
+  },
+  {
+    id: 194,
+    name: "Shattered Reality",
+    description: `Shatter Reality for the First Time.`,
+  },
+  {
+    id: 195,
+    name: "Shattered Reality",
+    description: `Shatter Reality for the First Time.`,
+  },
+  {
+    id: 196,
+    name: "Shattered Reality",
+    description: `Shatter Reality for the First Time.`,
+    
+  },
 ];
