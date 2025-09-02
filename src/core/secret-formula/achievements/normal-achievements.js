@@ -1430,4 +1430,44 @@ export const normalAchievements = [
     description: `Reach Teresa, Effarig, Nameless Ones, and V's Memory Level 25.`,
     
   },
+  {
+    id: 201,
+    name: "Explosion",
+    description: `Unlock Ra's Auto Memory Gain.`,
+  },
+  {
+    id: 202,
+    name: "Lai'tela 2",
+    description: `Unlock Lai'tela's Hard Reality`,
+  },
+  {
+    id: 203,
+    name: "Pelle 2",
+    description: `Bypass Pelle's lock and enter their reality for a second time.`,
+  },
+  {
+    id: 204,
+    name: "Two Times a strike.",
+    description: `Disable Pelle's Strike Nerfs`,
+  },
+  {
+    id: 205,
+    name: "Break the Reality.",
+    description: `Use Pelle's Galaxy Generator to Break their Reality`,
+  },
+  {
+    id: 206,
+    name: "Pixels.",
+    description: `Unlock The Unnamed.`,
+  },
+  {
+    id: 207,
+    name: "TBA",
+    description: `TBA`,
+  },
+  {
+    id: 208,
+    name: "TBA",
+    description: `TBA`,
+  },
 ];

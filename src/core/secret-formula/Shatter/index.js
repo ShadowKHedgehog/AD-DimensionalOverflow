@@ -1,7 +1,6 @@
-import { breakInfinityUpgrades } from "./break-infinity-upgrades";
-import { infinityUpgrades } from "./infinity-upgrades";
 
-export const infinity = {
-  upgrades: infinityUpgrades,
-  breakUpgrades: breakInfinityUpgrades
+import { shatterupgrades } from "./shatter-upgrades.js";
+
+export const Shatter = {
+  upgrades: shatterupgrades
 };
