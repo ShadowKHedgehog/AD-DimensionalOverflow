@@ -151,6 +151,13 @@ window.player = {
       })),
       isActive: true,
     },
+    remnantDims: {
+      all: Array.range(0, 8).map(() => ({
+        isActive: false,
+        lastTick: 0,
+      })),
+      isActive: true,
+    },
     replicantiGalaxies: {
       isActive: false,
     },
