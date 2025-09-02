@@ -1,3 +1,4 @@
+import { BreakInfinityUpgrade } from "../break-infinity-upgrades";
 import { DC } from "../constants";
 
 import { DimensionState } from "./dimension";
@@ -19,6 +20,7 @@ export function antimatterDimensionCommonMultiplier() {
     BreakInfinityUpgrade.slowestChallengeMult,
     InfinityUpgrade.totalTimeMult,
     InfinityUpgrade.thisInfinityTimeMult,
+    BreakInfinityUpgrade.ipGen,
     Achievement(48),
     Achievement(56),
     Achievement(65),
@@ -101,7 +103,7 @@ function applyNDMultipliers(mult, tier) {
 
   let infinitiedMult = DC.D1.timesEffectsOf(
     AntimatterDimension(tier).infinityUpgrade,
-    BreakInfinityUpgrade.infinitiedMult
+    BreakInfinityUpgrade.infinitiedMult,
   );
   infinitiedMult = infinitiedMult.pow(TimeStudy(31).effectOrDefault(1));
   multiplier = multiplier.times(infinitiedMult);
@@ -111,6 +113,7 @@ function applyNDMultipliers(mult, tier) {
       .timesEffectsOf(
         InfinityUpgrade.unspentIPMult,
         InfinityUpgrade.unspentIPMult.chargedEffect,
+        
         Achievement(28),
         Achievement(31),
         Achievement(68),
