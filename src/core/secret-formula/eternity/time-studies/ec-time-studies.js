@@ -9,7 +9,7 @@ export const ecTimeStudies = [
     secondary: {
       resource: "Eternities",
       current: () => Currency.eternities.value,
-      required: completions => new Decimal(20000 + Math.min(completions, Enslaved.isRunning ? 999 : 4) * 20000),
+      required: completions => new Decimal(100 + Math.min(completions, Enslaved.isRunning ? 999 : 4) * 100),
       formatValue: formatInt
     }
   },
@@ -45,7 +45,7 @@ export const ecTimeStudies = [
     secondary: {
       resource: "Infinities",
       current: () => Currency.infinitiesTotal.value,
-      required: completions => new Decimal(1e8 + Math.min(completions, 4) * 2.5e7),
+      required: completions => new Decimal(1e2 + Math.min(completions, 4) * 2.5e2),
       formatValue: value => formatInt(Math.floor(value.toNumber()))
     }
   },
@@ -57,7 +57,7 @@ export const ecTimeStudies = [
     secondary: {
       resource: "Antimatter Galaxies",
       current: () => player.galaxies,
-      required: completions => Decimal.min(completions, 4).times(14).add(160),
+      required: completions => Decimal.min(completions, 4).times(14).add(100),
       formatValue: formatInt
     }
   },
@@ -99,7 +99,7 @@ export const ecTimeStudies = [
   },
   {
     id: 9,
-    cost: new Decimal(415),
+    cost: new Decimal(115),
     requirement: [151],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {
@@ -111,7 +111,7 @@ export const ecTimeStudies = [
   },
   {
     id: 10,
-    cost: new Decimal(550),
+    cost: new Decimal(250),
     requirement: [181],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     secondary: {

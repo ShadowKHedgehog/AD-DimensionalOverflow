@@ -92,7 +92,7 @@ export const normalTimeStudies = [
   },
   {
     id: 33,
-    cost: DC.D2,
+    cost: new Decimal(35),
     requirement: [22],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     description: "You keep half of your Replicanti Galaxies on Infinity"

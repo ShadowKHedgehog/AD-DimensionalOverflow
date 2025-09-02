@@ -8,7 +8,8 @@ export const eternityChallenges = [
   {
     id: 1,
     description: "Time Dimensions are disabled.",
-    goal: DC.E1800,
+    goal: DC.E1000,
+    pelleGoal: DC.E2000,
     goalIncrease: DC.E200,
     reward: {
       description: "Time Dimension multiplier based on time spent this Eternity",
@@ -150,9 +151,9 @@ export const eternityChallenges = [
       EternityChallenge(10).applyEffect(v => description += ` Currently: ${formatX(v, 2, 1)}`);
       return description;
     },
-    goal: DC.E3000,
+    goal: DC.E2000,
     pelleGoal: DC.E3200,
-    goalIncrease: DC.E300,
+    goalIncrease: DC.E200,
     effect: () => Decimal.pow(Currency.infinitiesTotal.value, 950).clampMin(1).pow(TimeStudy(31).effectOrDefault(1)),
     reward: {
       description: "Time Dimension multiplier based on Infinities",
