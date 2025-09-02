@@ -125,7 +125,7 @@ export const AD = {
         Achievement(76),
         Achievement(84),
         Achievement(91),
-        Achievement(92)
+        Achievement(92),
       );
 
       const dimMults = Array.repeat(DC.D1, 9);
@@ -214,7 +214,8 @@ export const AD = {
         BreakInfinityUpgrade.currentAMMult,
         BreakInfinityUpgrade.achievementMult,
         BreakInfinityUpgrade.slowestChallengeMult,
-        BreakInfinityUpgrade.infinitiedMult
+        BreakInfinityUpgrade.infinitiedMult,
+        BreakInfinityUpgrade.ipGen
       );
       return Decimal.pow(mult, dim ? 1 : MultiplierTabHelper.activeDimCount("AD"));
     },

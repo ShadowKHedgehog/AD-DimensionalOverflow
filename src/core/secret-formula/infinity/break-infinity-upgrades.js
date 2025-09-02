@@ -90,6 +90,12 @@ export const breakInfinityUpgrades = {
       return `${quantify("Infinity", infinities)} every ${timeStr}`;
     }
   },
+  ipGen: {
+    id: "AntimatterBoost",
+    initialCost: new Decimal(1e10),
+    description: "Antimatter Dimensions are Multiplied by 1.0e50 ",
+    effect: DC.E50,
+  },
   autobuyMaxDimboosts: {
     id: "autobuyMaxDimboosts",
     cost: new Decimal(5e9),
@@ -125,22 +131,5 @@ export const breakInfinityUpgrades = {
     ),
     noLabel: true,
     onPurchased: () => GameCache.dimensionMultDecrease.invalidate()
-  }),
-  ipGen: rebuyable({
-    id: 2,
-    initialCost: new Decimal(1e7),
-    costIncrease: DC.E1,
-    maxUpgrades: DC.E1,
-    effect: value => Player.bestRunIPPM.times(value.div(20)),
-    description: () => {
-      let generation = `Generate ${format(player.infinityRebuyables[2].mul(5))}%`;
-      if (!BreakInfinityUpgrade.ipGen.isCapped) {
-        generation += ` ➜ ${format(player.infinityRebuyables[2].add(1).mul(5))}%`;
-      }
-      return `${generation} of your best IP/min from your last 10 Infinities`;
-    },
-    isDisabled: effect => effect.eq(0),
-    formatEffect: value => `${format(value, 2, 1)} IP/min`,
-    noLabel: false
   })
 };

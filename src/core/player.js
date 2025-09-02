@@ -42,7 +42,7 @@ window.player = {
   achievementBits: Array.repeat(0, 21),
   secretAchievementBits: Array.repeat(0, 5),
   infinityUpgrades: new Set(),
-  infinityRebuyables: [new Decimal(), new Decimal(), new Decimal()],
+  infinityRebuyables: [new Decimal(), new Decimal()],
   challenge: {
     normal: {
       current: 0,
