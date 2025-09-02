@@ -1,4 +1,5 @@
 import { DC } from "./constants";
+import { Achievement } from "./globals";
 
 // Slowdown parameters for replicanti growth, interval will increase by scaleFactor for every scaleLog10
 // OoM past the cap (default is 308.25 (log10 of 1.8e308), 1.2, Number.MAX_VALUE)
@@ -151,6 +152,7 @@ export function totalReplicantiSpeedMult(overCap) {
   if (!overCap && Achievement(134).isUnlocked) {
     totalMult = totalMult.times(2);
   }
+  
   totalMult = totalMult.times(getAdjustedGlyphEffect("replicationspeed"));
   if (GlyphAlteration.isAdded("replication")) {
     totalMult = totalMult
@@ -266,6 +268,7 @@ export function replicantiMult() {
   return Decimal.pow(Decimal.log2(Replicanti.amount.clampMin(1)), 2)
     .plusEffectOf(TimeStudy(21))
     .timesEffectOf(TimeStudy(102))
+    .timesEffectOf(Achievement(194))
     .clampMin(1)
     .pow(getAdjustedGlyphEffect("replicationpow"));
 }
@@ -342,8 +345,8 @@ export const ReplicantiUpgrade = {
     get costIncrease() { return 1e15; }
 
     get cap() {
-      // Chance never goes over 100%.
-      return DC.D1;
+      // Chance never goes over 250%.
+      return new Decimal(2.5);
     }
 
     get isCapped() {

@@ -1408,6 +1408,10 @@ export const normalAchievements = [
     id: 194,
     name: "Eternity Again.",
     description: `Eternity after Shattering Reality for the first time.`,
+     get reward() {
+      return `Replicanti Multiplier is Boosted by 500 times.`;
+    },
+    effect: 500
   },
   {
     id: 195,
