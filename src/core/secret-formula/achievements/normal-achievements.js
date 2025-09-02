@@ -1382,21 +1382,21 @@ export const normalAchievements = [
     checkEvent: GAME_EVENT.GAME_TICK_AFTER
   },
   {
-    id: 189,
+    id: 191,
     name: "Shattered Reality",
     description: `Shatter Reality for the First Time.`,
   },
   {
-    id: 190,
+    id: 192,
     name: "Its Been Meta",
     description: `Buy a Remnant Dimension.`,
     get reward() {
       return `You feel 30% Better.`;
     },
-    effect: 1
+    effect: () => "You feel 30% Better"
   },
   {
-    id: 191,
+    id: 193,
     name: "Energy Overflow",
     description: `Unlock the Pre-Reality Shatter Upgrade 'PostHaste'.`,
      get reward() {
@@ -1405,29 +1405,29 @@ export const normalAchievements = [
     effect: 1.35
   },
   {
-    id: 192,
-    name: "Shattered Reality",
-    description: `Shatter Reality for the First Time.`,
-  },
-  {
-    id: 193,
-    name: "Shattered Reality",
-    description: `Shatter Reality for the First Time.`,
-  },
-  {
     id: 194,
-    name: "Shattered Reality",
-    description: `Shatter Reality for the First Time.`,
+    name: "Eternity Again.",
+    description: `Eternity after Shattering Reality for the first time.`,
   },
   {
     id: 195,
-    name: "Shattered Reality",
-    description: `Shatter Reality for the First Time.`,
+    name: "Between Dimensions",
+    description: `Reach 30 First Time Dimensions.`,
   },
   {
     id: 196,
-    name: "Shattered Reality",
-    description: `Shatter Reality for the First Time.`,
+    name: "Teresa.",
+    description: `Unlock Teresa again.`,
+  },
+  {
+    id: 197,
+    name: "Bowser & Gromit: The Written Tales",
+    description: `Unlock V again.`,
+  },
+  {
+    id: 198,
+    name: "The Memory Cap",
+    description: `Reach Teresa, Effarig, Nameless Ones, and V's Memory Level 25.`,
     
   },
 ];
