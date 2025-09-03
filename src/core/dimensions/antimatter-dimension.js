@@ -20,7 +20,7 @@ export function antimatterDimensionCommonMultiplier() {
     BreakInfinityUpgrade.slowestChallengeMult,
     InfinityUpgrade.totalTimeMult,
     InfinityUpgrade.thisInfinityTimeMult,
-    BreakInfinityUpgrade.ipGen,
+    BreakInfinityUpgrade.antimatterBoost,
     Achievement(48),
     Achievement(56),
     Achievement(65),
