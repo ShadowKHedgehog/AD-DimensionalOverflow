@@ -34,7 +34,7 @@ export default {
         [
           BreakInfinityUpgrade.tickspeedCostMult,
           BreakInfinityUpgrade.dimCostMult,
-          BreakInfinityUpgrade.ipGen
+          BreakInfinityUpgrade.antimatterBoost
         ]
       ];
     }
