@@ -90,10 +90,10 @@ export const breakInfinityUpgrades = {
       return `${quantify("Infinity", infinities)} every ${timeStr}`;
     }
   },
-  ipGen: {
-    id: "AntimatterBoost",
+  antimatterBoost: {
+    id: "antimatterBoost",
     Cost: new Decimal(1e10),
-    description: "Antimatter Dimensions are Multiplied by 1.0e50 ",
+    description: `Antimatter Dimensions are Multiplied by ${format(DC.E50)}`,
     effect: DC.E50,
   },
   autobuyMaxDimboosts: {
