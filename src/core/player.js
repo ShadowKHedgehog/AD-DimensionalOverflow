@@ -784,6 +784,10 @@ window.player = {
       showBought: false,
     }
   },
+  exposes: DC.D0,
+  expose: {
+    shattershards: DC.D0
+  },
   isGameEnd: false,
   tabNotifications: new Set(),
   triggeredTabNotificationBits: 0,
