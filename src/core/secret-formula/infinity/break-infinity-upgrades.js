@@ -93,7 +93,7 @@ export const breakInfinityUpgrades = {
   antimatterBoost: {
     id: "antimatterBoost",
     Cost: new Decimal(1e10),
-    description: `Antimatter Dimensions are Multiplied by ${formatX(1e50)}`,
+    description: () => `Antimatter Dimensions are Multiplied by ${format(1e50)}`,
     effect: DC.E50,
   },
   autobuyMaxDimboosts: {
