@@ -35,6 +35,11 @@ window.player = {
       cost: [DC.D1, DC.D5, DC.E2, DC.E3, DC.E2350, DC.E2650, DC.E3000, DC.E3350][tier],
       amount: DC.D0,
       bought: DC.D0
+    })),
+    remnant: Array.range(0, 8).map(tier => ({
+      cost: [DC.D1, DC.D40, DC.D800, DC.D2300, DC.D12400, DC.D1_33E7, DC.D4_58E13, DC.E50][tier],
+      amount: DC.D0,
+      bought: DC.D0
     }))
   },
   buyUntil10: true,
