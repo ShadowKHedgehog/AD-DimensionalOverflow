@@ -485,3 +485,8 @@ Currency.shattershards = new class extends DecimalCurrency {
   get value() { return player.expose.shattershards; }
   set value(value) { player.expose.shattershards = value; }
 }();
+
+Currency.shatterPower = new class extends DecimalCurrency {
+  get value() { return player.expose.shatterpower; }
+  set value(value) { player.expose.shatterpower = value; }
+}();
