@@ -90,11 +90,7 @@ export const breakInfinityUpgrades = {
       return `${quantify("Infinity", infinities)} every ${timeStr}`;
     }
   },
-<<<<<<< Updated upstream
   antimatterBoost: {
-=======
-  ipGen: {
->>>>>>> Stashed changes
     id: "antimatterBoost",
     Cost: new Decimal(1e10),
     description: `Antimatter Dimensions are Multiplied by ${format(DC.E50)}`,
