@@ -480,3 +480,8 @@ Currency.galaxyGeneratorGalaxies = new class extends DecimalCurrency {
       player.celestials.pelle.galaxyGenerator.spentGalaxies.add(spent);
   }
 }();
+
+Currency.shattershards = new class extends DecimalCurrency {
+  get value() { return player.expose.shattershards; }
+  set value(value) { player.expose.shattershards = value; }
+}();
