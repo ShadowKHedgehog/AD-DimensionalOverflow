@@ -786,7 +786,8 @@ window.player = {
   },
   exposes: DC.D0,
   expose: {
-    shattershards: DC.D0
+    shattershards: DC.D0,
+    shatterpower: DC.D0
   },
   isGameEnd: false,
   tabNotifications: new Set(),
