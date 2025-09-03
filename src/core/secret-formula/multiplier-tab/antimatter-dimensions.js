@@ -215,7 +215,7 @@ export const AD = {
         BreakInfinityUpgrade.achievementMult,
         BreakInfinityUpgrade.slowestChallengeMult,
         BreakInfinityUpgrade.infinitiedMult,
-        BreakInfinityUpgrade.antimatterDimension
+        BreakInfinityUpgrade.antimatterBoost
       );
       return Decimal.pow(mult, dim ? 1 : MultiplierTabHelper.activeDimCount("AD"));
     },
