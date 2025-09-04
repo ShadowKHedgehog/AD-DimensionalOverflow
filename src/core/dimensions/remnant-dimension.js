@@ -13,7 +13,7 @@ class RemnantDimensionState extends DimensionState {
     super(() => player.dimensions.remnant, tier);
     const COST_MULTS = [null, 3, 10, 60, 120, 600, 1.3e5, 3e9, 1e20];
     this._costMultiplier = COST_MULTS[tier];
-    const POWER_MULTS = [null, 5, 5, 5, 5, 5, 5, 5, 10];
+    const POWER_MULTS = [null, 1, 1.75, 2.5, 5, 6, 7, 8, 10];
     this._powerMultiplier = POWER_MULTS[tier];
     const BASE_COSTS = [null, 1, 40, 800, 2300, 12400, 1.33e7, 4.58e13, 1e50];
     this._baseCost = new Decimal(BASE_COSTS[tier]);
@@ -83,7 +83,7 @@ class RemnantDimensionState extends DimensionState {
   }
 
   get purchaseCap() {
-    return RemnantDimensions.capIncrease.add(this.tier === 8
+    return RemnantDimensions.capIncrease.add(this.tier === 9
       ? DC.BEMAX
       : RemnantDimensions.HARDCAP_PURCHASES);
   }
