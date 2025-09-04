@@ -51,7 +51,6 @@ export const NG = {
     player.isGameEnd = false;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
-    Achievement(188).lock();
     player.tabNotifications = new Set();
     player.triggeredTabNotificationBits = 0;
     player.tutorialState = 0;
