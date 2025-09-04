@@ -1,5 +1,4 @@
 import { DC } from "../constants";
-import { celestials } from "./celestials/index";
 
 // A = always there
 // L = locked
@@ -3282,7 +3281,7 @@ export const news = [
   {
     id: "l89",
     text: "Pelle watches you.",
-    get unlocked() { return celestials.pelle.isDoomed = true; }
+    get unlocked() { return Pelle.isDoomed; }
   },
   {
     id: "r1",
