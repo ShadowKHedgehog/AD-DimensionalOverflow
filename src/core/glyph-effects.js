@@ -145,7 +145,7 @@ class GlyphEffectConfig {
       throw new Error(`Glyph effect "${setup.id}" includes unrecognized field "${unknownField}"`);
     }
 
-    const unknownGlyphType = setup.glyphTypes.find(e => !GlyphInfo.glyphTypes.includes(e()));
+    const unknownGlyphType = setup.glyphTypes.find(e => !GlyphInfo.glyphTypes.includes(e));
     if (unknownGlyphType !== undefined) {
       throw new Error(`Glyph effect "${setup.id}" references unknown glyphType "${unknownGlyphType}"`);
     }
