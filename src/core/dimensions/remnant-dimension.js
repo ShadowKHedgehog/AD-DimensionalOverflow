@@ -155,7 +155,7 @@ export const RemnantDimensions = {
    * @type {RemnantDimensionState[]}
    */
   all: RemnantDimension.index.compact(),
-  HARDCAP_PURCHASES: new Decimal(2000000),
+  HARDCAP_PURCHASES: DC.E500000,
 
   resetAmount() {
     Currency.shatterPower.reset();
