@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import { DC } from "../../constants";
-import { GameEnd } from "../../globals";
 
 export const normalAchievements = [
   {
