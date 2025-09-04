@@ -195,7 +195,7 @@ export const realityGlyphEffectLevelThresholds = [0, 9000, 15000, 25000];
 export const GlyphEffects = mapGameDataToObject(
   GameDatabase.reality.glyphEffects,
   config => new GlyphEffectConfig(config)
-);
+)
 
 export function makeGlyphEffectBitmask(effectList) {
   return effectList.reduce((mask, eff) => mask + (1 << GlyphEffects[eff].bitmaskIndex), 0);
