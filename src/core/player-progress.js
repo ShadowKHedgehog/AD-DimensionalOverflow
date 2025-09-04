@@ -15,6 +15,10 @@ export class PlayerProgress {
     return new Decimal(this._player.realities).gt(0);
   }
 
+  get isShatterUnlocked() {
+    return new Decimal(this._player.exposes).gt(0);
+  }
+
   get hasFullCompletion() {
     return this._player.records?.fullGameCompletions > 0;
   }

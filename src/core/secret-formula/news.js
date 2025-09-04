@@ -1,4 +1,5 @@
 import { DC } from "../constants";
+import { celestials } from "./celestials/index";
 
 // A = always there
 // L = locked
@@ -136,12 +137,11 @@ export const news = [
   },
   {
     id: "a29",
-    text: `If you are not playing on Kongregate, Steam, or https://ivark.github.io/AntimatterDimensions/,
-      the site is bootleg.`
+    text: `Someone waits for you..`
   },
   {
     id: "a30",
-    text: "Rate 5 on Kongregate so more people can experience this 5 star rating."
+    text: "Someone waits for you."
   },
   {
     id: "a31",
@@ -3280,6 +3280,11 @@ export const news = [
     get unlocked() { return PlayerProgress.realityUnlocked(); }
   },
   {
+    id: "l89",
+    text: "Pelle watches you.",
+    get unlocked() { return celestials.pelle.isRunning = true; }
+  },
+  {
     id: "r1",
     text: "This news message is 100x rarer than all the others.",
     get unlocked() { return Math.random() < 0.01; }
@@ -3332,7 +3337,7 @@ export const news = [
   },
   {
     id: "ai11",
-    text: "\"click here to buy a stack of paperclips\" (when clicked you get Rickroll)",
+    text: "\"click here to buy a stack of paperclips\"",
     onClick() { window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ"); }
   },
   {

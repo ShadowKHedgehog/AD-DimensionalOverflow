@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { DC } from "../../constants";
+import { GameEnd } from "../../globals";
 
 export const normalAchievements = [
   {
@@ -1506,16 +1507,116 @@ export const normalAchievements = [
   {
     id: 216,
     name: "The Fourth Titan Falls",
-    description: `Vanquish the Titan lurking in Ra's EX reality.`,
+    description: `Vanquish the Titan lurking in Nameless One's EX reality.`,
   },
   {
     id: 217,
     name: "The Fifth Titan Falls",
-    description: `Vanquish the Titan lurking in Lai'tela's EX reality.`,
+    description: `Vanquish the Titan lurking in Ra's EX reality.`,
   },
   {
     id: 218,
     name: "The Sixth Titan Falls",
-    description: `Vanquish the Titan lurking in Pelle's EX reality.`,
+    description: `Vanquish the Titan lurking in Lai'tela's EX reality.`,
+  },
+  {
+    id: 221,
+    name: "The Expert",
+    description: `Finish The Unnamed's True Reality.`,
+  },
+  {
+    id: 222,
+    name: "Antimatter Broken",
+    description: `Reach ee50 AM.`,
+    get reward() {
+      return `The Final Act.`;
+    },
+    effect: () => "Its almost over"
+  },
+  {
+    id: 223,
+    name: "Infinity Broken",
+    description: `Reach ee49 IP.`,
+    get reward() {
+      return `The Final Play.`;
+    },
+    effect: () => "Its almost over2"
+  },
+  {
+    id: 224,
+    name: "Eternity Broken",
+    description: `Reach ee48 EP.`,
+    get reward() {
+      return `The Final Show.`;
+    },
+    effect: () => "Its almost over3"
+  },
+  {
+    id: 225,
+    name: "Left for Dead",
+    description: `Beat Pelle's EX Reality.`,
+  },
+  {
+    id: 226,
+    name: "Lost to Forget",
+    description: `Beat The Unnamed and Pelle's Duo Reality.`,
+  },
+  {
+    id: 227,
+    name: "Forget I said anything.",
+    description: `Free The Unnamed.`,
+  },
+  {
+    id: 228,
+    name: "Rapid Acceleration",
+    description: `Unlock Metaworld.`,
+  },
+  {
+    id: 231,
+    name: "Valid Crashout",
+    description: `Break the Hardcap.`,
+  },
+  {
+    id: 232,
+    name: "The Final Show",
+    description: `Discover the Eternal Fountain.`,
+  },
+  {
+    id: 233,
+    name: "I think we have a problem.",
+    description: `Return to Pelle's Reality after discovering the Eternal Fountain.`,
+  },
+  {
+    id: 234,
+    name: "Vanquisher",
+    description: `Beat Eternal Pelle.`,
+    get reward() {
+      return `Unlock The Final Celestial`;
+    },
+    effect: () => "Placeholder"
+  },
+  {
+    id: 235,
+    name: "Virtual Reality",
+    description: `Enter The Final Celestial Reality.`,
+  },
+  {
+    id: 236,
+    name: "The Finale",
+    description: `Start Generating Negative Galaxies.`,
+  },
+  {
+    id: 237,
+    name: "The Fall",
+    description: `Have them destroy your Negative Galaxies, start generating Eterntiy Galaxies.`,
+  },
+  {
+    id: 238,
+    name: "The TRUE END",
+    description: `THE END HAS COME WE HOPE TO SEE YOU AGAIN.`,
+    get reward() {
+      return `The End`;
+    },
+    effect: 4
   },
 ];
