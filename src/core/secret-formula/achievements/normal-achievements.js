@@ -1393,8 +1393,7 @@ export const normalAchievements = [
     description: `Buy a Remnant Dimension.`,
     get reward() {
       return `You feel 30% Better.`;
-    },
-    effect: () => "You feel 30% Better"
+    }
   },
   {
     id: 193,
@@ -1466,8 +1465,7 @@ export const normalAchievements = [
     description: `Unlock The Unnamed.`,
     get reward() {
       return `You think you are almost done with this part of your life.`;
-    },
-    effect: () => "Your lifer"
+    }
   },
   {
     id: 207,
@@ -1529,9 +1527,8 @@ export const normalAchievements = [
     name: "Antimatter Broken",
     description: `Reach ee50 AM.`,
     get reward() {
-      return `The Final Act.`;
-    },
-    
+      return `The Final Act. (Its almost over)`;
+    }
   },
   {
     id: 223,
@@ -1540,7 +1537,7 @@ export const normalAchievements = [
     get reward() {
       return `The Final Play.`;
     },
-    
+    effect: () => "Itsveryalmostover"
   },
   {
     id: 224,
@@ -1549,6 +1546,7 @@ export const normalAchievements = [
     get reward() {
       return `The Final Show.`;
     },
+    effect: () => "Its truly almost over"
   },
   {
     id: 225,
@@ -1592,7 +1590,7 @@ export const normalAchievements = [
     get reward() {
       return `Unlock The Final Celestial`;
     },
-    
+    effect: () => "Placeholder"
   },
   {
     id: 235,
