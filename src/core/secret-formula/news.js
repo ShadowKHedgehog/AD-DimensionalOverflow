@@ -3282,7 +3282,7 @@ export const news = [
   {
     id: "l89",
     text: "Pelle watches you.",
-    get unlocked() { return celestials.pelle.isRunning = true; }
+    get unlocked() { return celestials.pelle.isDoomed = true; }
   },
   {
     id: "r1",
