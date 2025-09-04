@@ -223,4 +223,11 @@ export const glyphCosmeticSets = {
     preventBlur: true,
     color: ["W#0000AA"],
   },
+  spamton: {
+    id: "spamton",
+    name: "Letters",
+    symbol: ["A", "I", "T", "D", "E", "R", "S"],
+    preventBlur: true,
+    color: ["W#0000AA"],
+  },
 };
