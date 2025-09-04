@@ -51,7 +51,7 @@ export const NG = {
     player.isGameEnd = false;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
-    achievement.lock(188);
+    Achievement(188).lock();
     player.tabNotifications = new Set();
     player.triggeredTabNotificationBits = 0;
     player.tutorialState = 0;
@@ -414,7 +414,7 @@ export const NG = {
     AntimatterDimensions.reset();
     Currency.antimatter.reset();
     initializeChallengeCompletions(true);
-    achievement.lock(188);
+    Achievement(188).lock();
     player.records.totalTimePlayed = player.records.realTimePlayed;
     player.records.timePlayedAtBHUnlock = Number.MAX_VALUE;
     player.records.realTimeDoomed = DC.D0;
