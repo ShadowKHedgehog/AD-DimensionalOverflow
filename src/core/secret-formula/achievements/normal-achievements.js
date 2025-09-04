@@ -1613,6 +1613,6 @@ export const normalAchievements = [
     get reward() {
       return `The End`;
     },
-    effect: 4
+    effect: 1
   },
 ];
