@@ -1393,8 +1393,7 @@ export const normalAchievements = [
     description: `Buy a Remnant Dimension.`,
     get reward() {
       return `You feel 30% Better.`;
-    },
-    effect: () => "You feel 30% Better"
+    }
   },
   {
     id: 193,
@@ -1466,8 +1465,7 @@ export const normalAchievements = [
     description: `Unlock The Unnamed.`,
     get reward() {
       return `You think you are almost done with this part of your life.`;
-    },
-    effect: () => "Your lifer"
+    }
   },
   {
     id: 207,
@@ -1529,27 +1527,24 @@ export const normalAchievements = [
     name: "Antimatter Broken",
     description: `Reach ee50 AM.`,
     get reward() {
-      return `The Final Act.`;
-    },
-    effect: () => "Its almost over"
+      return `The Final Act. (Its almost over)`;
+    }
   },
   {
     id: 223,
     name: "Infinity Broken",
     description: `Reach ee49 IP.`,
     get reward() {
-      return `The Final Play.`;
-    },
-    effect: () => "Itsveryalmostover"
+      return `The Final Play. (Itsveryalmostover)`;
+    }
   },
   {
     id: 224,
     name: "Eternity Broken",
     description: `Reach ee48 EP.`,
     get reward() {
-      return `The Final Show.`;
-    },
-    effect: () => "Its truly almost over"
+      return `The Final Show. (Its truly almost over)`;
+    }
   },
   {
     id: 225,
@@ -1591,9 +1586,8 @@ export const normalAchievements = [
     name: "Vanquisher",
     description: `Beat Eternal Pelle.`,
     get reward() {
-      return `Unlock The Final Celestial`;
-    },
-    effect: () => "Placeholder"
+      return `Unlock The Final Celestial (Placeholder)`;
+    }
   },
   {
     id: 235,
