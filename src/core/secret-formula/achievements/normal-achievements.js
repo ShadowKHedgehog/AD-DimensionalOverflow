@@ -1531,7 +1531,7 @@ export const normalAchievements = [
     get reward() {
       return `The Final Act.`;
     },
-    effect: () => "Its almost over"
+    
   },
   {
     id: 223,
@@ -1540,7 +1540,7 @@ export const normalAchievements = [
     get reward() {
       return `The Final Play.`;
     },
-    effect: () => "Itsveryalmostover"
+    
   },
   {
     id: 224,
@@ -1549,7 +1549,6 @@ export const normalAchievements = [
     get reward() {
       return `The Final Show.`;
     },
-    effect: () => "Its truly almost over"
   },
   {
     id: 225,
@@ -1593,7 +1592,7 @@ export const normalAchievements = [
     get reward() {
       return `Unlock The Final Celestial`;
     },
-    effect: () => "Placeholder"
+    
   },
   {
     id: 235,
