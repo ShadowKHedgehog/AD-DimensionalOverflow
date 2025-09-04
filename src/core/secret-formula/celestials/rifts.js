@@ -44,6 +44,13 @@ export const pelleRifts = {
         effect: () => Decimal.pow(4, PelleRifts.vacuum.totalFill.max(1).log10().div(616).add(3)),
         formatEffect: x => `EP gain ${formatX(x, 2, 2)}`
       },
+      {
+        resource: "vacuum",
+        requirement: 0.9,
+        description: () => `${wordShift.wordCycle(PelleRifts.vacuum.name)} also affects Dimension Boost Power.`,
+        effect: () => Decimal.pow(4, PelleRifts.vacuum.totalFill.max(1).log10().div(1023).add(2.6)),
+        formatEffect: x => `Dimensional Boost Power ${formatX(x, 2, 2)}`
+      },
     ],
     galaxyGeneratorText: "There is not enough space left for more, you must fill in the $value"
   },

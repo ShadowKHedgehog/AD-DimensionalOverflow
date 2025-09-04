@@ -1540,7 +1540,7 @@ export const normalAchievements = [
     get reward() {
       return `The Final Play.`;
     },
-    effect: () => "Its almost over2"
+    effect: () => "Itsveryalmostover"
   },
   {
     id: 224,
@@ -1549,7 +1549,7 @@ export const normalAchievements = [
     get reward() {
       return `The Final Show.`;
     },
-    effect: () => "Its almost over3"
+    effect: () => "Its truly almost over"
   },
   {
     id: 225,
