@@ -1,4 +1,5 @@
 import * as ADNotations from "adnot-beport-small";
+import { DC } from "./constants";
 
 export const NG = {
   startNewGame() {
