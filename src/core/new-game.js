@@ -92,9 +92,9 @@ export const NG = {
       select: AUTO_GLYPH_SCORE.LOWEST_SACRIFICE,
       trash: AUTO_GLYPH_REJECT.SACRIFICE,
       simple: 0,
-      types: GlyphTypes.list
-        .filter(t => ALCHEMY_BASIC_GLYPH_TYPES.includes(t.id))
-        .mapToObject(t => t.id, t => ({
+      types: Object.keys(getGlyphTypes())
+        .filter(t => GlyphInfo.generatedGlyphTypes.includes(t))
+        .mapToObject(t => t, t => ({
           rarity: new Decimal(),
           score: 0,
           effectCount: 0,
