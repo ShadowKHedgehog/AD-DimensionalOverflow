@@ -431,7 +431,7 @@ export const normalTimeStudies = [
       () => EternityChallenge(3).completions > 0 || Perk.bypassEC3Lock.isBought],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain ${formatPercents(0.01)} of your Infinity Points gained on crunch each second`,
-    effect: () => gainedInfinityPoints().times(Time.deltaTime.div(100))
+    effect: () => Pelle.isDoomed ? 0 : gainedInfinityPoints().times(Time.deltaTime.div(100))
       .timesEffectOf(Ra.unlocks.continuousTTBoost.effects.autoPrestige)
   },
   {
