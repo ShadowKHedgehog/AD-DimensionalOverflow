@@ -415,6 +415,7 @@ export const NG = {
     Currency.antimatter.reset();
     initializeChallengeCompletions(true);
     Achievement(188).lock();
+    Achievement(238).lock();
     player.records.totalTimePlayed = player.records.realTimePlayed;
     player.records.timePlayedAtBHUnlock = Number.MAX_VALUE;
     player.records.realTimeDoomed = DC.D0;
