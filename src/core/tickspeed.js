@@ -211,13 +211,12 @@ export const FreeTickspeed = {
   GROWTH_RATE: new Decimal(6e-6).add(1),
   GROWTH_EXP: DC.D2,
   
-  get TS171_EFFECT() {
-    if (Pelle.isDoomed) return 1.33;
-    return TimeStudy(171);
+  get tickmult() {
+    if (Pelle.isDoomed) return DC.D1.add(new Decimal(1.33).sub(1)).mul(
+    Decimal.max(getAdjustedGlyphEffect("cursedtickspeed"), 1));
+    return DC.D1.add(Effects.min(1.33, TimeStudy(171)).sub(1)).mul(
+    Decimal.max(getAdjustedGlyphEffect("cursedtickspeed"), 1));
   },
-  
-  tickmult: () => DC.D1.add(Decimal.min(1.33, this.TS171_EFFECT).sub(1)).mul(
-    Decimal.max(getAdjustedGlyphEffect("cursedtickspeed"), 1)),
 
   get amount() {
     return player.totalTickGained;
