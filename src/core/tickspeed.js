@@ -231,14 +231,14 @@ export const FreeTickspeed = {
   },
 
   get multToNext() {
-    if (this.amount.lt(this.softcap)) return new Decimal(this.tickmult());
-    return this.tickmult().mul(this.GROWTH_RATE.pow(this.amount.sub(this.softcap)));
+    if (this.amount.lt(this.softcap)) return new Decimal(this.tickmult);
+    return this.tickmult.mul(this.GROWTH_RATE.pow(this.amount.sub(this.softcap)));
   },
 
   get tickExpo() {
     return new ExponentialCostScaling({
       baseCost: DC.D1,
-      baseIncrease: this.tickmult(),
+      baseIncrease: this.tickmult,
       costScale: FreeTickspeed.GROWTH_RATE,
       purchasesBeforeScaling: FreeTickspeed.softcap
     });
