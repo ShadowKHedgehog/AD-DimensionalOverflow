@@ -216,7 +216,7 @@ export const FreeTickspeed = {
     return TimeStudy(171);
   },
   
-  tickmult: () => DC.D1.add(Effects.min(1.33, this.TS171_EFFECT).sub(1)).mul(
+  tickmult: () => DC.D1.add(Decimal.min(1.33, this.TS171_EFFECT).sub(1)).mul(
     Decimal.max(getAdjustedGlyphEffect("cursedtickspeed"), 1)),
 
   get amount() {
