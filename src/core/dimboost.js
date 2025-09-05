@@ -35,7 +35,7 @@ export class DimBoost {
         GlyphEffect.dimBoostPower,
         PelleRifts.recursion.milestones[0],
         PelleRifts.vacuum.milestones[3],
-        (Currency.shatterPower ^ Currency.shatterPowerconversionrate),
+        Currency.shatterPower.pow(Currency.shatterPowerconversionrate),
       ).powEffectsOf(InfinityUpgrade.dimboostMult.chargedEffect);
     if (GlyphAlteration.isAdded("effarig")) boost = boost.pow(getSecondaryGlyphEffect("effarigforgotten"));
     return boost;
