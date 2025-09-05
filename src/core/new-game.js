@@ -409,7 +409,7 @@ export const NG = {
     player.partInfinitied = 0;
     player.dimensionBoosts = DC.D0;
     player.galaxies = DC.D0;
-    player.break = false;
+    player.break = true;
     resetTickspeed();
     AntimatterDimensions.reset();
     Currency.antimatter.reset();
@@ -476,5 +476,7 @@ export const NG = {
     player.records.bestReality.speedSet = [];
     player.records.bestReality.iMCapSet = [];
     player.records.bestReality.laitelaSet = [];
+    pelle.isGameEnd = false;
+    pelle.isDoomed = false;
   }
 };
