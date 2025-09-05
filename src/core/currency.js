@@ -490,3 +490,7 @@ Currency.shatterPower = new class extends DecimalCurrency {
   get value() { return player.expose.shatterpower; }
   set value(value) { player.expose.shatterpower = value; }
 }();
+Currency.shatterPowerconversionrate = new class extends DecimalCurrency {
+  get value() { return player.expose.shatterPowerconversionrate; }
+  set value(value) { player.expose.shatterPowerconversionrate = value; }
+}();
