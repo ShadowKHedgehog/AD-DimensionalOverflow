@@ -1,6 +1,6 @@
 import * as ADNotations from "adnot-beport-small";
 import { DC } from "./constants";
-
+import { Player } from "./player";
 export const NG = {
   startNewGame() {
     GameEnd.creditsClosed = false;
@@ -36,7 +36,13 @@ export const NG = {
     // Modify beaten-game quantities before doing a carryover reset
     player.records.fullGameCompletions++;
     GlyphAppearanceHandler.unlockSet();
-    this.restartWithCarryover();
+    if (player.exposes == 0) {
+      this.restartWithCarryover();
+    }
+    if (player.exposes >= 1) {
+      this.restartWithCarryoverPostShatter();
+    }
+    
 
     // The ending animation ends at 12.5, although the value continues to increase after that. We set it to a bit above
     // 12.5 when we start the rollback animation to hide some of the unavoidable lag from all the reset functions
@@ -476,6 +482,151 @@ export const NG = {
     player.records.bestReality.speedSet = [];
     player.records.bestReality.iMCapSet = [];
     player.records.bestReality.laitelaSet = [];
+    pelle.isGameEnd = false;
+    pelle.isDoomed = false;
+  },
+restartWithCarryoverPostShatter() {
+    player.isGameEnd = false;
+    Tab.dimensions.antimatter.show();
+    AchievementTimers.marathon2.reset();
+    player.tabNotifications = new Set();
+    player.triggeredTabNotificationBits = 0;
+    ui.view.newUI = player.options.newUI;
+    ui.view.news = player.options.news.enabled;
+    Themes.find(Theme.currentName()).set();
+    Notations.all.find(n => n.name === player.options.notation).setAsCurrent();
+    ADNotations.Settings.exponentCommas.min = 10 ** player.options.notationDigits.comma;
+    ADNotations.Settings.exponentCommas.max = 10 ** player.options.notationDigits.notation;
+  
+    player.reality.glyphs.protectedRows = 0;
+    Glyphs.autoClean(0);
+    player.reality.glyphs.protectedRows = 2;
+    Glyphs.unequipAll();
+    player.reality.glyphs.protectedRows = 0;
+    Glyphs.autoClean(0);
+    player.reality.glyphs.protectedRows = 2;
+    
+    player.reality.respec = false;
+    player.reality.showGlyphSacrifice = false;
+    player.reality.showSidebarPanel = GLYPH_SIDEBAR_MODE.INVENTORY_MANAGEMENT;
+    player.reality.autoSort = 0;
+    player.reality.autoCollapse = false;
+    player.reality.autoAutoClean = false;
+    player.reality.applyFilterToPurge = false;
+    player.reality.moveGlyphsOnProtection = false;
+    player.reality.unlockedEC = 0;
+    player.reality.autoEC = true;
+    player.reality.lastAutoEC = 0;
+    player.reality.partEternitied = DC.D0;
+  
+    player.celestials.pelle.doomed = false;
+    player.celestials.pelle.upgrades = new Set();
+    player.celestials.pelle.remnants = DC.D0;
+    player.celestials.pelle.realityShards = DC.D0;
+    player.celestials.pelle.records.totalInfinityPoints = DC.D0;
+    player.celestials.pelle.records.totalEternityPoints = DC.D0;
+    player.celestials.pelle.rebuyables.antimatterDimensionMult = DC.D0;
+    player.celestials.pelle.rebuyables.timeSpeedMult = DC.D0;      
+    player.celestials.pelle.rebuyables.glyphLevels = DC.D0;
+    player.celestials.pelle.rebuyables.infConversion = DC.D0;
+    player.celestials.pelle.rebuyables.galaxyPower = DC.D0;
+    player.celestials.pelle.rebuyables.galaxyGeneratorAdditive = DC.D0;
+    player.celestials.pelle.rebuyables.galaxyGeneratorMultiplicative = DC.D0;
+    player.celestials.pelle.rebuyables.galaxyGeneratorAntimatterMult = DC.D0;
+    player.celestials.pelle.rebuyables.galaxyGeneratorIPMult = DC.D0;
+    player.celestials.pelle.rebuyables.galaxyGeneratorEPMult = DC.D0;
+    player.celestials.pelle.rifts.vacuum.fill = DC.D0;
+    player.celestials.pelle.rifts.vacuum.active = false;
+    player.celestials.pelle.rifts.vacuum.reducedTo = 1;
+    player.celestials.pelle.rifts.decay.fill = DC.D0;
+    player.celestials.pelle.rifts.decay.active = false;
+    player.celestials.pelle.rifts.decay.percentageSpent = 0;
+    player.celestials.pelle.rifts.decay.reducedTo = 1;
+    player.celestials.pelle.rifts.chaos.fill = 0;
+    player.celestials.pelle.rifts.chaos.active = false;
+    player.celestials.pelle.rifts.chaos.reducedTo = 1;
+    player.celestials.pelle.rifts.recursion.fill = DC.D0;
+    player.celestials.pelle.rifts.recursion.active = false;
+    player.celestials.pelle.rifts.recursion.reducedTo = 1;
+    player.celestials.pelle.rifts.paradox.fill = DC.D0;
+    player.celestials.pelle.rifts.paradox.active = false;
+    player.celestials.pelle.rifts.paradox.reducedTo = 1;
+    player.celestials.pelle.progressBits = 0;
+    player.celestials.pelle.galaxyGenerator.unlocked = false;
+    player.celestials.pelle.galaxyGenerator.spentGalaxies = DC.D0;
+    player.celestials.pelle.galaxyGenerator.generatedGalaxies = DC.D0;
+    player.celestials.pelle.galaxyGenerator.phase = 0;
+    player.celestials.pelle.galaxyGenerator.sacrificeActive = false;
+    player.celestials.pelle.collapsed.upgrades = false;
+    player.celestials.pelle.collapsed.rifts = false;
+    player.celestials.pelle.collapsed.galaxies = false;
+    player.celestials.pelle.showBought = false;
+    player.dilation.studies = [];
+    player.dilation.active = false;
+    player.dilation.upgrades.clear();
+    player.dilation.rebuyables = {
+      1: new Decimal(),
+      2: new Decimal(),
+      3: new Decimal(),
+      11: new Decimal(),
+      12: new Decimal(),
+      13: new Decimal(),
+    };
+    Currency.tachyonParticles.reset();
+    player.dilation.nextThreshold = DC.E3;
+    player.dilation.baseTachyonGalaxies = DC.D0;
+    player.dilation.totalTachyonGalaxies = DC.D0;
+    Currency.dilatedTime.reset();
+    player.dilation.lastEP = DC.DM1;
+    resetChallengeStuff();
+    player.eternityChalls = {};
+    player.reality.unlockedEC = 0;
+    player.reality.lastAutoEC = DC.D0;
+    player.challenge.eternity.current = 0;
+    player.challenge.eternity.unlocked = 0;
+    player.challenge.eternity.requirementBits = 0;
+    Lazy.invalidateAll();
+    ECTimeStudyState.invalidateCachedRequirements();
+    player.IPMultPurchases = DC.D0;
+    Currency.infinityPower.reset();
+    player.postC4Tier = 0;
+    Currency.timeShards.reset();
+    Replicanti.reset(true);
+    Currency.eternityPoints.reset();
+    EternityUpgrade.epMult.reset();
+    Currency.eternities.reset();
+    player.eternityUpgrades.clear();
+    player.totalTickGained = DC.D0;
+    player.totalTickBought = DC.D0;
+    Currency.timeTheorems.reset();
+    resetEternityRuns();
+    secondSoftReset(false);
+    player.respec = false;
+    player.eterc8ids = 50;
+    player.eterc8repl = 40;
+    
+    InfinityDimensions.fullReset();
+    InfinityDimensions.resetAmount();
+    fullResetTimeDimensions();
+    resetTimeDimensions();
+    player.buyUntil10 = true;
+    player.sacrificed = DC.D0;
+    playerInfinityUpgradesOnReset();
+    Currency.infinityPoints.reset();
+    resetInfinityRuns();
+    Currency.infinities.reset();
+    Currency.infinitiesBanked.reset();
+    player.partInfinityPoint = 0;
+    player.partInfinitied = 0;
+    player.dimensionBoosts = DC.D0;
+    player.galaxies = DC.D0;
+    player.break = true;
+    resetTickspeed();
+    AntimatterDimensions.reset();
+    Currency.antimatter.reset();
+    initializeChallengeCompletions(true);
+    Achievement(188).lock();
+    Achievement(238).lock();
     pelle.isGameEnd = false;
     pelle.isDoomed = false;
   }

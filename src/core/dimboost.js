@@ -1,6 +1,7 @@
 import { DC } from "./constants";
 import { Currency } from "./currency";
 import { EternityChallenge } from "./eternity-challenge";
+import { Player } from "./player";
 
 class DimBoostRequirement {
   constructor(tier, amount) {
@@ -35,8 +36,11 @@ export class DimBoost {
         GlyphEffect.dimBoostPower,
         PelleRifts.recursion.milestones[0],
         PelleRifts.vacuum.milestones[3],
-        Decimal.max(Currency.shatterpower, 1).pow(Currency.shatterpowerconversionrate),
+        
       ).powEffectsOf(InfinityUpgrade.dimboostMult.chargedEffect);
+    if (expose.shatterpower.amount.gt(1)) {
+    boost = boost.times(expose.shatterpower.pow(Player.expose.shatterpowerconversionrate));
+    } 
     if (GlyphAlteration.isAdded("effarig")) boost = boost.pow(getSecondaryGlyphEffect("effarigforgotten"));
     return boost;
   }
