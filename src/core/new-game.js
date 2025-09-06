@@ -338,12 +338,12 @@ export const NG = {
     player.dilation.active = false;
     player.dilation.upgrades.clear();
     player.dilation.rebuyables = {
-      1: new Decimal(),
-      2: new Decimal(),
-      3: new Decimal(),
-      11: new Decimal(),
-      12: new Decimal(),
-      13: new Decimal(),
+      1: DC.D0,
+      2: DC.D0,
+      3: DC.D0,
+      11: DC.D0,
+      12: DC.D0,
+      13: DC.D0,
     };
     Currency.tachyonParticles.reset();
     player.dilation.nextThreshold = DC.E3;
@@ -399,7 +399,7 @@ export const NG = {
     player.eterc8repl = 40;
     player.auto.bigCrunch.mode = 0;
     player.auto.eternity.mode = 0;
-    Autobuyers.reset()
+    Autobuyers.reset();
     InfinityDimensions.fullReset();
     InfinityDimensions.resetAmount();
     fullResetTimeDimensions();
@@ -565,12 +565,12 @@ restartWithCarryoverPostShatter() {
     player.dilation.active = false;
     player.dilation.upgrades.clear();
     player.dilation.rebuyables = {
-      1: new Decimal(),
-      2: new Decimal(),
-      3: new Decimal(),
-      11: new Decimal(),
-      12: new Decimal(),
-      13: new Decimal(),
+      1: DC.D0,
+      2: DC.D0,
+      3: DC.D0,
+      11: DC.D0,
+      12: DC.D0,
+      13: DC.D0,
     };
     Currency.tachyonParticles.reset();
     player.dilation.nextThreshold = DC.E3;
