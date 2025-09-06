@@ -39,7 +39,7 @@ export class DimBoost {
         
       ).powEffectsOf(InfinityUpgrade.dimboostMult.chargedEffect);
     if (Player.expose.shatterpower.gt(1)) {
-    boost = boost.times(expose.shatterpower.pow(Player.expose.shatterpowerconversionrate));
+    boost = boost.times(Player.expose.shatterpower.pow(Player.expose.shatterpowerconversionrate));
     } 
     if (GlyphAlteration.isAdded("effarig")) boost = boost.pow(getSecondaryGlyphEffect("effarigforgotten"));
     return boost;
