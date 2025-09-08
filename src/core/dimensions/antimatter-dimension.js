@@ -18,9 +18,10 @@ export function antimatterDimensionCommonMultiplier() {
     BreakInfinityUpgrade.currentAMMult,
     BreakInfinityUpgrade.achievementMult,
     BreakInfinityUpgrade.slowestChallengeMult,
-    InfinityUpgrade.totalTimeMult,
     InfinityUpgrade.thisInfinityTimeMult,
     BreakInfinityUpgrade.antimatterBoost,
+    InfinityUpgrade.totalTimeMult,
+    InfinityUpgrade.totalTimeMult.chargedEffect,
     Achievement(48),
     Achievement(56),
     Achievement(65),
@@ -113,7 +114,7 @@ function applyNDMultipliers(mult, tier) {
       .timesEffectsOf(
         InfinityUpgrade.unspentIPMult,
         InfinityUpgrade.unspentIPMult.chargedEffect,
-        InfinityUpgrade.totalTimeMult,
+        
         Achievement(28),
         Achievement(31),
         Achievement(68),
@@ -159,7 +160,6 @@ function applyNDPowers(mult, tier) {
   multiplier = multiplier
     .powEffectsOf(
       AntimatterDimension(tier).infinityUpgrade.chargedEffect,
-      InfinityUpgrade.totalTimeMult.chargedEffect,
       InfinityUpgrade.thisInfinityTimeMult.chargedEffect,
       AlchemyResource.power,
       Achievement(183),
