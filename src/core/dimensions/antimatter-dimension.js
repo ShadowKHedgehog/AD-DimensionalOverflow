@@ -113,7 +113,7 @@ function applyNDMultipliers(mult, tier) {
       .timesEffectsOf(
         InfinityUpgrade.unspentIPMult,
         InfinityUpgrade.unspentIPMult.chargedEffect,
-        
+        InfinityUpgrade.totalTimeMult,
         Achievement(28),
         Achievement(31),
         Achievement(68),
