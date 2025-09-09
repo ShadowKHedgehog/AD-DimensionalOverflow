@@ -16,7 +16,7 @@ export const infinityUpgrades = {
     effect: () => Decimal.pow(AntimatterDimension(8).amount.div(1.3), 0.45),
     formatEffect: value => formatX(value, 2, 2),
     charged: {
-      description: "Antimatter Dimensions gain a power effect based on Infinity Points and Teresa level",
+      description: "Antimatter Dimensions gain a power effect based on Eigth Antimatter Dimension Amount and Teresa level",
       effect: () =>
         Decimal.pow(Player.antimatterDimensions[7].amount.div(1.3), 0.45).times(Decimal.pow(Ra.pets.teresa.level, 0.5)).div(150).add(1),
       formatEffect: value => formatPow(value, 4, 4)
