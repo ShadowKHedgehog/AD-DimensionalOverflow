@@ -203,8 +203,8 @@ export const normalAchievements = [
   {
     id: 41,
     name: "No DLC required",
-    get description() { return `Buy ${formatInt(16)} Infinity Upgrades.`; },
-    checkRequirement: () => player.infinityUpgrades.size >= 16,
+    get description() { return `Buy ${formatInt(12)} Infinity Upgrades.`; },
+    checkRequirement: () => player.infinityUpgrades.size >= 12,
     checkEvent: [
       GAME_EVENT.INFINITY_UPGRADE_BOUGHT,
       GAME_EVENT.REALITY_RESET_AFTER,
