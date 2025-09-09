@@ -20,8 +20,7 @@ export function antimatterDimensionCommonMultiplier() {
     BreakInfinityUpgrade.slowestChallengeMult,
     InfinityUpgrade.thisInfinityTimeMult,
     BreakInfinityUpgrade.antimatterBoost,
-    InfinityUpgrade.totalTimeMult,
-    InfinityUpgrade.totalTimeMult.chargedEffect,
+    
     Achievement(48),
     Achievement(56),
     Achievement(65),
@@ -43,7 +42,12 @@ export function antimatterDimensionCommonMultiplier() {
     AlchemyResource.dimensionality,
     PelleUpgrade.antimatterDimensionMult
   );
-
+  if (Player.infinityPoints.gte(1))
+    multiplier = multiplier.timesEffectsOf(
+      InfinityUpgrade.totalTimeMult,
+      InfinityUpgrade.totalTimeMult.chargedEffect,
+    );
+  
   multiplier = multiplier.dividedByEffectOf(InfinityChallenge(6));
   multiplier = multiplier.times(getAdjustedGlyphEffect("powermult"));
   multiplier = multiplier.times(Currency.realityMachines.value.powEffectOf(AlchemyResource.force));
