@@ -166,6 +166,7 @@ export function timeDimensionCommonMultiplier() {
         4)
         .clampMin(1));
   }
+    if (Currency.timedimensionpoints.gte(1)) mult = mult.times(player.expose.timedimensionpoints.pow(new Decimal(0.45)));
   return mult;
 }
 

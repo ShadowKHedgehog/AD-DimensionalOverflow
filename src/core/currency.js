@@ -494,3 +494,15 @@ Currency.shatterpowerconversionrate = new class extends DecimalCurrency {
   get value() { return player.expose.shatterpowerconversionrate; }
   set value(value) { player.expose.shatterpowerconversionrate = value; }
 }();
+Currency.antimatterdimensionpoints = new class extends DecimalCurrency {
+  get value() { return player.expose.antimatterdimensionpoints; }
+  set value(value) { player.expose.antimatterdimensionpoints = value; }
+}();
+Currency.infinitydimensionpoints = new class extends DecimalCurrency {
+  get value() { return player.expose.infinitydimensionpoints; }
+  set value(value) { player.expose.infinitydimensionpoints = value; }
+}();
+Currency.timedimensionpoints = new class extends DecimalCurrency {
+  get value() { return player.expose.timedimensionpoints; }
+  set value(value) { player.expose.timedimensionpoints = value; }
+}();

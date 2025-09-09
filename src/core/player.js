@@ -788,6 +788,9 @@ window.player = {
   expose: {
     shattershards: DC.D0,
     shatterpower: DC.D0,
+    antimatterdimensionpoints: DC.D0,
+    infinitydimensionpoints: DC.D0,
+    timeimensionpoints: DC.D0,
     shatterpowerconversionrate: DC.D0_46,
   },
   isGameEnd: false,

@@ -24,6 +24,7 @@ export function infinityDimensionCommonMultiplier() {
   if (Replicanti.areUnlocked && Replicanti.amount.gt(1)) {
     mult = mult.times(replicantiMult());
   }
+  if (Currency.infinitydimensionpoints.gte(1)) mult = mult.times(player.expose.infinitydimensionpoints.pow(new Decimal(0.45)));
 
   return mult;
 }

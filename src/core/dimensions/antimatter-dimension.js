@@ -43,7 +43,7 @@ export function antimatterDimensionCommonMultiplier() {
     PelleUpgrade.antimatterDimensionMult
   );
   if (Currency.infinityPoints.gte(1)) multiplier = multiplier.timesEffectsOf(InfinityUpgrade.totalTimeMult,InfinityUpgrade.totalTimeMult.chargedEffect);
-  
+  if (Currency.antimatterdimensionpoints.gte(1)) multiplier = multiplier.times(player.expose.antimatterdimensionpoints.pow(new Decimal(0.45)));
   multiplier = multiplier.dividedByEffectOf(InfinityChallenge(6));
   multiplier = multiplier.times(getAdjustedGlyphEffect("powermult"));
   multiplier = multiplier.times(Currency.realityMachines.value.powEffectOf(AlchemyResource.force));
