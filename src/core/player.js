@@ -792,6 +792,7 @@ window.player = {
     infinitydimensionpoints: DC.D0,
     timeimensionpoints: DC.D0,
     shatterpowerconversionrate: DC.D0_46,
+    remotegalaxypurchases: DC.D0
   },
   isGameEnd: false,
   tabNotifications: new Set(),
