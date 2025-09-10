@@ -43,7 +43,7 @@ class RemnantDimensionState extends DimensionState {
   get rateOfChange() {
     const tier = this.tier;
     let toGain = DC.D0;
-    toGain = InfinityDimension(tier + 1).productionPerSecond;
+    toGain = RemnantDimension(tier + 1).productionPerSecond;
     const current = Decimal.max(this.amount, 1);
     return toGain.times(10).dividedBy(current);
   }
