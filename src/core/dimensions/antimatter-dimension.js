@@ -304,14 +304,14 @@ export function buyMaxDimension(tier, bulk = Infinity) {
     bulkLeft = bulkLeft.sub(1);
   }
 
-  if (bulkLeft.lte(0)) return;
+  if (bulkLeft.lte(1)) return;
 
   // Buy in a while loop in order to properly trigger abnormal price increases
   if (NormalChallenge(9).isRunning || InfinityChallenge(5).isRunning) {
     while (dimension.isAffordableUntil10 && dimension.cost.lt(goal) && bulkLeft.gt(0)) {
       // We can use dimension.currencyAmount or Currency.antimatter here, they're the same,
       // but it seems safest to use dimension.currencyAmount for consistency.
-      dimension.currencyAmount = dimension.currencyAmount.minus(dimension.costUntil10).max(0);
+      dimension.currencyAmount = dimension.currencyAmount.minus(dimension.costUntil10);
       buyUntilTen(tier);
       bulkLeft = bulkLeft.sub(1);
     }
@@ -326,7 +326,7 @@ export function buyMaxDimension(tier, bulk = Infinity) {
     return;
   }
   let buying = maxBought.quantity;
-  if (buying.gt(bulkLeft)) buying = new Decimal(bulkLeft);
+  if (buying.gt(bulkLeft)) buying = new Decimal(bulkLeft).times(10);
   dimension.amount = dimension.amount.plus(buying.times(10));
   dimension.bought = dimension.bought.add(buying.times(10));
   dimension.currencyAmount = dimension.currencyAmount.minus(Decimal.pow10(maxBought.logPrice)).max(0);
