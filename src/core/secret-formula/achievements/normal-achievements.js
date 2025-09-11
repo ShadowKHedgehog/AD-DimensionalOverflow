@@ -1403,7 +1403,7 @@ export const normalAchievements = [
     name: "Energy Overflow",
     description: `Unlock the Pre-Reality Shatter Upgrade 'PostHaste'.`,
      get reward() {
-      return `Antimatter Dimensions are boosted by ${formatPercents(13.5)}.`;
+      return `Antimatter Dimensions are boosted by ${formatPercents(1.35)}.`;
     },
     effect: 1.35
   },
