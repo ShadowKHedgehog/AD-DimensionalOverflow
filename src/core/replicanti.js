@@ -152,8 +152,8 @@ export function totalReplicantiSpeedMult(overCap) {
   if (!overCap && Achievement(134).isUnlocked) {
     totalMult = totalMult.times(2);
   }
-  
-  if (!overCap && Achievement(194).isUnlocked) {
+
+  if (Achievement(194).isUnlocked) {
     totalMult = totalMult.times(500);
   }
   
