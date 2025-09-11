@@ -1385,6 +1385,10 @@ export const normalAchievements = [
     id: 191,
     name: "Shattered Reality",
     description: `Shatter Reality for the First Time.`,
+    get reward() {
+      return `Antimatter Dimensions are multiplied by ${FormatX(12.5,0,2)}`;
+    },
+    effect: 12.5
   },
   {
     id: 192,
@@ -1399,7 +1403,7 @@ export const normalAchievements = [
     name: "Energy Overflow",
     description: `Unlock the Pre-Reality Shatter Upgrade 'PostHaste'.`,
      get reward() {
-      return `Antimatter Dimensions are boosted by 135%.`;
+      return `Antimatter Dimensions are boosted by ${formatPercents(13.5)}.`;
     },
     effect: 1.35
   },
@@ -1416,11 +1420,20 @@ export const normalAchievements = [
     id: 195,
     name: "Between Dimensions",
     description: `Reach 30 First Time Dimensions.`,
+    get reward() {
+      return `Increase ShatterPower Conversion Rate by ${format(new Decimal(0.07))}`;
+    },
+    effect: 0.07
   },
+  
   {
     id: 196,
     name: "Teresa.",
     description: `Unlock Teresa again.`,
+    get reward() {
+      return `EP Gain ${formatX(DC.E50,0,2)}.`;
+    },
+    effect: DC.E50
   },
   {
     id: 197,
@@ -1431,6 +1444,10 @@ export const normalAchievements = [
     id: 198,
     name: "The Memory Cap",
     description: `Reach Teresa, Effarig, Nameless Ones, and V's Memory Level 25.`,
+    get reward() {
+      return `IP Gain ${formatX(DC.E120,0,2)}.`;
+    },
+    effect: DC.E120
     
   },
   {
@@ -1475,6 +1492,10 @@ export const normalAchievements = [
     id: 208,
     name: "Shadows Fall",
     description: `Beat The Unnamed's Reality for the First Time.`,
+    get reward() {
+      return `Increase ShatterPower Conversion Rate by ${format(0.15)}`;
+    },
+    effect: 0.15
   },
   {
     id: 211,

@@ -126,6 +126,7 @@ function totalEPMult() {
         TimeStudy(122),
         TimeStudy(121),
         TimeStudy(123),
+        Achievement(196),
         RealityUpgrade(12),
         GlyphEffect.epMult
       );
