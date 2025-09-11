@@ -1386,7 +1386,7 @@ export const normalAchievements = [
     name: "Shattered Reality",
     description: `Shatter Reality for the First Time.`,
     get reward() {
-      return `Antimatter Dimensions are multiplied by ${FormatX(12.5,0,2)}`;
+      return `Antimatter Dimensions are multiplied by x12.5`;
     },
     effect: 12.5
   },

@@ -2,12 +2,12 @@ export const unnamedQuotes = {
   initial: {
     id: 0,
     lines: [
-      "....",
-      { text: "Suffering.. Thats all thats there..", showCelestialName: false }
-      { text: "I will pass to live another day..", showCelestialName: false }
-      { text: "Wont you call out your friends again?", showCelestialName: false }
-      { text: "Maybe we may meet soon enough.", showCelestialName: false }
-      { text: "See you soon, Destroyer.", showCelestialName: false }
+      { text: "...", showCelestialName: false },
+      { text: "Suffering.. Thats all thats there..", showCelestialName: false },
+      { text: "I will pass to live another day..", showCelestialName: false },
+      { text: "Wont you call out your friends again?", showCelestialName: false },
+      { text: "Maybe we may meet soon enough.", showCelestialName: false },
+      { text: "See you soon, Destroyer.", showCelestialName: false },
     ]
   },
   unlockcel: {
