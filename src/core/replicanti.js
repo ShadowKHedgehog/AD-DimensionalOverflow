@@ -153,6 +153,10 @@ export function totalReplicantiSpeedMult(overCap) {
     totalMult = totalMult.times(2);
   }
   
+  if (!overCap && Achievement(194).isUnlocked) {
+    totalMult = totalMult.times(500);
+  }
+  
   totalMult = totalMult.times(getAdjustedGlyphEffect("replicationspeed"));
   if (GlyphAlteration.isAdded("replication")) {
     totalMult = totalMult
