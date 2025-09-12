@@ -33,7 +33,7 @@ class RemnantDimensionState extends DimensionState {
   }
 
   get isAvailableForPurchase() {
-    return InfinityDimensions.canBuy() && this.isAffordable && !this.isCapped;
+    return RemnantDimensions.canBuy() && this.isAffordable && !this.isCapped;
   }
 
   get isAffordable() {
@@ -187,7 +187,7 @@ export const RemnantDimensions = {
       RemnantDimension(tier).produceDimensions(RemnantDimension(tier - 1), diff.div(10));
     }
 
-    RemnantDimension(1).produceCurrency(Currency.shatterPower, diff);
+    RemnantDimension(1).produceCurrency(Currency.shatterpower, diff);
   },
 
   // Called from "Max All" UI buttons and nowhere else
