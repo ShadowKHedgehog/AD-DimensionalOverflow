@@ -205,6 +205,6 @@ export const RemnantDimensions = {
   },
 
   get shatterPowerConversionRate() {
-    return Pelle.isDoomed ? new Decimal(0.45) : new Decimal(0.24);
+    return Pelle.isDoomed ? new Decimal(0.24) : Currency.shatterpowerconversionrate;
   }
 };
