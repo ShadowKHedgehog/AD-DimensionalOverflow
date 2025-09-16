@@ -1395,8 +1395,9 @@ export const normalAchievements = [
     name: "Its Been Meta",
     description: `Buy a Remnant Dimension.`,
     get reward() {
-      return `You feel 30% Better.`;
-    }
+      return `Delay Galaxy Scaling by 300.`;
+    },
+    effect: 100
   },
   {
     id: 193,
@@ -1454,6 +1455,10 @@ export const normalAchievements = [
     id: 201,
     name: "Explosion",
     description: `Unlock Ra's Auto Memory Gain.`,
+    get reward() {
+      return `Galaxy Remote Start Delayed by ${format(DC.E7)} galaxies.`;
+    },
+    effect: DC.E7
   },
   {
     id: 202,

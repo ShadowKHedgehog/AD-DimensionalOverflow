@@ -1,6 +1,7 @@
 /* eslint-disable line-comment-position */
 /* eslint-disable no-inline-comments */
 import { DC } from "./constants";
+import { Achievement } from "./globals";
 
 export const GALAXY_TYPE = {
   NORMAL: 0,
@@ -22,7 +23,7 @@ class GalaxyRequirement {
 
 export class Galaxy {
   static get remoteStart() {
-    return Decimal.max(800, RealityUpgrade(21).effectOrDefault(0));
+    return Decimal.max((800, RealityUpgrade(21).effectOrDefault(0)) + Achievement(201).effectOrDefault(0));
   }
 
   static get requirement() {
@@ -174,7 +175,8 @@ export class Galaxy {
       TimeStudy(223),
       TimeStudy(224),
       TimeStudy(302),
-      EternityChallenge(5).reward
+      EternityChallenge(5).reward,
+      Achievement(192).effectOrDefault(0)
     ).add(GlyphInfo.power.sacrificeInfo.effect());
   }
 
