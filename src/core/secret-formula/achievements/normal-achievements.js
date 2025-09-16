@@ -1397,7 +1397,7 @@ export const normalAchievements = [
     get reward() {
       return `Delay Galaxy Scaling by 300.`;
     },
-    effect: 100
+    effect: 300
   },
   {
     id: 193,
