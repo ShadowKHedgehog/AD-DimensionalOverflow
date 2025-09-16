@@ -23,7 +23,10 @@ class GalaxyRequirement {
 
 export class Galaxy {
   static get remoteStart() {
-    return Decimal.max((800, RealityUpgrade(21).effectOrDefault(0)) + Achievement(201).effectOrDefault(0));
+    return new Decimal(800).plusEffectsOf(
+      RealityUpgrade(21),
+      Achievement(201),
+    );
   }
 
   static get requirement() {
@@ -176,7 +179,7 @@ export class Galaxy {
       TimeStudy(224),
       TimeStudy(302),
       EternityChallenge(5).reward,
-      Achievement(192).effectOrDefault(0)
+      Achievement(192),
     ).add(GlyphInfo.power.sacrificeInfo.effect());
   }
 
