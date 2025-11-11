@@ -1668,6 +1668,11 @@ export const normalAchievements = [
     description: `Vanquish the Titan lurking in Lai'tela's EX reality.`,
   },
   {
+    id: 247,
+    name: "The Seventh Titan Falls",
+    description: `Vanquish the Titan lurking in Luna's EX reality.`,
+  },
+  {
     id: 248,
     name: "The Expert",
     description: `Finish The Unnamed's True Reality.`,
