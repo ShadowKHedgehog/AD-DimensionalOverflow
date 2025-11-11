@@ -1509,6 +1509,7 @@ export const normalAchievements = [
     get reward() {
       return `Unlock Antimatter Recovery Center`;
     },
+    effect: () => "Placeholder"
   },
   {
     id: 212,
@@ -1516,7 +1517,8 @@ export const normalAchievements = [
     description: `Reach 1ee50 AM.`,
     get reward() {
       return `The Final Act. (Its almost over)`;
-    }
+    },
+    effect: () => "Placeholder"
   },
   {
     id: 213,
