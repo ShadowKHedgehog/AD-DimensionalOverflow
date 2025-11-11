@@ -1713,6 +1713,36 @@ export const normalAchievements = [
     description: `Return to Pelle's Reality after discovering the Eternal Fountain.`,
   },
   {
+    id: 262,
+    name: "Houston, this is bullshit.",
+    description: `Be softcapped at 1e50 AM in Eternal Pelle.`,
+  },
+  {
+    id: 263,
+    name: "This is more bullshit.",
+    description: `Reach Infinity in Eternal Pelle.`,
+  },
+  {
+    id: 264,
+    name: "Save Teresa and Effarig.",
+    description: `Beat Teresa and Effarig's Corrupted Realities`,
+  },
+  {
+    id: 265,
+    name: "Save Nameless Ones and V.",
+    description: `Beat Nameless Ones and V's Corrupted Realities`,
+  },
+  {
+    id: 266,
+    name: "Save Ra and Lai'tela.",
+    description: `Beat Ra and Lai'tela's Corrupted Realities`,
+  },
+  {
+    id: 267,
+    name: "Goodbye Pelle..",
+    description: `Reach Galaxy Generator again.`,
+  },
+  {
     id: 268,
     name: "Vanquisher",
     description: `Beat Eternal Pelle.`,
