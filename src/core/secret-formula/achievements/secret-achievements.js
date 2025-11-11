@@ -206,28 +206,28 @@ export const secretAchievements = [
   },
   {
     id: 53,
-    name: "For a friend inside me",
-    description: "Imported 'Friend Inside Me' into the import"
-  },
-  {
-    id: 54,
     name: "Can we go home?",
     description: "No, we cannot."
   },
   {
-    id: 55,
+    id: 54,
     name: "IS THAT SANS DELTARUNE??",
     description: "Imported 'Megalovania' into the import"
   },
   {
-    id: 56,
+    id: 55,
     name: "God no.",
     description: "Imported 'wanna see me speedbridge' into the import"
   },
   {
-    id: 57,
+    id: 56,
     name: "I lost contact",
     description: "somehow break your game, tell me what you did wrong."
+  },
+  {
+    id: 57,
+    name: "I CANT EXIT DILATION??",
+    description: "Tried exiting Dilation in Sercanote's Reality. You should know better"
   },
   {
     id: 58,

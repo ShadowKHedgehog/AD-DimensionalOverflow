@@ -1504,59 +1504,27 @@ export const normalAchievements = [
   },
   {
     id: 211,
-    name: "Faulty Hardware",
-    description: `I dont think you were meant to reach ee25 AM just yet.`,
+    name: "AM Recovery Center!",
+    description: `Reached 1ee25 AM.`,
+    get reward() {
+      return `Unlock Antimatter Recovery Center`;
+    },
   },
   {
     id: 212,
-    name: "Supersonic-Seven's Guidance",
-    description: `Unlock Supersonic-Seven's Minigame World.`,
-  },
-  {
-    id: 213,
-    name: "The First Titan Falls",
-    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
-  },
-  {
-    id: 214,
-    name: "The Second Titan Falls",
-    description: `Vanquish the Titan lurking in Effarig's EX reality.`,
-  },
-  {
-    id: 215,
-    name: "The Third Titan Falls",
-    description: `Vanquish the Titan lurking in V's EX reality.`,
-  },
-  {
-    id: 216,
-    name: "The Fourth Titan Falls",
-    description: `Vanquish the Titan lurking in Nameless One's EX reality.`,
-  },
-  {
-    id: 217,
-    name: "The Fifth Titan Falls",
-    description: `Vanquish the Titan lurking in Ra's EX reality.`,
-  },
-  {
-    id: 218,
-    name: "The Sixth Titan Falls",
-    description: `Vanquish the Titan lurking in Lai'tela's EX reality.`,
-  },
-  {
-    id: 221,
-    name: "The Expert",
-    description: `Finish The Unnamed's True Reality.`,
-  },
-  {
-    id: 222,
     name: "Antimatter Broken",
-    description: `Reach ee50 AM.`,
+    description: `Reach 1ee50 AM.`,
     get reward() {
       return `The Final Act. (Its almost over)`;
     }
   },
   {
-    id: 223,
+    id: 213,
+    name: "Reach your Hardcap.",
+    description: `Reach 1ee50 AM`,
+  },
+  {
+    id: 214,
     name: "Infinity Broken",
     description: `Reach ee49 IP.`,
     get reward() {
@@ -1565,7 +1533,7 @@ export const normalAchievements = [
     effect: () => "Itsveryalmostover"
   },
   {
-    id: 224,
+    id: 215,
     name: "Eternity Broken",
     description: `Reach ee48 EP.`,
     get reward() {
@@ -1574,42 +1542,178 @@ export const normalAchievements = [
     effect: () => "Its truly almost over"
   },
   {
+    id: 216,
+    name: "Hardcap Break 2",
+    description: `Break past the 1ee50 AM Hardcap`,
+  },
+  {
+    id: 217,
+    name: "Simply Realistic",
+    description: `Complete Luna's Base Reality`,
+  },
+  {
+    id: 218,
+    name: "Singularity Exposition",
+    description: `Find the way to raise the Dark Matter hardcap to 3.2e616`,
+  },
+  {
+    id: 221,
+    name: "Singularity Overflow.",
+    description: `Reach 1.0e150 Singularities`,
+  },
+  {
+    id: 222,
+    name: "The First Anti-Antihistorian.",
+    description: `Reach 11 Reverse-Singularities`,
+  },
+  {
+    id: 223,
+    name: "Hot Burning Birds in your area.",
+    description: `Reach the 3rd Reverse-DarkMatter Dimension`,
+  },
+  {
+    id: 224,
+    name: "Rapid Cloning Incarnate.",
+    description: `Unlock The Unnamed's First Challenge`,
+  },
+  {
     id: 225,
+    name: "First Celestial Wielder",
+    description: `Beat the first 5 Challenges of The Unnamed`,
+  },
+  {
+    id: 226,
+    name: "Exposition Incarnate",
+    description: `Beat the 15th Challenge of The Unnamed`,
+  },
+  {
+    id: 227,
+    name: "ICUP",
+    description: `Unlock Reverse-Infinity Button`,
+  },
+  {
+    id: 228,
+    name: "QUIT IT",
+    description: `Unlock Reverse-Eternity Button`,
+  },
+  {
+    id: 231,
+    name: "Memories.",
+    description: `Destroy Pelle's Base Reality to piss him off`,
+  },
+  {
+    id: 232,
+    name: "Teresa Destruction",
+    description: `Destroy Teresa's Base Reality to unlock Teresa's EX Reality`,
+  },
+  {
+    id: 233,
+    name: "V Destruction",
+    description: `Destroy V's Base Reality to unlock V's EX Reality`,
+  },
+  {
+    id: 234,
+    name: "Nameless's Destruction",
+    description: `Destroy The Nameless Ones' Base Reality to unlock The Nameless Ones' EX Reality`,
+  },
+  {
+    id: 235,
+    name: "Effarig Destruction",
+    description: `Destroy Effarig's Base Reality to unlock Effarig's EX Reality`,
+  },
+  {
+    id: 236,
+    name: "Lai'tela Destruction",
+    description: `Destroy Lai'tela's Base Reality to unlock Lai'tela's EX Reality`,
+  },
+  {
+    id: 237,
+    name: "Ra Destruction",
+    description: `Destroy Ra's Base Reality to unlock Ra's EX Reality`,
+  },
+  {
+    id: 238,
+    name: "Pelle Destruction 2",
+    description: `Destroy Pelle's Second Reality to unlock Pelle's EX Reality`,
+  },
+  
+  {
+    id: 241,
+    name: "The First Titan Falls",
+    description: `Vanquish the Titan lurking in Teresa's EX reality.`,
+  },
+  {
+    id: 242,
+    name: "The Second Titan Falls",
+    description: `Vanquish the Titan lurking in Effarig's EX reality.`,
+  },
+  {
+    id: 243,
+    name: "The Third Titan Falls",
+    description: `Vanquish the Titan lurking in V's EX reality.`,
+  },
+  {
+    id: 244,
+    name: "The Fourth Titan Falls",
+    description: `Vanquish the Titan lurking in Nameless One's EX reality.`,
+  },
+  {
+    id: 245,
+    name: "The Fifth Titan Falls",
+    description: `Vanquish the Titan lurking in Ra's EX reality.`,
+  },
+  {
+    id: 246,
+    name: "The Sixth Titan Falls",
+    description: `Vanquish the Titan lurking in Lai'tela's EX reality.`,
+  },
+  {
+    id: 248,
+    name: "The Expert",
+    description: `Finish The Unnamed's True Reality.`,
+  },
+  {
+    id: 252,
+    name: "Supersonic-Seven's Guidance",
+    description: `Unlock Supersonic-Seven's Minigame World.`,
+  },
+  {
+    id: 253,
     name: "Left for Dead",
     description: `Beat Pelle's EX Reality.`,
   },
   {
-    id: 226,
+    id: 254,
     name: "Lost to Forget",
     description: `Beat The Unnamed and Pelle's Duo Reality.`,
   },
   {
-    id: 227,
+    id: 255,
     name: "Forget I said anything.",
     description: `Free The Unnamed.`,
   },
   {
-    id: 228,
+    id: 256,
     name: "Rapid Acceleration",
     description: `Unlock Metaworld.`,
   },
   {
-    id: 231,
+    id: 257,
     name: "Valid Crashout",
-    description: `Break the Hardcap.`,
+    description: `Push the 1ee100 AM softcap to 1ee150 AM.`,
   },
   {
-    id: 232,
+    id: 258,
     name: "The Final Show",
     description: `Discover the Eternal Fountain.`,
   },
   {
-    id: 233,
+    id: 261,
     name: "I think we have a problem.",
     description: `Return to Pelle's Reality after discovering the Eternal Fountain.`,
   },
   {
-    id: 234,
+    id: 268,
     name: "Vanquisher",
     description: `Beat Eternal Pelle.`,
     get reward() {
@@ -1618,22 +1722,82 @@ export const normalAchievements = [
     effect: () => "Placeholder"
   },
   {
-    id: 235,
+    id: 271,
     name: "Virtual Reality",
     description: `Enter The Final Celestial Reality.`,
   },
   {
-    id: 236,
+    id: 272,
+    name: "Not done Yet.",
+    description: `Reach Infinity in the Final Celestial.`,
+  },
+  {
+    id: 273,
+    name: "Getting close..",
+    description: `Break Infinity In the Final Celestial's Reality.`,
+  },
+  {
+    id: 274,
+    name: "Witchcraft",
+    description: `Reach 1e150 IP in the Final Celestial's Reality.`,
+  },
+  {
+    id: 275,
+    name: "Oh god what the f...?",
+    description: `Reach 1.8e308 IP in the Final Celestial.`,
+  },
+  {
+    id: 276,
+    name: "Okay... Getting there",
+    description: `Reach Eternity in the Final Celestial.`,
+  },
+  {
+    id: 277,
+    name: "Wait, I'm inside dilation already?",
+    description: `Unlock Dilation and find out you're in Dilation already.`,
+  },
+  {
+    id: 278,
+    name: "Time Study Affirmative",
+    description: `Unlock all Time Studies again.`,
+  },
+  {
+    id: 281,
+    name: "I CAN DO A REALITY RESET???",
+    description: `Reach Reality and be able to do Reality in the Final Celestial's Reality, You are still trapped however..`,
+  },
+  {
+    id: 282,
+    name: "Smooth Going",
+    description: `Reach 1e15 RM inside of the Final Celestial's Reality.`,
+  },
+  {
+    id: 283,
+    name: "Reality Machine Generator?",
+    description: `Reach Strike 12 in the Final Celestial's Reality.`,
+  },
+  {
+    id: 284,
+    name: "Reality Machine Generator?",
+    description: `Destroy Strike 1 in the Final Celestial's Reality using the Reality Machine Generator.`,
+  },
+  {
+    id: 285,
     name: "The Finale",
     description: `Start Generating Negative Galaxies.`,
   },
   {
-    id: 237,
+    id: 286,
     name: "The Fall",
     description: `Have them destroy your Negative Galaxies, start generating Eterntiy Galaxies.`,
   },
   {
-    id: 238,
+    id: 287,
+    name: "The End?",
+    description: `Unlock Eternity Galaxy Replication.`,
+  },
+  {
+    id: 288,
     name: "The TRUE END",
     description: `THE END HAS COME WE HOPE TO SEE YOU AGAIN.`,
     get reward() {
