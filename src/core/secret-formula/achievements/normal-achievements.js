@@ -1680,6 +1680,11 @@ export const normalAchievements = [
     description: `Finish The Unnamed's True Reality.`,
   },
   {
+    id: 251,
+    name: "Can we live a real life?",
+    description: `Unlock The Alchemy Cap Increaser.`,
+  },
+  {
     id: 252,
     name: "Supersonic-Seven's Guidance",
     description: `Unlock Supersonic-Seven's Minigame World.`,
