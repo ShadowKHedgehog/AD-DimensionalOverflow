@@ -784,6 +784,9 @@ window.player = {
       showBought: false,
     }
   },
+  sercanote: {
+      trapped: false,
+  },
   exposes: DC.D0,
   expose: {
     shattershards: DC.D0,

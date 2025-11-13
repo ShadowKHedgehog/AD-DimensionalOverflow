@@ -123,7 +123,8 @@ export default {
     isObscured(row) {
       if (!this.isDoomed && player.exposes.lt(1)) return row >= 17;
       if (this.isDoomed && player.exposes.lt(1)) return row >= 18;
-      if (player.exposes.gte(1)) return row >= 25;
+      if (player.exposes.gte(1)) return row >= 26;
+      if (player.celestials.sercanote.trapped) return row >= 28;
     },
     timeDisplay,
     timeDisplayNoDecimals,

@@ -33,8 +33,8 @@ export const unnamedQuotes = {
     id: 3,
     lines: [
       ".",
-      "They squeezed... this Reality... too tightly. Cracks appeared.",
-      "Search... everywhere. We will help... where we can.",
+      "Make yourself at home..",
+      "Its not much right now though.",
     ]
   },
   UnlockPermGalaxyGen: {
@@ -45,18 +45,16 @@ export const unnamedQuotes = {
       { text: "You have unlocked the Permanent Galaxy Generator.", showCelestialName: false }
     ]
   },
-  runec12ic8: {
+  memoryrecovered: {
     id: 5,
     lines: [
-      "... did not... underestimate you..."
+      "Thank you for recovering my memories."
     ]
   },
   completeReality: {
     id: 6,
     lines: [
-      "All... fragments... clones... freed.",
-      "We have given... tools... of our imprisoning. Use them...",
-      "Freedom from torture... is torture itself.",
+      "Come back Soon, Destroyer."
     ]
   },
 };
