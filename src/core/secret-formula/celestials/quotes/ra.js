@@ -127,4 +127,13 @@ export const raQuotes = {
       "I do not want to hurt you too.",
     ]
   },
+  Jearly: {
+    id: 14,
+    requirement: () => Ra.pets.v.level >= 50,
+    lines: [
+      "I think I remember this new Celestial...",
+      "I believe they have forogtten their memories.",
+      "Please Help me make them remember who they are",
+    ]
+  },
 };

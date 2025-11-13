@@ -435,4 +435,13 @@ export const pelleQuotes = {
       },
     ],
   },
+  return: {
+    id: 12,
+    lines: [
+      ".... Nice to see you again. I didnt die. good luck getting out of here a se- ARE THOSE MY DIMENSIONS YOU HAVE!?",
+      "You... YOU.... YOU HORRID LITTLE DESTROYER...",
+      "....",
+      "HA! I NERFED THEM HERE! GOOD LUCK!"
+    ],
+  },
 };

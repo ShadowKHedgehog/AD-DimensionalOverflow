@@ -39,6 +39,16 @@ export const ra = {
       requiredUnlock: () => Ra.unlocks.vUnlock,
       rawMemoryChunksPerSecond: () => Decimal.pow(Currency.infinityPower.value.add(1).log10().div(1e7), 1.5).mul(4),
       memoryProductionMultiplier: () => Ra.unlocks.vXP.effectOrDefault(new Decimal(1))
+    },
+    j: {
+      id: "josearthu",
+      name: "The Unnamed",
+      color: "#edd988ff",
+      chunkGain: "ShatterPower",
+      memoryGain: "Total Memory Level",
+      requiredUnlock: () => Ra.unlocks.jUnlock,
+      rawMemoryChunksPerSecond: () => Decimal.pow(Currency.infinityPower.value.add(1).log10().div(1e7), 1.5).mul(4),
+      memoryProductionMultiplier: () => Ra.unlocks.vXP.effectOrDefault(new Decimal(1))
     }
   },
   unlocks: {
@@ -291,6 +301,13 @@ export const ra = {
       level: 25,
       displayIcon: `<i class="fab fa-buffer"></i>`,
       disabledByPelle: true
-    }
+    },
+    jUnlock: {
+      id: 28,
+      reward: "Unlock The Unnamed's Memories",
+      pet: "V",
+      level: 50,
+      displayIcon: `⌭`
+    },
   }
 };

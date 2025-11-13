@@ -33,7 +33,7 @@ export function playerInfinityUpgradesOnReset() {
       "totalMult", "currentMult", "postGalaxy",
       "challengeMult", "achievementMult", "infinitiedMult",
       "infinitiedGeneration", "autoBuyerUpgrade", "autobuyMaxDimboosts",
-      "ipOffline"]
+      "antimatterBoost"]
   );
 
   if (PelleUpgrade.keepBreakInfinityUpgrades.canBeApplied) {
