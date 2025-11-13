@@ -156,11 +156,11 @@ export const Sercanote = {
   },
 
   get cel() {
-    return player.celestials.pelle;
+    return player.celestials.sercanote;
   },
 
-  get isDoomed() {
-    return this.cel.doomed;
+  get isTrapped() {
+    return this.cel.trapped;
   },
 
  
