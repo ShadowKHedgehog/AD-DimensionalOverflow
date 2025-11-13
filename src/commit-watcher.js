@@ -20,7 +20,7 @@ export function watchLatestCommit() {
         }
 
         Modal.message.show(
-          "Refresh the page (game will be saved), we've got new stuff: " +
+          "Your game will be saved and the page will refresh to add this new content: " +
           `"${json.message}" by ${json.author}`,
           {
             callback: updateRefresh,
