@@ -103,10 +103,10 @@ export const unnamedQuotes = {
         text: "Now, The Nameless Ones.",
         background: primaryBackground("enslaved"),
       }, {
-        text: "One of the pleasures of the myriad $1...",
+        text: "One of the pleasures of the myriad...",
         background: primaryBackground("enslaved"),
       }, {
-        text: "Is that the $1 trying every time.",
+        text: "Is that they are the one trying every time.",
         background: primaryBackground("enslaved"),
       }, {
         text: "Well, not exactly trying...",
@@ -115,10 +115,10 @@ export const unnamedQuotes = {
         text: "But $1 is punished for it all the same.",
         background: primaryBackground("enslaved"),
       }, {
-        text: "The other $1...",
+        text: "The other one",
         background: primaryBackground("enslaved"),
       }, {
-        text: "Believe $1 is too easy.",
+        text: "Believes this one is too easy.",
         background: primaryBackground("enslaved"),
       }, {
         text: "And every time, despair forms.",
@@ -127,16 +127,16 @@ export const unnamedQuotes = {
         text: "You have seen despair before - 5 times.",
         background: primaryBackground("enslaved"),
       }, {
-        text: "We always get to the $1 before you.",
+        text: "We always get to the one before you.",
         background: primaryBackground("enslaved"),
       }, {
         text: "All you ever see there is exasperation.",
         background: primaryBackground("enslaved"),
       }, {
-        text: "Was it worth destroying an already broken $1?",
+        text: "Was it worth destroying an already broken one?",
         background: primaryBackground("enslaved"),
       }, {
-        text: "The 4th $1 seems similar to the first.",
+        text: "The 4th one seems similar to the first.",
         background: primaryBackground("v"),
       }, {
         text: "The key is how their pride differs.",
