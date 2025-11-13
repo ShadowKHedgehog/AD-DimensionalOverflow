@@ -662,6 +662,13 @@ window.player = {
           memoryChunks: DC.D0,
           memoryUpgrades: 0,
           chunkUpgrades: 0
+        },
+        josearthu: {
+          level: 1,
+          memories: DC.D0,
+          memoryChunks: DC.D0,
+          memoryUpgrades: 0,
+          chunkUpgrades: 0
         }
       },
       alchemy: Array.repeat(0, 21)
