@@ -5,7 +5,7 @@ import { Pelle } from "./pelle/pelle";
 import { Ra } from "./ra/ra";
 import { Teresa } from "./teresa";
 import { V } from "./V";
-import { Sercanote } from "./Sercanote/Sercanote";
+import { Sercanote } from "./Sercanote/sercanote";
 
 export const Celestials = {
   teresa: Teresa,
