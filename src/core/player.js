@@ -783,11 +783,12 @@ window.player = {
         galaxies: false
       },
       showBought: false,
-    }
-  },
-  sercanote: {
+    },
+    sercanote: {
       trapped: false,
+   },
   },
+  
   exposes: DC.D0,
   expose: {
     shattershards: DC.D0,
