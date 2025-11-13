@@ -5,6 +5,7 @@ import { Pelle } from "./pelle/pelle";
 import { Ra } from "./ra/ra";
 import { Teresa } from "./teresa";
 import { V } from "./V";
+import { Sercanote } from "./Sercanote/Sercanote";
 
 export const Celestials = {
   teresa: Teresa,
@@ -13,7 +14,8 @@ export const Celestials = {
   v: V,
   ra: Ra,
   laitela: Laitela,
-  pelle: Pelle
+  pelle: Pelle,
+  sercanote: Sercanote,
 };
 
 GameDatabase.celestials.descriptions = [
