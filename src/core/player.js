@@ -1,7 +1,6 @@
 import { AutomatorPanels } from "@/components/tabs/automator/AutomatorDocs";
 import { GlyphInfo } from "./secret-formula/reality/core-glyph-info";
 import { GlyphInfoVue } from "@/components/modals/options/SelectGlyphInfoDropdown";
-
 import { AUTOMATOR_MODE, AUTOMATOR_TYPE } from "./automator/automator-backend";
 import { DC } from "./constants";
 import { deepmergeAll } from "@/utility/deepmerge";
