@@ -107,7 +107,7 @@ export const Sercanote = {
   },
 
   get isUnlocked() {
-    return ImaginaryUpgrade(25).isBought;
+    // nah
   },
   // This will check if a specific mechanic is disabled, like old PelleFlag(x).isActive,
   // Initially it will only have isDoomed check but we will have upgrades that let you get stuff back
@@ -149,9 +149,8 @@ export const Sercanote = {
   },
 
   gameLoop(diff) {
-    if (this.isDoomed) {
-      Currency.realityShards.add(this.realityShardGainPerSecond.times(diff).div(1000));
-      PelleRifts.all.forEach(r => r.fill(diff));
+    if (this.isTrapped) {
+
     }
   },
 

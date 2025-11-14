@@ -31,6 +31,7 @@ export default {
   },
   computed: {
     isDoomed: () => Pelle.isDoomed,
+    isTrapped: () => Sercanote.isTrapped,
     rows: () => Achievements.allRows,
     renderedRows() {
       return this.rows.filter((_, i) => this.renderedRowIndices.includes(i));
