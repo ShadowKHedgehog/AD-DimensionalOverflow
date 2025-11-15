@@ -125,7 +125,7 @@ export default {
       if (!this.isDoomed && player.exposes.lt(1)) return row >= 17;
       if (this.isDoomed && player.exposes.lt(1)) return row >= 18;
       if (player.exposes.gte(1)) return row >= 26;
-      if (this.isTrapped) return row >= 28;
+      if (this.isTrapped && player.exposes.gte(1)) return row >= 28;
     },
     timeDisplay,
     timeDisplayNoDecimals,
