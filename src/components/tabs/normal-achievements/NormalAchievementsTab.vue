@@ -122,7 +122,7 @@ export default {
       return this.renderedRowIndices.includes(row);
     },
     isObscured(row) {
-      if (this.isTrapped) return row >= 28;
+      if (player.celestials.sercanote.trapped) return row >= 28;
       if (player.exposes.gte(1)) return row >= 26;
       if (this.isDoomed) return row >= 18;
       if (!this.isDoomed) return row >= 17;
