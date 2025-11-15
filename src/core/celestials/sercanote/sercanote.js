@@ -74,7 +74,7 @@ export const Sercanote = {
     player.IPMultPurchases = DC.D0;
     Autobuyer.bigCrunch.mode = AUTO_CRUNCH_MODE.AMOUNT;
     disChargeAll();
-    clearCelestialRuns();
+
 
     // Force-enable the group toggle for AD autobuyers to be active; whether or not they can actually tick
     // is still handled through if the autobuyers are unlocked at all. This fixes an odd edge case where the player
@@ -83,7 +83,7 @@ export const Sercanote = {
     player.auto.antimatterDims.isActive = true;
 
     player.buyUntil10 = true;
-    player.records.realTimeDoomed = 0;
+    
     for (const res of AlchemyResources.all) res.amount = 0;
     AutomatorBackend.stop();
 
@@ -150,7 +150,7 @@ export const Sercanote = {
 
   gameLoop(diff) {
     if (this.isTrapped) {
-
+      // nah
     }
   },
 
