@@ -159,7 +159,7 @@ export const Sercanote = {
   },
 
   get isTrapped() {
-    return this.cel.trapped;
+    return player.celestials.sercanote.trapped;
   },
 
  

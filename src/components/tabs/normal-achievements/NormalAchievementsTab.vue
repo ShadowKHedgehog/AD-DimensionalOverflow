@@ -126,8 +126,6 @@ export default {
       if (player.exposes.gte(1)) return row >= 26;
       if (this.isDoomed) return row >= 18;
       if (!this.isDoomed) return row >= 17;
-      
-      
     },
     timeDisplay,
     timeDisplayNoDecimals,
