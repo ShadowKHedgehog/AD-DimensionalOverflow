@@ -19,7 +19,7 @@ export const END_STATE_MARKERS = {
 export const GameEnd = {
   get endState() {
     if (this.removeAdditionalEnd || player.bypassEnd) return this.additionalEnd;
-    return (Achievement(288).effectOrDefault(0));
+    return (this.additionalEnd + Achievement(288).effectOrDefault(0));
   },
 
   _additionalEnd: 0,
