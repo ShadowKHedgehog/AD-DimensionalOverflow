@@ -35,6 +35,11 @@ export * from "./celestials/pelle/rifts";
 export * from "./celestials/pelle/galaxy-generator";
 export * from "./celestials/pelle/game-end";
 export * from "./celestials/celestials";
+export * from "./celestials/sercanote/sercanote";
+export * from "./celestials/sercanote/strikes";
+export * from "./celestials/sercanote/rifts";
+export * from "./celestials/sercanote/game-end";
+
 
 export * from "./automator";
 
