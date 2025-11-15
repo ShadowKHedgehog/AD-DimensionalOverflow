@@ -103,7 +103,7 @@ export const Sercanote = {
   },
 
   get displayName() {
-    return Date.now() % 4000 > 500 ? "Pelle" : wordShift.randomCrossWords("Pelle");
+    return Date.now() % 4000 > 500 ? "Sercanote" : wordShift.randomCrossWords("Sercanote");
   },
 
   get isUnlocked() {
