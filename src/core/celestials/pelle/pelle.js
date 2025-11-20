@@ -351,7 +351,7 @@ export const Pelle = {
     return zalgo(str, Math.floor(stage ** 2 * 7));
   },
 
-  endTabNames: "End Is Nigh Destruction Is Imminent Help Us Good Bye Forever".split(" "),
+  endTabNames: "End Comes For All Time Is Gone Now Good Bye Forever".split(" "),
 
   quotes: Quotes.pelle,
 

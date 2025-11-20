@@ -181,7 +181,7 @@ export class EternityChallengeState extends GameMechanicState {
 
   requestStart() {
     if (!Tab.challenges.eternity.isUnlocked || this.isRunning) return;
-    if (GameEnd.creditsEverClosed) return;
+    if (GameEnd.creditsEverClosed || GameEnd2.creditsEverClosed) return;
     if (!player.options.confirmations.challenges) {
       this.start();
       return;

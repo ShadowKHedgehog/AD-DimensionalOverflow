@@ -16,18 +16,19 @@ export const END_STATE_MARKERS = {
   CREDITS_END: 15.7,
 };
 
-export const GameEnd = {
+export const GameEnd2 = {
   get endState() {
     if (this.removeAdditionalEnd || player.bypassEnd) return this.additionalEnd;
-    return (this.additionalEnd + Achievement(288).effectOrDefault(0));
+    return Math.max(player.celestials.sercanote.records.totalAntimatter.add(1).log10().add(1).log10().sub(8.7)
+      .div(Math.log10(1e300) - 8.7).min(1).toNumber() + this.additionalEnd + Achievement(288).effectOrDefault(0));
   },
 
   _additionalEnd: 0,
   get additionalEnd() {
-    return (player.isGameEnd || this.removeAdditionalEnd) ? this._additionalEnd : 0;
+    return (player.isGameEnd2 || this.removeAdditionalEnd) ? this._additionalEnd : 0;
   },
   set additionalEnd(x) {
-    this._additionalEnd = (player.isGameEnd || this.removeAdditionalEnd) ? x : 0;
+    this._additionalEnd = (player.isGameEnd2 || this.removeAdditionalEnd) ? x : 0;
   },
 
   removeAdditionalEnd: false,
@@ -46,7 +47,7 @@ export const GameEnd = {
     }
     if (!this.removeAdditionalEnd && this.endState >= END_STATE_MARKERS.GAME_END &&
         ui.$viewModel.modal.progressBar === undefined) {
-      player.isGameEnd = true;
+      player.isGameEnd2 = true;
       this.additionalEnd += Math.min(diff / 1000 / 20, 0.1);
     }
   }

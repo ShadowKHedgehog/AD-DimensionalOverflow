@@ -1,7 +1,7 @@
 import { Currency } from "../../currency";
 import { DC } from "../../constants";
 import { RebuyableMechanicState } from "../../game-mechanics/rebuyable";
-import { SetPurchasableMechanicState } from "../../utils";
+import { SetPurchasableMechanicState } from "../../utils";  
 
 import { Quotes } from "../quotes";
 
@@ -299,6 +299,8 @@ export const Sercanote = {
   reset() {
     player.celestials.sercanote = {
       trapped: false,
+      isGameEnd2: false,
+            
     }
   },
 };

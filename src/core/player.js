@@ -806,6 +806,7 @@ window.player = {
     remotegalaxypurchases: DC.D0
   },
   isGameEnd: false,
+  isGameEnd2: false,
   tabNotifications: new Set(),
   triggeredTabNotificationBits: 0,
   tutorialState: 0,

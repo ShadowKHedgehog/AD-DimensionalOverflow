@@ -6,6 +6,7 @@ export default {
       canSwapImages: false,
       isCancerImages: false,
       isDoomed: false,
+      isTrapped: false,
     };
   },
   computed: {
@@ -20,6 +21,7 @@ export default {
   methods: {
     update() {
       this.isDoomed = Pelle.isDoomed;
+      this.isTrapped = Sercanote.isTrapped;
       const isCancerTheme = Theme.current().name === "S4";
       this.canSwapImages = !isCancerTheme && Themes.find("S4").isAvailable();
       this.isCancerImages = isCancerTheme || player.secretUnlocks.cancerAchievements;

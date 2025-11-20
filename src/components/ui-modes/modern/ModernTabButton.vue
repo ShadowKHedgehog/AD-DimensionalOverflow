@@ -1,4 +1,6 @@
 <script>
+import { Sercanote } from '../../../core/globals';
+
 export default {
   name: "ModernTabButton",
   props: {
@@ -46,6 +48,12 @@ export default {
           this.tab.name,
           Pelle.endTabNames[this.tabPosition],
           Math.clamp(GameEnd.endState - (this.tab.id % 4) / 10, 0, 1)
+        );
+      } else if (this.tabPosition < Sercanote.endTabNames.length) {
+        this.tabName = Sercanote.transitionText(
+          this.tab.name,
+          Sercanote.endTabNames[this.tabPosition],
+          Math.clamp(GameEnd2.endState - (this.tab.id % 4) / 10, 0, 1)
         );
       } else {
         this.tabName = this.tab.name;

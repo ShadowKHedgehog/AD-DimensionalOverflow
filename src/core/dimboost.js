@@ -219,7 +219,7 @@ export function skipResetsIfPossible(enteringAntimatterChallenge) {
 export function manualRequestDimensionBoost(bulk) {
   if (Currency.antimatter.gt(Player.infinityLimit) || !DimBoost.requirement.isSatisfied) return;
   if (!DimBoost.canBeBought) return;
-  if (GameEnd.creditsEverClosed) return;
+  if (GameEnd.creditsEverClosed || GameEnd2.creditsEverClosed) return;
   if (player.options.confirmations.dimensionBoost) {
     Modal.dimensionBoost.show({ bulk });
     return;

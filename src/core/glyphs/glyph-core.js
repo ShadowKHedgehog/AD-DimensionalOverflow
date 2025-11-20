@@ -275,7 +275,7 @@ export const Glyphs = {
   equip(glyph, targetSlot) {
     const forbiddenByPelle = Pelle.isDisabled("glyphs") || ["effarig", "reality", "cursed"].includes(glyph.type);
     if (Pelle.isDoomed && forbiddenByPelle) return;
-    if (GameEnd.creditsEverClosed) return;
+    if (GameEnd.creditsEverClosed || GameEnd2.creditsEverClosed) return;
 
     if (glyph.type !== "companion") {
       if (RealityUpgrade(9).isLockingMechanics) {

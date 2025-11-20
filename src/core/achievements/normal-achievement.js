@@ -35,6 +35,11 @@ class AchievementState extends GameMechanicState {
   get isPostShatterPelle() {
     return this.row > 18;
   }
+
+  get isPreSercanote() {
+    return this.row < 27;
+  }
+
   get isUnlocked() {
     return (player.achievementBits[this.row - 1] & this._bitmask) !== 0;
   }

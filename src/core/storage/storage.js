@@ -181,7 +181,7 @@ export const GameStorage = {
   },
 
   importAsFile() {
-    if (GameEnd.creditsEverClosed) return;
+    if (GameEnd.creditsEverClosed  || GameEnd2.creditsEverClosed) return;
     const reader = new FileReader();
     const text = reader.readAsText(file);
     this.import(text);
@@ -515,6 +515,7 @@ export const GameStorage = {
     V.updateTotalRunUnlocks();
     Enslaved.boostReality = false;
     GameEnd.additionalEnd = 0;
+    GameEnd2.additionalEnd = 0;
     Theme.set(Theme.currentName());
     Glyphs.unseen = [];
     Glyphs.unequipped = [];

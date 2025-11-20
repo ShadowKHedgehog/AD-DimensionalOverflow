@@ -7,6 +7,7 @@ import { deepmergeAll } from "@/utility/deepmerge";
 import { DEV } from "@/env";
 import { SpeedrunMilestones } from "./core/speedrun";
 import { supportedBrowsers } from "./supported-browsers";
+import { GameEnd2 } from "./core/globals";
 
 if (GlobalErrorHandler.handled) {
   throw new Error("Initialization failed");
@@ -442,7 +443,7 @@ export function gameLoop(passedDiff, options = {}) {
   // In certain cases we want to allow the player to interact with the game's settings and tabs, but prevent any actual
   // resource generation from happening - in these cases, we have to make sure this all comes before the hibernation
   // check or else it'll attempt to run the game anyway
-  if (Speedrun.isPausedAtStart() || GameEnd.creditsEverClosed) {
+  if (Speedrun.isPausedAtStart() || GameEnd.creditsEverClosed || GameEnd2.creditsEverClosed) {
     GameUI.update();
     return;
   }
@@ -487,6 +488,7 @@ export function gameLoop(passedDiff, options = {}) {
   GameCache.antimatterDimensionFinalMultipliers.invalidate();
   GameCache.infinityDimensionCommonMultiplier.invalidate();
   GameCache.timeDimensionCommonMultiplier.invalidate();
+  GameCache.remnantDimensionCommonMultiplier.invalidate();
   GameCache.totalIPMult.invalidate();
 
   const fixedSpeedActive = EternityChallenge(12).isRunning;

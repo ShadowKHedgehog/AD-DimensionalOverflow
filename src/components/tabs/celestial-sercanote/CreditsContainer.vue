@@ -285,4 +285,11 @@ perfectly the same. */
   color: var(--color-pelle--base);
   animation: a-pelle-credits 5s linear infinite;
 }
+
+.c-sercanote-credits {
+  top: 240rem;
+  left: 70%;
+  color: var(--color-pelle--base);
+  animation: a-pelle-credits 5s linear infinite;
+}
 </style>
