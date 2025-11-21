@@ -1,5 +1,4 @@
 <script>
-import { Sercanote } from '../../../core/globals';
 
 export default {
   name: "ModernTabButton",
