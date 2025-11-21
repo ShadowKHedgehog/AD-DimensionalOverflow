@@ -7,7 +7,6 @@ import { deepmergeAll } from "@/utility/deepmerge";
 import { DEV } from "@/env";
 import { SpeedrunMilestones } from "./core/speedrun";
 import { supportedBrowsers } from "./supported-browsers";
-import { GameEnd2 } from "./core/globals";
 
 if (GlobalErrorHandler.handled) {
   throw new Error("Initialization failed");
