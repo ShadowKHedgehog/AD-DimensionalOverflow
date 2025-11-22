@@ -1,5 +1,6 @@
 import { BreakInfinityUpgrade } from "../break-infinity-upgrades";
 import { DC } from "../constants";
+import { Achievement } from "../globals";
 
 import { DimensionState } from "./dimension";
 
@@ -119,8 +120,8 @@ function applyNDMultipliers(mult, tier) {
         Achievement(31),
         Achievement(68),
         Achievement(71),
-        Achievement(191),
-        Achievement(193),
+
+        
         TimeStudy(234)
       );
   }
@@ -134,7 +135,8 @@ function applyNDMultipliers(mult, tier) {
     tier <= 4 ? Achievement(64) : null,
     tier < 8 ? TimeStudy(71) : null,
     tier === 8 ? TimeStudy(214) : null,
-    tier > 1 && tier < 8 ? InfinityChallenge(8).reward : null
+    tier >= 1 && tier <= 8 ? Achievement(191) : null,
+    tier >= 1 && tier <= 8 ? Achievement(193) : null,
   );
   if (Achievement(43).isUnlocked) {
     multiplier = multiplier.times(1 + tier / 100);

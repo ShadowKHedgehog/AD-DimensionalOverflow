@@ -55,7 +55,11 @@ class RemnantDimensionState extends DimensionState {
 
   get multiplier() {
     const tier = this.tier;
-    let mult = GameCache.remnantDimensionCommonMultiplier.value;
+    let mult = GameCache.remnantDimensionCommonMultiplier.value
+    .timesEffectsOf(
+        tier >= 1 && tier <= 8 ? Achievement(205) : null,
+        tier >= 1 && tier <= 8 ? Achievement(217) : null,
+      );
     mult = mult.times(Decimal.pow(this.powerMultiplier, Decimal.floor(this.baseAmount.div(DC.E1))));
 
     return mult;

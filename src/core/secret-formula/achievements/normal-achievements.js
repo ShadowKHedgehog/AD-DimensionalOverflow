@@ -1422,7 +1422,7 @@ export const normalAchievements = [
     name: "Between Dimensions",
     description: `Reach 30 First Time Dimensions.`,
     get reward() {
-      return `Increase ShatterPower Conversion Rate by ${format(new Decimal(0.07))}`;
+      return `Increase ShatterPower Conversion Rate by ${formatPercents(0.07)}`;
     },
     effect: 0.07
   },
@@ -1440,6 +1440,10 @@ export const normalAchievements = [
     id: 197,
     name: "Bowser & Gromit: The Written Tales",
     description: `Unlock V again.`,
+    get reward() {
+      return `Time Dimensions are boosted by ${formatPercents(4)}.`;
+    },
+    effect: 4
   },
   {
     id: 198,
@@ -1464,6 +1468,10 @@ export const normalAchievements = [
     id: 202,
     name: "Lai'tela 2",
     description: `Unlock Lai'tela's Hard Reality`,
+    get reward() {
+      return `Infinity Dimensions are boosted by ${formatPercents(2.5)}.`;
+    },
+    effect: 2.5
   },
   {
     id: 203,
@@ -1479,6 +1487,10 @@ export const normalAchievements = [
     id: 205,
     name: "Break the Reality.",
     description: `Use Pelle's Galaxy Generator to Break their Reality`,
+    get reward() {
+      return `Remnant Dimensions are boosted by ${formatPercents(7)}.`;
+    },
+    effect: 7
   },
   {
     id: 206,
@@ -1498,7 +1510,7 @@ export const normalAchievements = [
     name: "Shadows Fall",
     description: `Beat The Unnamed's Reality for the First Time.`,
     get reward() {
-      return `Increase ShatterPower Conversion Rate by ${format(0.15)}`;
+      return `Increase ShatterPower Conversion Rate by ${formatPercents(0.15)}`;
     },
     effect: 0.15
   },
@@ -1552,11 +1564,20 @@ export const normalAchievements = [
     id: 217,
     name: "Simply Realistic",
     description: `Complete Luna's Base Reality`,
+    get reward() {
+      return `Remnant Dimensions are boosted by ${formatPercents(2.5)}.`;
+    },
+    effect: 2.5
+
   },
   {
     id: 218,
     name: "Singularity Exposition",
     description: `Find the way to raise the Dark Matter hardcap to 3.2e616`,
+    get reward() {
+      return `Increase ShatterPower Conversion Rate by ${formatPercents(0.18)}`;
+    },
+    effect: 0.18
   },
   {
     id: 221,
@@ -1572,6 +1593,10 @@ export const normalAchievements = [
     id: 223,
     name: "Hot Burning Birds in your area.",
     description: `Reach the 3rd Reverse-DarkMatter Dimension`,
+    get reward() {
+      return `Increase ShatterPower Conversion Rate by ${formatPercents(0.25)}`;
+    },
+    effect: 0.25
   },
   {
     id: 224,
