@@ -363,6 +363,14 @@ window.player = {
       iMCapSet: [],
       laitelaSet: [],
     },
+    bestShatter: {
+      time: DC.BEMAX,
+      realTime: DC.BEMAX,
+      trueTime: 0,
+      shattershards: DC.D0,
+      maxAM: DC.D0,
+      bestEP: DC.D0,
+    },
   },
   speedrun: {
     isUnlocked: false,
@@ -807,6 +815,7 @@ window.player = {
   },
   isGameEnd: false,
   isGameEnd2: false,
+  isGameEnd3: false,
   tabNotifications: new Set(),
   triggeredTabNotificationBits: 0,
   tutorialState: 0,

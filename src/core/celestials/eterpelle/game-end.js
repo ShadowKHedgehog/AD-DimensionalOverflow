@@ -1,6 +1,6 @@
 import { isDecimal } from "../../../utility/type-check";
 
-export const END_STATE_MARKERS2 = {
+export const END_STATE_MARKERS3 = {
   // Tab zalgoification starts as soon as endState > 0
   GAME_END: 1,
   TAB_START_HIDE: 1.5,
@@ -16,19 +16,19 @@ export const END_STATE_MARKERS2 = {
   CREDITS_END: 15.7,
 };
 
-export const GameEnd2 = {
+export const GameEnd3 = {
   get endState() {
     if (this.removeAdditionalEnd || player.bypassEnd) return this.additionalEnd;
-    return Math.max(player.celestials.sercanote.records.totalAntimatter.add(1).log10().add(1).log10().sub(8.7)
-      .div(Math.log10(1e300) - 8.7).min(1).toNumber() + this.additionalEnd + Achievement(288).effectOrDefault(0));
+    return Math.max(player.celestials.pelle.records.totalAntimatter.add(1).log10().add(1).log10().sub(8.7)
+      .div(Math.log10(9e15) - 8.7).min(1).toNumber() + this.additionalEnd);
   },
 
   _additionalEnd: 0,
   get additionalEnd() {
-    return (player.isGameEnd2 || this.removeAdditionalEnd) ? this._additionalEnd : 0;
+    return (player.isGameEnd3 || this.removeAdditionalEnd) ? this._additionalEnd : 0;
   },
   set additionalEnd(x) {
-    this._additionalEnd = (player.isGameEnd2 || this.removeAdditionalEnd) ? x : 0;
+    this._additionalEnd = (player.isGameEnd3 || this.removeAdditionalEnd) ? x : 0;
   },
 
   removeAdditionalEnd: false,
@@ -45,9 +45,9 @@ export const GameEnd2 = {
         this.removeAdditionalEnd = false;
       }
     }
-    if (!this.removeAdditionalEnd && this.endState >= END_STATE_MARKERS2.GAME_END &&
+    if (!this.removeAdditionalEnd && this.endState >= END_STATE_MARKERS.GAME_END3 &&
         ui.$viewModel.modal.progressBar === undefined) {
-      player.isGameEnd2 = true;
+      player.isGameEnd3 = true;
       this.additionalEnd += Math.min(diff / 1000 / 20, 0.1);
     }
   }
