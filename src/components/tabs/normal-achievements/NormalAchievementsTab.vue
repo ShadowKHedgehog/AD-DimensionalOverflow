@@ -126,8 +126,8 @@ export default {
     isObscured(row) {
       if (this.isTrapped) return row >= 32;
       if (this.isForgotten) return row >=29;
-      if (player.exposes.gte(150)) return row >=28;
-      if (player.exposes.gte(1)) return row >= 26;
+      if (player.exposes.gte(150)) return row >=26;
+      if (player.exposes.gte(1)) return row >= 25;
       if (this.isDoomed) return row >= 18;
       if (!this.isDoomed) return row >= 17;
     },
