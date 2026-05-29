@@ -33,7 +33,7 @@ export default {
     isDoomed: () => Pelle.isDoomed,
     isForgotten: () => eternalpelle.isDoomed,
     isTrapped: () => Sercanote.isTrapped,
-    metarendered: () => Achievement(258).isUnlocked(),
+    metarendered: () => Achievement(258).isUnlocked,
     rows: () => Achievements.allRows,
     renderedRows() {
       return this.rows.filter((_, i) => this.renderedRowIndices.includes(i));
@@ -126,7 +126,7 @@ export default {
     isObscured(row) {
       if (this.isTrapped) return row >= 32;
       if (this.isForgotten) return row >=29;
-      if (player.exposes.gte(150)) return row >=28;
+      if (this.metarendered) return row >=28;
       if (player.exposes.gte(1)) return row >= 25;
       if (this.isDoomed) return row >= 18;
       if (!this.isDoomed) return row >= 17;
