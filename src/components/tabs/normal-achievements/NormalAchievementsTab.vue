@@ -124,7 +124,7 @@ export default {
     },
     isObscured(row) {
       if (this.isTrapped) return row >= 30;
-      if (this.metarendered) return row >=27;
+      if (this.metarendered) return row >=26;
       if (player.exposes.gte(1)) return row >= 25;
       if (this.isDoomed) return row >= 18;
       if (!this.isDoomed) return row >= 17;
