@@ -9,6 +9,7 @@ import wordShift from "../../word-shift";
 
 import zalgo from "./zalgo";
 
+// Super, can you modify this to be for eternal pelle when you get the chance, thanks.
 
 const disabledMechanicUnlocks = {
   achievements: () => ({}),
@@ -52,7 +53,7 @@ const disabledMechanicUnlocks = {
   timeTheorems: () => ({})
 };
 
-export const EternalPelle = {
+export const eternalpelle = {
   symbol: "♅V",
   // Suppress the randomness for this form
   possessiveName: "Eternal Pelle's",
@@ -84,7 +85,7 @@ export const EternalPelle = {
     player.reality.automator.state.repeat = false;
     player.reality.automator.state.forceRestart = false;
     if (BlackHoles.arePaused) BlackHoles.togglePause();
-    player.celestials.pelle.doomed = true;
+    player.celestials.eterpelle.doomed = true;
     Pelle.armageddon(false);
     respecTimeStudies(true);
     Currency.infinityPoints.reset();
@@ -262,7 +263,7 @@ export const EternalPelle = {
     return 3.8e13;
   },
 
-  get canDilateInPelle() {
+  get canDilateInEternalPelle() {
     return this.cel.remnants.gte(this.remnantRequirementForDilation);
   },
 
@@ -356,8 +357,8 @@ export const EternalPelle = {
   quotes: Quotes.pelle,
 
   reset() {
-    player.celestials.pelle = {
-      doomed: false,
+    player.celestials.eterpelle = {
+      doomed2: false,
       upgrades: new Set(),
       remnants: DC.D0,
       realityShards: DC.D0,
@@ -495,7 +496,7 @@ export class PelleUpgradeState extends SetPurchasableMechanicState {
   }
 
   get isAvailableForPurchase() {
-    return Pelle.isDoomed;
+    return EternalPelle.isDoomed2;
   }
 
 }

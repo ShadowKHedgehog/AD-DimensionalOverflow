@@ -1740,6 +1740,116 @@ export const normalAchievements = [
     description: `Push the 1ee100 AM softcap to 1ee150 AM.`,
   },
   {
+    id: 258,
+    name: "Reach Pelle Memory Level 5",
+    description: `Reach Pelle Memory Level 5`,
+  },
+  {
+    id: 261,
+    name: "Reach Pelle Memory Level 10",
+    description: `Reach Pelle Memory Level 10`,
+  },
+  {
+    id: 262,
+    name: "Reach The Unnamed Memory Level 5",
+    description: `Reach The Unnamed Memory Level 5`,
+  },
+  {
+    id: 263,
+    name: "Reach Pelle Memory Level 15",
+    description: `Reach Pelle Memory Level 15`,
+  },
+  {
+    id: 264,
+    name: "Josearthu's Reality",
+    description: `Complete Josearthu's Reality Layer.`,
+  },
+  {
+    id: 265,
+    name: "Reach Josearthu Memory Level 25",
+    description: `Reach Pelle Josearthu Level 25`,
+  },
+  {
+    id: 268,
+    name: "Unlock Luna",
+    description: `Unlock Luna, The Celestial of Research.`,
+  },
+  {
+    id: 271,
+    name: "First Research Rift Done",
+    description: `Complete your first Research Rift.`,
+  },
+  {
+    id: 272,
+    name: "Josearthu Memory Level 50",
+    description: `Reach Josearthu Memory Level 50`,
+  },
+  {
+    id: 273,
+    name: "Josearthu's EX Reality!",
+    description: `Complete Josearthu's EX reality.`,
+  },
+  {
+    id: 274,
+    name: "Tenth Research Rift Done",
+    description: `Complete your Tenth Research Rift.`,
+  },
+  {
+    id: 275,
+    name: "Antimatter Dimensions: Exposed",
+    description: `Reach Shatter 980.`,
+  },
+  {
+    id: 276,
+    name: "Pelle's Memory Level 50",
+    description: `Reach Pelle Memory Level 50.`,
+  },
+  {
+    id: 277,
+    name: "Twenty Research Rifts Done",
+    description: `Complete 20 Research Rift.`,
+  },
+  {
+    id: 278,
+    name: "Josearthu Extravaganza",
+    description: `Reach 1.8e308 Points in Josearthu's Reality.`,
+  },
+  {
+    id: 281,
+    name: "Start the Eternal Fountain Quest",
+    description: `Start the 36th Research Rift.`,
+  },
+  {
+    id: 282,
+    name: "Lunar Teresa",
+    description: `Complete Teresa's Reality while in Luna's Reality.`,
+  },
+  {
+    id: 283,
+    name: "Lunar Effarig",
+    description: `Complete Effarig's Reality while in Luna's Reality.`,
+  },
+  {
+    id: 284,
+    name: "Lunar Nameless Ones",
+    description: `Complete Nameless Ones's Reality while in Luna's Reality.`,
+  },
+  {
+    id: 285,
+    name: "Lunar Lai'tela",
+    description: `Complete Lai'teia's Reality while in Luna's Reality.`,
+  },
+  {
+    id: 286,
+    name: "Lunar Pelle",
+    description: `Complete Pelle's Reality while in Luna's Reality.`,
+  },
+  {
+    id: 287,
+    name: "Lunar Josearthu",
+    description: `Complete Josearthu's Reality while in Luna's Reality.`,
+  },
+  {
     id: 288,
     name: "The Final Show",
     description: `Discover the Eternal Fountain.`,

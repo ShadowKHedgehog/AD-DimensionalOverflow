@@ -32,6 +32,7 @@ export default {
   computed: {
     isDoomed: () => Pelle.isDoomed,
     isTrapped: () => Sercanote.isTrapped,
+    metarendered: () => player.Achievement(258).isUnlocked(),
     rows: () => Achievements.allRows,
     renderedRows() {
       return this.rows.filter((_, i) => this.renderedRowIndices.includes(i));
@@ -122,8 +123,9 @@ export default {
       return this.renderedRowIndices.includes(row);
     },
     isObscured(row) {
-      if (this.isTrapped) return row >= 28;
-      if (player.exposes.gte(1)) return row >= 26;
+      if (this.isTrapped) return row >= 30;
+      if (this.metarendered)
+      if (player.exposes.gte(1)) return row >= 25;
       if (this.isDoomed) return row >= 18;
       if (!this.isDoomed) return row >= 17;
     },

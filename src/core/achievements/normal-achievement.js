@@ -37,7 +37,10 @@ class AchievementState extends GameMechanicState {
   }
 
   get isPreSercanote() {
-    return this.row < 27;
+    return this.row < 31;
+  }
+  get isPrePelleMemory() {
+    return this.row < 28;
   }
 
   get isUnlocked() {
