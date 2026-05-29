@@ -1770,6 +1770,16 @@ export const normalAchievements = [
     description: `Reach Pelle Josearthu Level 25`,
   },
   {
+    id: 266,
+    name: "Complete Pelle's ex Reality",
+    description: `Complete Pelle's ex Reality.`,
+  },
+  {
+    id: 267,
+    name: "Pelle Loses, Destroyer Wins.",
+    description: `Win against Pelle in Minigame World.`,
+  },
+  {
     id: 268,
     name: "Unlock Luna",
     description: `Unlock Luna, The Celestial of Research.`,
