@@ -39,6 +39,10 @@ export * from "./celestials/sercanote/sercanote";
 export * from "./celestials/sercanote/strikes";
 export * from "./celestials/sercanote/rifts";
 export * from "./celestials/sercanote/game-end";
+export * from "./celestials/eterpelle/eterpelle";
+export * from "./celestials/eterpelle/strikes";
+export * from "./celestials/eterpelle/rifts";
+export * from "./celestials/eterpelle/game-end";
 
 
 export * from "./automator";
