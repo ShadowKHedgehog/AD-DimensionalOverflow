@@ -123,7 +123,7 @@ export default {
       return this.renderedRowIndices.includes(row);
     },
     isObscured(row) {
-      if (this.isTrapped) return row >= 30;
+      if (this.isTrapped) return row >= 29;
       if (this.metarendered) return row >=26;
       if (player.exposes.gte(1)) return row >= 25;
       if (this.isDoomed) return row >= 18;
