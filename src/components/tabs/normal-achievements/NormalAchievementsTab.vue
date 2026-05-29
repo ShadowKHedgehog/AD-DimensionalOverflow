@@ -32,7 +32,7 @@ export default {
   computed: {
     isDoomed: () => Pelle.isDoomed,
     isTrapped: () => Sercanote.isTrapped,
-    metarendered: () => player.Achievement(258).isUnlocked(),
+    metarendered: () => Achievement(258).isUnlocked(),
     rows: () => Achievements.allRows,
     renderedRows() {
       return this.rows.filter((_, i) => this.renderedRowIndices.includes(i));
