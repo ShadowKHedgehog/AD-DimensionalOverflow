@@ -1563,7 +1563,7 @@ export const normalAchievements = [
   {
     id: 217,
     name: "Simply Realistic",
-    description: `Complete Luna's Base Reality`,
+    description: `Complete Effarig's Shatter`,
     get reward() {
       return `Remnant Dimensions are boosted by ${formatPercents(2.5)}.`;
     },
