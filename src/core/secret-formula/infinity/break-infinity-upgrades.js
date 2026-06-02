@@ -124,7 +124,7 @@ export const breakInfinityUpgrades = {
     id: 1,
     initialCost: new Decimal(1e7),
     costIncrease: new Decimal(5e3),
-    maxUpgrades: new Decimal(7),
+    maxUpgrades: new Decimal(8),
     description: "Reduce post-infinity Antimatter Dimension cost multiplier scaling",
     afterEC: () => (EternityChallenge(6).completions > 0
       ? `After EC6: ${formatX(Player.dimensionMultDecrease, 2, 2)}`
