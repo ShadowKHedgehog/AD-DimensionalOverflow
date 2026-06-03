@@ -456,7 +456,7 @@ export const normalTimeStudies = [
   {
     id: 193,
     cost: new Decimal(300),
-    requirement: [181, () => EternityChallenge(10).completions > 0 || Perk.BypassEC10Lock.isBought],
+    requirement: [181, () => EternityChallenge(10).completions > 0 || Perk.bypassEC10Lock.isBought],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: "Antimatter Dimension multiplier based on Eternities",
     effect: () => (DC.E13000.pow(Currency.eternities.value.div(1e6).clampMax(1))),
