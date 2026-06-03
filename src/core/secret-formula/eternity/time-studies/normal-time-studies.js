@@ -512,18 +512,18 @@ export const normalTimeStudies = [
   },
   {
     id: 221,
-    cost: new Decimal(900),
+    cost: new Decimal(500),
     STCost: 4,
     requirement: [211],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [222],
     description: "Time Dimension multiplier based on Dimension Boosts",
-    effect: () => DC.D1_0025.pow(DimBoost.totalBoosts),
+    effect: () => DC.D1_025.pow(DimBoost.totalBoosts),
     formatEffect: value => formatX(value, 2, 1)
   },
   {
     id: 222,
-    cost: new Decimal(900),
+    cost: new Decimal(400),
     STCost: 4,
     requirement: [211],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
@@ -533,7 +533,7 @@ export const normalTimeStudies = [
   },
   {
     id: 223,
-    cost: new Decimal(900),
+    cost: new Decimal(400),
     STCost: 4,
     requirement: [212],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
@@ -543,7 +543,7 @@ export const normalTimeStudies = [
   },
   {
     id: 224,
-    cost: new Decimal(900),
+    cost: new Decimal(400),
     STCost: 4,
     requirement: [212],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
@@ -557,7 +557,7 @@ export const normalTimeStudies = [
   },
   {
     id: 225,
-    cost: new Decimal(900),
+    cost: new Decimal(500),
     STCost: 4,
     requirement: [213],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
@@ -568,7 +568,7 @@ export const normalTimeStudies = [
   },
   {
     id: 226,
-    cost: new Decimal(900),
+    cost: new Decimal(500),
     STCost: 4,
     requirement: [213],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
@@ -579,7 +579,7 @@ export const normalTimeStudies = [
   },
   {
     id: 227,
-    cost: new Decimal(900),
+    cost: new Decimal(500),
     STCost: 4,
     requirement: [214],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
@@ -590,7 +590,7 @@ export const normalTimeStudies = [
   },
   {
     id: 228,
-    cost: new Decimal(900),
+    cost: new Decimal(500),
     STCost: 4,
     requirement: [214],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
@@ -619,7 +619,7 @@ export const normalTimeStudies = [
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [231],
     description: "All Galaxies are stronger based on Antimatter Galaxies",
-    effect: () => Decimal.pow(player.galaxies.div(1000).add(1), 0.2),
+    effect: () => Decimal.pow(player.galaxies.div(1300).add(1), 0.2),
     formatEffect: value => `+${formatPercents(value.sub(1), 3)}`
   },
   {
