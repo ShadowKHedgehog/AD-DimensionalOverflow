@@ -151,9 +151,9 @@ export const eternityChallenges = [
       EternityChallenge(10).applyEffect(v => description += ` Currently: ${formatX(v, 2, 1)}`);
       return description;
     },
-    goal: DC.E2000,
-    pelleGoal: DC.E3200,
-    goalIncrease: DC.E200,
+    goal: DC.E1700,
+    pelleGoal: DC.E2000,
+    goalIncrease: DC.E400,
     effect: () => Decimal.pow(Currency.infinitiesTotal.value, 950).clampMin(1).pow(TimeStudy(31).effectOrDefault(1)),
     reward: {
       description: "Time Dimension multiplier based on Infinities",
@@ -176,7 +176,7 @@ export const eternityChallenges = [
       Infinity Power and Dimension Boosts (to Antimatter Dimensions). ${specialInfinityGlyphDisabledEffectText()}`,
     goal: DC.E450,
     pelleGoal: DC.E11200,
-    goalIncrease: DC.E200,
+    goalIncrease: DC.E450,
     pelleGoalIncrease: DC.E1400,
     reward: {
       description: "Further reduce Tickspeed cost multiplier growth",
