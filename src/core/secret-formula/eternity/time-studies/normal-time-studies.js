@@ -483,7 +483,7 @@ export const normalTimeStudies = [
     requirement: [191],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     description: "All Galaxies are stronger based on your Time Shards",
-    effect: () => Decimal.pow(Currency.timeShards.value.clampMin(2).log2(), 0.005),
+    effect: () => Decimal.pow(Currency.timeShards.value.clampMin(2.3).log2(), 0.009),
     cap: new Decimal(1.1),
     formatEffect: value => `+${formatPercents(value.sub(1), 3)}`
   },
@@ -574,7 +574,7 @@ export const normalTimeStudies = [
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [225],
     description: "You gain extra Replicanti Galaxies based on their max",
-    effect: () => Decimal.floor(player.replicanti.boughtGalaxyCap.div(15)),
+    effect: () => Decimal.floor(player.replicanti.boughtGalaxyCap.div(12)),
     formatEffect: value => `+${formatInt(value)} RG`
   },
   {
@@ -585,7 +585,7 @@ export const normalTimeStudies = [
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [228],
     description: "Dimensional Sacrifice affects 4th Time Dimension with reduced effect",
-    effect: () => Decimal.max(Decimal.pow(Sacrifice.totalBoost.absLog10(), 10), 1),
+    effect: () => Decimal.max(Decimal.pow(Sacrifice.totalBoost.absLog10(), 11), 1),
     formatEffect: value => formatX(value, 2, 2)
   },
   {
