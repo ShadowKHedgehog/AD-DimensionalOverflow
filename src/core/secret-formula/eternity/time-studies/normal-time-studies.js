@@ -647,7 +647,7 @@ export const normalTimeStudies = [
   },
   // Note: These next 4 entries are the triad studies
   {
-    id: 301,
+    id: 321,
     cost: DC.D0,
     STCost: 12,
     requirement: [() => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 1, 221, 222, 231],
@@ -659,7 +659,7 @@ export const normalTimeStudies = [
     unlocked: () => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 1
   },
   {
-    id: 302,
+    id: 322,
     cost: DC.D0,
     STCost: 12,
     requirement: [() => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 2, 223, 224, 232],
@@ -670,7 +670,7 @@ export const normalTimeStudies = [
     unlocked: () => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 2
   },
   {
-    id: 303,
+    id: 323,
     cost: DC.D0,
     STCost: 12,
     requirement: [() => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 3, 225, 226, 233],
@@ -682,7 +682,7 @@ export const normalTimeStudies = [
     unlocked: () => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 3
   },
   {
-    id: 304,
+    id: 324,
     cost: DC.D0,
     STCost: 12,
     requirement: [() => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 4, 227, 228, 234],
@@ -695,7 +695,7 @@ export const normalTimeStudies = [
   // Post-Reality
 
   {
-    id: 311,
+    id: 251,
     cost: new Decimal(1e45),
     requirement: [181],
     reqType: TS_REQUIREMENT_TYPE.ALL,
@@ -704,7 +704,7 @@ export const normalTimeStudies = [
     formatEffect: value => formatX(value,2,2)
   },
   {
-    id: 312,
+    id: 261,
     cost: new Decimal(1e54),
     requirement: [311],
     reqType: TS_REQUIREMENT_TYPE.ALL,
@@ -713,7 +713,7 @@ export const normalTimeStudies = [
     formatEffect: value => formatX(value,2,2)
   },
   {
-    id: 313,
+    id: 262,
     cost: new Decimal(1e54),
     requirement: [311],
     reqType: TS_REQUIREMENT_TYPE.ALL,

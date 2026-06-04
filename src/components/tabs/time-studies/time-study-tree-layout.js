@@ -129,7 +129,7 @@ export class TimeStudyTreeLayout {
 
     if (type.triad && !Pelle.isDoomed) {
       this.rows.push(
-        normalRow(                 TS(301), TS(302), TS(303), TS(304)                 )
+        normalRow(                 TS(321), TS(322), TS(323), TS(324)                 )
       );
     }
 

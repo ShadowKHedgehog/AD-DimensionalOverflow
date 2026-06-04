@@ -64,7 +64,7 @@ export class Sacrifice {
     // All the factors which go into the multiplier have to combine this way in order to replicate legacy behavior
     const preIC2 = Effects.sum(Achievement(32), Achievement(57)).add(1);
     const postIC2 = Effects.sum(Achievement(88), TimeStudy(228)).add(1);
-    const triad = TimeStudy(304).effectOrDefault(1);
+    const triad = TimeStudy(324).effectOrDefault(1);
 
     return base.mul(preIC2).mul(postIC2).mul(triad);
   }

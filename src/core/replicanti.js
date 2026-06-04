@@ -596,7 +596,7 @@ export const Replicanti = {
       return Decimal.floor((Effarig.bonusRG).add(Effects.sum(
         TimeStudy(225),
         TimeStudy(226)
-      )).times(TimeStudy(303).effectOrDefault(1)));
+      )).times(TimeStudy(323).effectOrDefault(1)));
     },
     get total() {
       return this.bought.add(this.extra);

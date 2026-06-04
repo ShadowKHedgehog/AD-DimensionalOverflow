@@ -17,7 +17,7 @@ NormalTimeStudies.paths = NormalTimeStudies.pathList.mapToObject(e => e.path, e 
 
 export class NormalTimeStudyState extends TimeStudyState {
   constructor(config) {
-    const type = config.id > 300 ? TIME_STUDY_TYPE.TRIAD : TIME_STUDY_TYPE.NORMAL;
+    const type = config.id > 340   ? TIME_STUDY_TYPE.TRIAD : TIME_STUDY_TYPE.NORMAL;
     super(config, type);
     const path = NormalTimeStudies.pathList.find(p => p.studies.includes(this.id));
     this._path = path?.path ?? TIME_STUDY_PATH.NONE;

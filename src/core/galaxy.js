@@ -177,7 +177,7 @@ export class Galaxy {
     return DC.E2.plusEffectsOf(
       TimeStudy(223),
       TimeStudy(224),
-      TimeStudy(302),
+      TimeStudy(322),
       EternityChallenge(5).reward,
       Achievement(192),
     ).add(GlyphInfo.power.sacrificeInfo.effect());
