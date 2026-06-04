@@ -521,7 +521,7 @@ export const perks = {
     layoutPosList: [23353, 81402, 81403, 79404, 79803, 84639],
   },
   bypassEC10Lock: {
-    id: 206,
+    id: 74,
     label: "E10R",
     family: PERK_FAMILY.ETERNITY,
     description: "Remove the Eternity Challenge 10 requirement from further time studies.",

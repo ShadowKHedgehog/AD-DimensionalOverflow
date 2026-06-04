@@ -447,7 +447,7 @@ export const normalTimeStudies = [
   {
     id: 192,
     cost: new Decimal(730),
-    requirement: [181, () => EternityChallenge(10).completions > 0, () => !Enslaved.isRunning],
+    requirement: [181, () => EternityChallenge(10).completions > 0 || Perk.bypassEC10Lock.isBought, () => !Enslaved.isRunning],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => (Enslaved.isRunning
       ? "There is not enough space in this Reality"
