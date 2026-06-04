@@ -697,10 +697,10 @@ export const normalTimeStudies = [
   {
     id: 311,
     cost: new Decimal(1e45),
-    requirement: [ () => TimeStudy.reality.isBought],
+    requirement: [181],
     reqType: TS_REQUIREMENT_TYPE.ALL,
-    description: () => `You gain more Replicanti based on Current Antimatter`,
-    effect: () => Decimal.max(Decimal.pow(player.antimatter.value.Log10(), 1.01), 1),
+    description: () => `You gain more Replicanti based on Best Antimatter per Shatter`,
+    effect: () => Decimal.max(Decimal.pow(player.records.bestShatter.maxAM.value.Log10(), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
