@@ -695,6 +695,7 @@ export const normalTimeStudies = [
 
   {
     id: 311,
+    requirement: [214],
     cost: new Decimal(1e45),
     description: () => `You gain more Replicanti based on Current Antimatter`,
     effect: () => Decimal.max(Decimal.pow(Currency.antimatter.value.Log10(), 1.01), 1),
