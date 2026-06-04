@@ -1,6 +1,7 @@
 import DilationTimeStudy from "../../../../components/tabs/time-studies/DilationTimeStudy.vue";
 import { DC } from "../../../constants";
 import { Player } from "../../../player.js";
+import { dilationTimeStudies } from "./dilation-time-studies.js";
 
 const thisInfinityMult = thisInfinity => {
   // All "this inf time" or "best inf time" mults are * 10
@@ -697,8 +698,8 @@ export const normalTimeStudies = [
   {
     id: 311,
     cost: new Decimal(1e45),
-    requirement: [214],
-    reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
+    requirement: [ () => dilationTimeStudies(6).isBought],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Replicanti based on Current Antimatter`,
     effect: () => Decimal.max(Decimal.pow(player.antimatter.value.Log10(), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
@@ -707,7 +708,7 @@ export const normalTimeStudies = [
     id: 312,
     cost: new Decimal(1e54),
     requirement: [311],
-    reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
+    reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Infinities based on Replicanti`,
     effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.001)), 1),
     formatEffect: value => formatX(value,2,2)
@@ -716,7 +717,7 @@ export const normalTimeStudies = [
     id: 313,
     cost: new Decimal(1e54),
     requirement: [311],
-    reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
+    reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Eternity Points based on Replicanti`,
     effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.01)), 1),
     formatEffect: value => formatX(value,2,2)
