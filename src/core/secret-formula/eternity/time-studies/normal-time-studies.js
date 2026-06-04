@@ -696,7 +696,6 @@ export const normalTimeStudies = [
   {
     id: 311,
     cost: new Decimal(1e45),
-    requirement: [() => DilationTimeStudy(6).isBought],
     description: () => `You gain more Replicanti based on Current Antimatter`,
     effect: () => Decimal.max(Decimal.pow(Currency.antimatter.value.Log10(), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
