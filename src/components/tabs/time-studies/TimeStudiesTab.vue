@@ -1,5 +1,5 @@
 <script>
-import { STUDY_TREE_LAYOUT_TYPE, TimeStudyTreeLayout } from "./time-study-tree-layout";
+import { TimeStudyTreeLayout } from "./time-study-tree-layout";
 
 import DilationTimeStudy from "./DilationTimeStudy";
 import ECTimeStudy from "./ECTimeStudy";
@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       respec: player.respec,
-      layoutType: STUDY_TREE_LAYOUT_TYPE.NORMAL,
+      layoutType: {},
       vLevel: 0,
       renderedStudyCount: 0,
       renderedConnectionCount: 0,
@@ -109,7 +109,7 @@ export default {
   methods: {
     update() {
       this.respec = player.respec;
-      this.layoutType = STUDY_TREE_LAYOUT_TYPE.current;
+      this.layoutType = TimeStudyTreeLayout.current;
       this.vLevel = Ra.pets.v.level;
       this.isEnslaved = Enslaved.isRunning || Date.now() - this.delayTimer < 1000;
     },
@@ -123,11 +123,11 @@ export default {
       throw "Unknown Time Study type";
     },
     exportStudyTree() {
-      if (player.timestudy.studies.length === 0) {
+      if (player.timestudy.studies.length === 0 && player.options.notifications.studies) {
         GameUI.notify.error("You cannot export an empty Time Study Tree!");
       } else {
         copyToClipboard(GameCache.currentStudyTree.value.exportString);
-        GameUI.notify.info("Exported current Time Studies to your clipboard");
+        if (player.options.notifications.studies) GameUI.notify.info("Exported current Time Studies to your clipboard");
       }
     }
   }
