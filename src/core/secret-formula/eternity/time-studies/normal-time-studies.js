@@ -696,8 +696,9 @@ export const normalTimeStudies = [
 
   {
     id: 311,
-    requirement: [214],
     cost: new Decimal(1e45),
+    requirement: [214],
+    reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     description: () => `You gain more Replicanti based on Current Antimatter`,
     effect: () => Decimal.max(Decimal.pow(player.antimatter.value.Log10(), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
@@ -706,6 +707,7 @@ export const normalTimeStudies = [
     id: 312,
     cost: new Decimal(1e54),
     requirement: [311],
+    reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     description: () => `You gain more Infinities based on Replicanti`,
     effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.001)), 1),
     formatEffect: value => formatX(value,2,2)
@@ -714,6 +716,7 @@ export const normalTimeStudies = [
     id: 313,
     cost: new Decimal(1e54),
     requirement: [311],
+    reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     description: () => `You gain more Eternity Points based on Replicanti`,
     effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.01)), 1),
     formatEffect: value => formatX(value,2,2)
