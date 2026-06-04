@@ -330,6 +330,13 @@ export const perks = {
     shortDescription: () => "Bulk EC Completion",
     layoutPosList: [62741, 78200, 81397, 81004, 78603, 41435],
   },
+  bypassEC10Lock: {
+    id: 74,
+    label: "E10R",
+    family: PERK_FAMILY.ETERNITY,
+    description: "Remove the Eternity Challenge 10 requirement from further time studies.",
+    layoutPosList: [62776, 77900, 81396, 81035, 78606, 41495],
+  },
   retroactiveTP1: {
     id: 80,
     label: "TP1",
@@ -519,13 +526,6 @@ export const perks = {
     automatorPoints: 10,
     shortDescription: () => "Keep Achievements on Reality",
     layoutPosList: [23353, 81402, 81403, 79404, 79803, 84639],
-  },
-  bypassEC10Lock: {
-    id: 74,
-    label: "E10R",
-    family: PERK_FAMILY.ETERNITY,
-    description: "Remove the Eternity Challenge 10 requirement from further time studies.",
-    layoutPosList: [62776, 77900, 81396, 81035, 78606, 41495],
   }
 };
 
