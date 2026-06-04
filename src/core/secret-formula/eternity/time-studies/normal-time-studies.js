@@ -1,7 +1,6 @@
-import DilationTimeStudy from "../../../../components/tabs/time-studies/DilationTimeStudy.vue";
 import { DC } from "../../../constants";
 import { Player } from "../../../player.js";
-import { dilationTimeStudies } from "./dilation-time-studies.js";
+
 
 const thisInfinityMult = thisInfinity => {
   // All "this inf time" or "best inf time" mults are * 10
@@ -698,7 +697,7 @@ export const normalTimeStudies = [
   {
     id: 311,
     cost: new Decimal(1e45),
-    requirement: [ () => dilationTimeStudies(6).isBought],
+    requirement: [ () => TimeStudy.reality.isBought],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Replicanti based on Current Antimatter`,
     effect: () => Decimal.max(Decimal.pow(player.antimatter.value.Log10(), 1.01), 1),
