@@ -87,7 +87,7 @@ export function gainedInfinityPoints() {
   const div = new Decimal(Effects.min(
     308,
     Achievement(103),
-    TimeStudy(111)
+    TimeStudy(111),
   )).toNumber();
   if (Pelle.isDisabled("IPMults")) {
     return Decimal.pow10(player.records.thisInfinity.maxAM.max(1).log10().div(div).sub(0.75))
@@ -126,6 +126,7 @@ function totalEPMult() {
         TimeStudy(122),
         TimeStudy(121),
         TimeStudy(123),
+        TimeStudy(313),
         Achievement(196),
         RealityUpgrade(12),
         GlyphEffect.epMult
@@ -272,6 +273,7 @@ export function gainedInfinities() {
     RealityUpgrade(7),
     Achievement(131).effects.infinitiesGain,
     Achievement(164),
+    TimeStudy(312),
     Ra.unlocks.continuousTTBoost.effects.infinity
   );
   infGain = infGain.times(getAdjustedGlyphEffect("infinityinfmult"));

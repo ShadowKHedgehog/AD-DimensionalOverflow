@@ -1,4 +1,5 @@
 import { DC } from "../../../constants";
+import { Currency } from "../../../currency";
 
 export const dilationTimeStudies = [
   {
@@ -22,25 +23,25 @@ export const dilationTimeStudies = [
   {
     id: 2,
     description: "Unlock the 5th Time Dimension",
-    cost: DC.E6,
+    cost: DC.E5,
     requirement: () => PlayerProgress.dilationUnlocked()
   },
   {
     id: 3,
     description: "Unlock the 6th Time Dimension",
-    cost: DC.E7,
+    cost: DC.E6,
     requirement: () => TimeStudy.timeDimension(5).isBought
   },
   {
     id: 4,
     description: "Unlock the 7th Time Dimension",
-    cost: DC.E8,
+    cost: DC.E7,
     requirement: () => TimeStudy.timeDimension(6).isBought
   },
   {
     id: 5,
     description: "Unlock the 8th Time Dimension",
-    cost: DC.E9,
+    cost: DC.E8,
     requirement: () => TimeStudy.timeDimension(7).isBought
   },
   {
@@ -53,5 +54,5 @@ export const dilationTimeStudies = [
       player.records.thisReality.maxEP.add(1).log10().gte(4000) &&
       (Perk.firstPerk.isBought || Achievements.preReality.every(a => a.isUnlocked)) &&
       !Pelle.isDoomed
-  }
+  },
 ];

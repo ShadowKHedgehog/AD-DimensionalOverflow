@@ -157,7 +157,10 @@ TimeStudy.allConnections = (function() {
     [TimeStudy.timeDimension(5), TimeStudy.timeDimension(6)],
     [TimeStudy.timeDimension(6), TimeStudy.timeDimension(7)],
     [TimeStudy.timeDimension(7), TimeStudy.timeDimension(8)],
-    [TimeStudy.timeDimension(8), TimeStudy.reality]
+    [TimeStudy.timeDimension(8), TimeStudy.reality],
+    [TimeStudy.reality,TS(311)],
+    [TS(311),TS(312)],
+    [TS(311),TS(313)]
   ].map(props => new TimeStudyConnection(props[0], props[1], props[2]));
 
   return connections;

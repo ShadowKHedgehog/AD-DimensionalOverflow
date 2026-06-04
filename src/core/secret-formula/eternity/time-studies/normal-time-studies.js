@@ -1,3 +1,4 @@
+import DilationTimeStudy from "../../../../components/tabs/time-studies/DilationTimeStudy.vue";
 import { DC } from "../../../constants";
 
 const thisInfinityMult = thisInfinity => {
@@ -643,7 +644,7 @@ export const normalTimeStudies = [
     description: "Dimensional Sacrifice applies to 1st Antimatter Dimension",
     effect: () => Sacrifice.totalBoost,
   },
-  // Note: These last 4 entries are the triad studies
+  // Note: These next 4 entries are the triad studies
   {
     id: 301,
     cost: DC.D0,
@@ -689,5 +690,31 @@ export const normalTimeStudies = [
     description: "Dimensional Sacrifice multiplier is squared",
     effect: 2,
     unlocked: () => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 4
-  }
+  },
+  // Post-Reality
+
+  {
+    id: 311,
+    cost: new Decimal(1e45),
+    requirement: [() => DilationTimeStudy(6).isBought],
+    description: () => `You gain more Replicanti based on Current Antimatter`,
+    effect: () => Decimal.max(Decimal.pow(Currency.antimatter.value.Log10(), 1.01), 1),
+    formatEffect: value => formatX(value,2,2)
+  },
+  {
+    id: 312,
+    cost: new Decimal(1e54),
+    requirement: [311],
+    description: () => `You gain more Infinities based on Replicanti`,
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.001)), 1),
+    formatEffect: value => formatX(value,2,2)
+  },
+  {
+    id: 313,
+    cost: new Decimal(1e54),
+    requirement: [311],
+    description: () => `You gain more Eternity Points based on Replicanti`,
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.01)), 1),
+    formatEffect: value => formatX(value,2,2)
+  },
 ];
