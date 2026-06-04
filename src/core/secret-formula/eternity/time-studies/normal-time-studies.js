@@ -483,7 +483,7 @@ export const normalTimeStudies = [
     requirement: [191],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     description: "All Galaxies are stronger based on your Time Shards",
-    effect: () => Decimal.pow(Currency.timeShards.value.clampMin(2.3).log2(), 0.009),
+    effect: () => Decimal.pow(Currency.timeShards.value.clampMin(2.3).log2(), 0.021),
     cap: new Decimal(1.1),
     formatEffect: value => `+${formatPercents(value.sub(1), 3)}`
   },
@@ -503,8 +503,8 @@ export const normalTimeStudies = [
     description: "Dimensional Sacrifice boosts the 8th Antimatter Dimension even more",
     effect: () => {
       const totalBoost = Sacrifice.totalBoost;
-      const firstPart = totalBoost.pow(7.6).clampMaxExponent(44000);
-      const secondPart = totalBoost.pow(1.05).clampMaxExponent(120000);
+      const firstPart = totalBoost.pow(7.6).clampMaxExponent(176000);
+      const secondPart = totalBoost.pow(3.01).clampMaxExponent(750000);
       return firstPart.times(secondPart);
     },
     cap: DC.E164000,
@@ -528,8 +528,8 @@ export const normalTimeStudies = [
     requirement: [211],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [221],
-    description: () => `Dimension Boost costs scale by another ${formatInt(2)} less`,
-    effect: 2
+    description: () => `Dimension Boost costs scale by another ${formatInt(7)} less`,
+    effect: 7
   },
   {
     id: 223,
@@ -563,7 +563,7 @@ export const normalTimeStudies = [
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [226],
     description: "You gain extra Replicanti Galaxies based on Replicanti amount",
-    effect: () => Decimal.floor(Replicanti.amount.clampMin(1).log10().div(1000)),
+    effect: () => Decimal.floor(Replicanti.amount.clampMin(1).log10().div(700)),
     formatEffect: value => `+${formatInt(value)} RG`
   },
   {
