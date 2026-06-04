@@ -1,5 +1,4 @@
 import { DC } from "../../../constants";
-import { Perk } from "../../../perks";
 
 const thisInfinityMult = thisInfinity => {
   // All "this inf time" or "best inf time" mults are * 10
@@ -438,7 +437,7 @@ export const normalTimeStudies = [
   {
     id: 191,
     cost: new Decimal(400),
-    requirement: [181, () => EternityChallenge(10).completions > 0],
+    requirement: [181, () => EternityChallenge(10).completions > 0 || Perk.bypassEC10Lock.isBought],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `After Eternity you permanently keep ${formatPercents(0.05)}
     of your Infinities as Banked Infinities`,
