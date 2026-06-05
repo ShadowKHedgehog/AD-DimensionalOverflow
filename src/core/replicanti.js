@@ -140,7 +140,8 @@ export function totalReplicantiSpeedMult(overCap) {
   const preCelestialEffects = Effects.product(
     TimeStudy(62),
     TimeStudy(213),
-    TimeStudy(311),
+    TimeStudy(271),
+    TimeStudy(272),
     RealityUpgrade(2),
     RealityUpgrade(6),
     RealityUpgrade(23),

@@ -694,32 +694,71 @@ export const normalTimeStudies = [
     unlocked: () => Ra.unlocks.unlockHardV.effectOrDefault(0) >= 4
   },
   // Post-Reality
-
   {
     id: 251,
     cost: new Decimal(1e45),
     requirement: [181],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `Dimension Boost Power is raised based on your best Antimatter per Shatter.`,
+    effect: () => Decimal.max(Decimal.pow(Decimal.log2(Decimal.log10(Decimal.log10(player.records.bestShatter.maxAM))), 1.01), 1),
+    formatEffect: value => formatPow(value,2,2)
+  },
+
+  {
+    id: 261,
+    cost: new Decimal(1e65),
+    requirement: [251],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `You gain more Infinities based on Replicanti`,
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.Replicanti), 1.01), 1),
+    formatEffect: value => formatX(value,2,2)
+  },
+  {
+    id: 262,
+    cost: new Decimal(1e65),
+    requirement: [251],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `You gain more Eternity Points based on Replicanti`,
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.Replicanti), 1.01), 1),
+    formatEffect: value => formatX(value,2,2)
+  },
+  {
+    id: 271,
+    cost: new Decimal(1e80),
+    requirement: [261],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `You gain more Replicanti based on Reality Machines`,
+    effect: () => Decimal.max(Decimal.pow(player.reality.realityMachines, 5), 1),
+    formatEffect: value => formatX(value,2,2)
+  },
+  {
+    id: 272,
+    cost: new Decimal(1e80),
+    requirement: [261],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Replicanti based on Best Antimatter per Shatter`,
     effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.records.bestShatter.maxAM), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
-    id: 261,
-    cost: new Decimal(1e54),
-    requirement: [251],
+    id: 273,
+    cost: new Decimal(1e95),
+    requirement: [262],
     reqType: TS_REQUIREMENT_TYPE.ALL,
-    description: () => `You gain more Infinities based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.001)), 1),
+    description: () => `You gain more Eternity Points based on Best Antimatter per Shatter`,
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.records.bestShatter.maxAM), 4), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
-    id: 262,
-    cost: new Decimal(1e54),
-    requirement: [251],
+    id: 274,
+    cost: new Decimal(1e95),
+    requirement: [262],
     reqType: TS_REQUIREMENT_TYPE.ALL,
-    description: () => `You gain more Eternity Points based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.01)), 1),
-    formatEffect: value => formatX(value,2,2)
+    description: () => `Delay Antimatter Galaxy Scaling based on Best Antimatter per Shatter`,
+    effect: () => {
+      let doubleExponent = Decimal.log10(player.records.bestShatter.maxAM).log10();
+      return Decimal.max(doubleExponent.mul(1000), 1);
+    },
+    formatEffect: value => `Both Antimatter Galaxy Scaling Tiers are Delayed by ${format(value)} Galaxies`
   },
 ];

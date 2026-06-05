@@ -26,6 +26,7 @@ export class Galaxy {
     return new Decimal(800).plusEffectsOf(
       RealityUpgrade(21),
       Achievement(201),
+      TimeStudy(274),
     );
   }
 
@@ -178,6 +179,7 @@ export class Galaxy {
       TimeStudy(223),
       TimeStudy(224),
       TimeStudy(322),
+      TimeStudy(274),
       EternityChallenge(5).reward,
       Achievement(192),
     ).add(GlyphInfo.power.sacrificeInfo.effect());
