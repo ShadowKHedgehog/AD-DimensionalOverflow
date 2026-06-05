@@ -761,4 +761,13 @@ export const normalTimeStudies = [
     },
     formatEffect: value => `Both Antimatter Galaxy Scaling Tiers are Delayed by ${format(value)} Galaxies`
   },
+  {
+    id: 281,
+    cost: new Decimal(1e400),
+    requirement: [271,272,273,274],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `Raise Gamespeed based on Best Antimatter per Shatter`,
+    effect: () => Decimal.log2(player.records.bestShatter.maxAM).log10(),
+    formatEffect: value => formatPow(value,2,2)
+  },
 ];

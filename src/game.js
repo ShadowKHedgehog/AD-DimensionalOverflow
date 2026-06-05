@@ -317,6 +317,7 @@ export function getGameSpeedupFactor(effectsToConsider, blackHolesActiveOverride
   }
 
   let factor = DC.D1;
+  
   if (effects.includes(GAME_SPEED_EFFECT.BLACK_HOLE)) {
     if (BlackHoles.areNegative) {
       factor = factor.mul(player.blackHoleNegative);
@@ -341,7 +342,7 @@ export function getGameSpeedupFactor(effectsToConsider, blackHolesActiveOverride
     factor = factor.mul(getAdjustedGlyphEffect("timespeed"));
     factor = factor.pow(getAdjustedGlyphEffect("effarigblackhole"));
   }
-
+    
   if (Enslaved.isStoringGameTime && effects.includes(GAME_SPEED_EFFECT.TIME_STORAGE)) {
     const storedTimeWeight = Ra.unlocks.autoPulseTime.canBeApplied ? 0.99 : 1;
     factor = factor.mul(1 - storedTimeWeight).add(storedTimeWeight);
@@ -361,6 +362,8 @@ export function getGameSpeedupFactor(effectsToConsider, blackHolesActiveOverride
   factor = factor.mul(PelleUpgrade.timeSpeedMult.effectValue);
 
   factor = factor.mul(dev.speedUp);
+
+  factor = factor.powEffectOf(TImeStudy(281).effectOrDefault(1));
 
   return factor;
 }
