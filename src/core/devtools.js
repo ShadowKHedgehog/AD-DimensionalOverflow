@@ -6,6 +6,7 @@ import { sha512_256 } from "js-sha512";
 import { Player } from "./player";
 import { DC } from "./constants";
 import FullScreenAnimationHandler from "./full-screen-animation-handler";
+import { GlyphGenerator } from "./globals";
 
 export const dev = {};
 
@@ -138,7 +139,7 @@ dev.giveGlyph = function(level, rawLevel = level) {
 
 dev.giveRealityGlyph = function(level) {
   if (GameCache.glyphInventorySpace.value === 0) return;
-  Glyphs.addToInventory(GlyphGenerator.realityGlyph());
+  Glyphs.addToInventory(GlyphGenerator.realityGlyph(level));
 };
 
 dev.setCompanionGlyphEP = function(eternityPoints) {
