@@ -710,7 +710,7 @@ export const normalTimeStudies = [
     requirement: [251],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Infinities based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.Replicanti), 1.01), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Replicanti.amount), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
@@ -719,7 +719,7 @@ export const normalTimeStudies = [
     requirement: [251],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Eternity Points based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.Replicanti), 1.01), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Replicanti.amount), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
