@@ -207,6 +207,21 @@ export const sercquotes = {
       }, {
         text: "You took advantage of him. He trusted you, and you didnt let him finish.",
         background: primaryBackground("pelle"),
+      },{
+        text: "Pelle's Elder Sister...",
+        background: primaryBackground("pelle"),
+      }, {
+        text: "I presume you know that you freed a Celestial Deity from their own EGO, huh.",
+        background: primaryBackground("pelle"),
+      },{
+        text: "Lets hope she doesnt strike back.",
+        background: primaryBackground("pelle"),
+      }, {
+        text: "The Celestials ahead... They arent what you expect them to be. you shall falter to them if I have lost to you.",
+        background: primaryBackground("ra"),
+      },{
+        text: "I dont ever think I'll know when to thank you..",
+        background: primaryBackground("ra"),
       },
       "You took control of my reality",
       "You have beaten me, and I respect that..",
