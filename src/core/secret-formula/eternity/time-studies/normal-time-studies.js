@@ -700,7 +700,7 @@ export const normalTimeStudies = [
     requirement: [181],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Replicanti based on Best Antimatter per Shatter`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.records.bestShatter.maxAM.value), 1.01), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Player.records.bestShatter.maxAM.value), 1.01), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
@@ -709,7 +709,7 @@ export const normalTimeStudies = [
     requirement: [251],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Infinities based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.001)), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Player.replicanti.value, 1.001)), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
@@ -718,7 +718,7 @@ export const normalTimeStudies = [
     requirement: [251],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Eternity Points based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.01)), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Player.replicanti.value, 1.01)), 1),
     formatEffect: value => formatX(value,2,2)
   },
 ];
