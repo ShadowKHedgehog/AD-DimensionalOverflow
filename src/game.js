@@ -363,7 +363,7 @@ export function getGameSpeedupFactor(effectsToConsider, blackHolesActiveOverride
 
   factor = factor.mul(dev.speedUp);
 
-  factor = factor.powEffectOf(TImeStudy(281).effectOrDefault(1));
+  factor = factor.powEffectOf(TimeStudy(281).effectOrDefault(1));
 
   return factor;
 }
