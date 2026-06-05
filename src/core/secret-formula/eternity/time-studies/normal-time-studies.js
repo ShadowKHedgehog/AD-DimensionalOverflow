@@ -699,8 +699,8 @@ export const normalTimeStudies = [
     cost: new Decimal(1e45),
     requirement: [181],
     reqType: TS_REQUIREMENT_TYPE.ALL,
-    description: () => `You gain more Replicanti based on Best Antimatter per Shatter`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Player.records.bestShatter.maxAM.value), 1.01), 1),
+    description: () => `You gain more Replicanti based on Eternities`,
+    effect: () => Decimal.max(Decimal.pow(Player.eternities.value, 10.00), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
