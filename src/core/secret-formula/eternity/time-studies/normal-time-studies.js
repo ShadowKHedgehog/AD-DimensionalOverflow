@@ -767,7 +767,7 @@ export const normalTimeStudies = [
     requirement: [271,272,273,274],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `Raise Gamespeed based on Best Antimatter per Shatter`,
-    effect: () => Decimal.log2(player.records.bestShatter.maxAM).log10(),
+    effect: () => Decimal.log2(player.records.bestShatter.maxAM).log10().div(4),
     formatEffect: value => formatPow(value,2,2)
   },
 ];
