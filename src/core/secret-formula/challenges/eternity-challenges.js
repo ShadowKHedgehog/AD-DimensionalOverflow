@@ -90,7 +90,7 @@ export const eternityChallenges = [
     goalIncrease: DC.E250,
     reward: {
       description: "Further reduce Antimatter Dimension cost multiplier growth",
-      effect: completions => completions * 0.2,
+      effect: completions => completions * 0.96,
       formatEffect: value => {
         const total = Player.dimensionMultDecrease.add(Effects.sum(EternityChallenge(6).reward)).round().sub(value);
         return `-${format(value, 2, 1)} (${formatX(total, 2, 1)} total)`;

@@ -1,4 +1,5 @@
 import { DC } from "../../../constants";
+import { Currency } from "../../../currency";
 import { Player } from "../../../player.js";
 
 
@@ -709,7 +710,7 @@ export const normalTimeStudies = [
     requirement: [251],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Infinities based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.replicanti.value, 1.001)), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.001)), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
@@ -718,7 +719,7 @@ export const normalTimeStudies = [
     requirement: [251],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Eternity Points based on Replicanti`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.replicanti.value, 1.01)), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log10(Currency.replicanti.value, 1.01)), 1),
     formatEffect: value => formatX(value,2,2)
   },
 ];
