@@ -763,7 +763,7 @@ export const normalTimeStudies = [
   },
   {
     id: 281,
-    cost: new Decimal(1e400),
+    cost: new Decimal("1e400"),
     requirement: [271,272,273,274],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `Raise Gamespeed based on Best Antimatter per Shatter`,
