@@ -1080,6 +1080,9 @@ export const Player = {
     return player.records.thisEternity.maxIP.gte(Player.eternityGoal);
   },
 
+  get canShatter() { 
+    return player.antimatter.gte(DC.BIMAX)
+
   get bestRunIPPM() {
     return GameCache.bestRunIPPM.value;
   },
