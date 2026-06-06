@@ -100,7 +100,7 @@ export default {
     />
     <div class="l-dim-row-multi-button-container">
       <PrimaryButton
-        :enabled="isAvailableForPurchase || (!isUnlocked && canUnlock)"
+        :enabled="isAvailableForPurchase /*|| (!isUnlocked && canUnlock)*/"
         class="o-primary-btn--buy-rd o-primary-btn--buy-dim c-dim-tooltip-container"
         :class="{ 'l-dim-row-small-text': hasLongText }"
         @click="buySingleRemnantDimension"
