@@ -18,6 +18,8 @@ export default {
   },
   data() {
     return {
+      isUnlocked: false,
+      canUnlock: false,
       multiplier: new Decimal(0),
       baseAmount: new Decimal(0),
       amount: new Decimal(0),
@@ -58,7 +60,7 @@ export default {
   methods: {
     update() {
       const tier = this.tier;
-      const dimension = RemnantDimension(tier);
+      const dimension = RemnantDimension(tier)
       this.isUnlocked = dimension.isUnlocked;
       this.canUnlock = dimension.canUnlock;
       this.multiplier.copyFrom(dimension.multiplier);

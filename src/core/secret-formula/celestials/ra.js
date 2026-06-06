@@ -47,7 +47,7 @@ export const ra = {
       chunkGain: "ShatterPower",
       memoryGain: "Total Memory Level",
       requiredUnlock: () => Ra.unlocks.jUnlock,
-      rawMemoryChunksPerSecond: () => Decimal.pow(Currency.infinityPower.value.add(1).log10().div(1e7), 1.5).mul(4),
+      rawMemoryChunksPerSecond: () => Decimal.pow(Currency.shatterpower.value.add(1).log10().div(1e15), 1.5).mul(4),
       memoryProductionMultiplier: () => Ra.unlocks.vXP.effectOrDefault(new Decimal(1))
     }
   },

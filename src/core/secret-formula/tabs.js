@@ -1,3 +1,5 @@
+import { PlayerProgress } from "../player-progress";
+
 export const tabs = [
   {
     key: "dimensions",
@@ -36,6 +38,16 @@ export const tabs = [
         condition: () => PlayerProgress.eternityUnlocked(),
         id: 2,
         hidable: true,
+      },
+      {
+        key: "remnant",
+        name: "Remnant Dimensions",
+        hideAt: 2.5,
+        symbol: "♆",
+        component: "RemnantDimensionsTab",
+        condition: () => PlayerProgress.ShatterUnlocked(),
+        id: 3,
+        hidable: false,
       },
     ]
   },
@@ -472,6 +484,15 @@ export const tabs = [
         key: "pelle",
         name: "Pelle",
         symbol: "♅",
+        component: "PelleTab",
+        condition: () => Pelle.isUnlocked,
+        id: 7,
+        hidable: true,
+      },
+      {
+        key: "sercanote",
+        name: "Sercanote",
+        symbol: "♆",
         component: "PelleTab",
         condition: () => Pelle.isUnlocked,
         id: 7,

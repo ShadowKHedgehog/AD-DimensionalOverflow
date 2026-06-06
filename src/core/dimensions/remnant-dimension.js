@@ -42,6 +42,7 @@ class RemnantDimensionState extends DimensionState {
 
   get rateOfChange() {
     const tier = this.tier;
+    if (tier===8){return DC.D0;}
     let toGain = DC.D0;
     toGain = RemnantDimension(tier + 1).productionPerSecond;
     const current = Decimal.max(this.amount, 1);
@@ -87,7 +88,7 @@ class RemnantDimensionState extends DimensionState {
   }
 
   get purchaseCap() {
-    return RemnantDimensions.capIncrease.add(this.tier === 9
+    return RemnantDimensions.add(this.tier === 9
       ? DC.BEMAX
       : RemnantDimensions.HARDCAP_PURCHASES);
   }

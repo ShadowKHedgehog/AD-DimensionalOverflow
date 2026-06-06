@@ -126,7 +126,7 @@ function totalEPMult() {
         TimeStudy(122),
         TimeStudy(121),
         TimeStudy(123),
-        TimeStudy(313),
+        TimeStudy(273),
         Achievement(196),
         RealityUpgrade(12),
         GlyphEffect.epMult
@@ -451,6 +451,9 @@ export function gameLoop(passedDiff, options = {}) {
     GameUI.update();
     return;
   }
+
+  
+
   const thisUpdate = Date.now();
   const passDiff = passedDiff === undefined
     ? Math.clamp(thisUpdate - player.lastUpdate, 1, 8.64e7) : passedDiff;
