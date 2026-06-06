@@ -100,7 +100,7 @@ export default {
         {{ capTooltip }}
       </div>
       <PrimaryButton
-        :enabled="isAvailableForPurchase || (!isUnlocked && canUnlock)"
+        :enabled="isAvailableForPurchase /*|| (!isUnlocked && canUnlock)*/"
         class="o-primary-btn--buy-rd o-primary-btn o-primary-btn--new o-primary-btn--buy-dim"
         :class="{ 'l-dim-row-small-text': hasLongText }"
         @click="buySingleRemnantDimension"
