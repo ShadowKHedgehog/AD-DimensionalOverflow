@@ -324,6 +324,8 @@ Currency.eternityPoints = new class extends DecimalCurrency {
   set value(value) {
     player.eternityPoints = value;
     player.records.thisReality.maxEP = player.records.thisReality.maxEP.max(value);
+    player.records.thisShatter.bestEP = player.records.thisShatter.bestEP.max(value);
+    player.records.bestShatter.bestEP = player.records.bestShatter.bestEP.max(value);
     if (player.records.bestReality.bestEP.lt(value)) {
       player.records.bestReality.bestEP = value;
       player.records.bestReality.bestEPSet = Glyphs.copyForRecords(Glyphs.active.filter(g => g !== null));
