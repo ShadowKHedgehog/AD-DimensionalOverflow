@@ -31,6 +31,7 @@ import PerksTab from "./perks/PerksTab";
 import PreviousSpeedrunTab from "./speedrun-milestones/PreviousSpeedrunTab";
 import RaTab from "./celestial-ra/RaTab";
 import RealityUpgradesTab from "./reality-upgrades/RealityUpgradesTab";
+import RemnantDimensionsTab from "./remnant-dimensions/RemnantDimensionsTab";
 import ReplicantiTab from "./replicanti/ReplicantiTab";
 import SecretAchievementTab from "./secret-achievements/SecretAchievementTab";
 import ShopTab from "./shop/ShopTab";
@@ -46,6 +47,7 @@ const TabComponents = {
   AntimatterDimensionsTab,
   InfinityDimensionsTab,
   TimeDimensionsTab,
+  RemnantDimensionsTab,
   OptionsSavingTab,
   OptionsVisualTab,
   OptionsGameplayTab,
