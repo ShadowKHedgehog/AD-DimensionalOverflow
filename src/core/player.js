@@ -363,10 +363,17 @@ window.player = {
       iMCapSet: [],
       laitelaSet: [],
     },
+    thisShatter: {
+      time: DC.D0,
+      realTime: DC.D0,
+      trueTime: 0,
+      maxAM: DC.D0,
+      bestEP: DC.D0,
+    },
     bestShatter: {
       time: DC.BEMAX,
       realTime: DC.BEMAX,
-      trueTime: 0,
+      trueTime: 1e308,
       shattershards: DC.D0,
       maxAM: DC.D0,
       bestEP: DC.D0,
@@ -1080,6 +1087,9 @@ export const Player = {
     return player.records.thisEternity.maxIP.gte(Player.eternityGoal);
   },
 
+  get canShatter() { 
+    return player.antimatter.gte(DC.BIMAX)
+  },
   get bestRunIPPM() {
     return GameCache.bestRunIPPM.value;
   },

@@ -578,11 +578,11 @@ class AntimatterDimensionState extends DimensionState {
   }
 
   get cappedProductionInNormalChallenges() {
-    const postBI = true;
+    const postBI = player.exposes.gte(1);
     const postBreak = (player.break && !NormalChallenge.isRunning) ||
       InfinityChallenge.isRunning ||
       Enslaved.isRunning;
-    if (postBI && postBreak) return DC.BEMAX;
+    if (postBI && postBreak) return DC.NUMMAX.pow10();
     return postBreak ? DC.BIMAX : DC.E315;
   }
 

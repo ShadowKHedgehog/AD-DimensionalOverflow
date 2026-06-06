@@ -152,6 +152,10 @@ export function gainedEternityPoints() {
   return ep.floor();
 }
 
+export function gainedShatterShards() {
+  return player.exposes.gte(1) ? DC.D1 : player.antimatter.log10().div(DC.NUMSAFE).max(1).times(player.antimatter.log10().div(DC.NUMMAX.div(DC.NUMSAFE)).max(1))
+}
+
 export function requiredIPForEP(epAmount) {
   return Decimal.pow10((Decimal.log10(Decimal.divide(epAmount, totalEPMult()), 5).times(308).plus(0.7)))
     .clampMin(Number.MAX_VALUE);
@@ -279,6 +283,10 @@ export function gainedInfinities() {
   infGain = infGain.times(getAdjustedGlyphEffect("infinityinfmult"));
   infGain = infGain.powEffectOf(SingularityMilestone.infinitiedPow);
   return infGain;
+}
+
+export function gainedExposes() {
+  return DC.D1
 }
 
 export function updateRefresh() {
@@ -548,11 +556,14 @@ export function gameLoop(passedDiff, options = {}) {
     }
     player.records.thisReality.realTime = player.records.thisReality.realTime.add(realDiff);
     player.records.thisReality.time = player.records.thisReality.time.add(diff);
+    player.records.thisShatter.realTime = player.records.thisShatter.realTime.add(realDiff);
+    player.records.thisShatter.time = player.records.thisShatter.time.add(diff);
 
     player.records.trueTimePlayed += trueDiff;
     player.records.thisInfinity.trueTime += trueDiff;
     player.records.thisEternity.trueTime += trueDiff;
     player.records.thisReality.trueTime += trueDiff;
+    player.records.thisShatter.trueTime += trueDiff;
   }
 
   DeltaTimeState.update(trueDiff, realDiff, diff);
