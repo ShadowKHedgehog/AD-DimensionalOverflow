@@ -2709,6 +2709,10 @@ br {
 .t-s8 .c-time-dim-description__accent {
   color: #673ab7;
 }
+.c-remnant-dim-description__accent {
+  font-size: 3.5rem;
+  color: black;
+}
 
 /* #endregion c-time-dim-description__accent */
 
