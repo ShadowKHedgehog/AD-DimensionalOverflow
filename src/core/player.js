@@ -364,8 +364,8 @@ window.player = {
       laitelaSet: [],
     },
     thisShatter: {
-      time: DC.BEMAX,
-      realTime: DC.BEMAX,
+      time: DC.D0,
+      realTime: DC.D0,
       trueTime: 0,
       maxAM: DC.D0,
       bestEP: DC.D0,
@@ -373,7 +373,7 @@ window.player = {
     bestShatter: {
       time: DC.BEMAX,
       realTime: DC.BEMAX,
-      trueTime: 0,
+      trueTime: 1e308,
       shattershards: DC.D0,
       maxAM: DC.D0,
       bestEP: DC.D0,
