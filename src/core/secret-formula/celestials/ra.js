@@ -302,12 +302,12 @@ export const ra = {
       displayIcon: `<i class="fab fa-buffer"></i>`,
       disabledByPelle: true
     },
-    jUnlock: {
-      id: 28,
-      reward: "Unlock The Unnamed's Memories",
-      pet: "V",
-      level: 50,
-      displayIcon: `⌭`
-    },
+    //  jUnlock: {
+    //  id: 28,
+    //  reward: "Unlock The Unnamed's Memories",
+    //  pet: "V",
+    //  level: 50,
+    //  displayIcon: `⌭`
+    // },
   }
 };
