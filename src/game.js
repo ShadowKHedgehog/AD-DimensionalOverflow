@@ -582,7 +582,7 @@ export function gameLoop(passedDiff, options = {}) {
   Achievements._power.invalidate();
 
   TimeDimensions.tick(diff);
-  RemnantDimensions.tick(diff);
+  RemnantDimensions.tick(realDiff);
   InfinityDimensions.tick(diff);
   AntimatterDimensions.tick(diff);
 
