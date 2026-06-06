@@ -88,7 +88,7 @@ class RemnantDimensionState extends DimensionState {
   }
 
   get purchaseCap() {
-    return RemnantDimensions.add(this.tier === 9
+    return RemnantDimensions(this.tier === 9
       ? DC.BEMAX
       : RemnantDimensions.HARDCAP_PURCHASES);
   }
