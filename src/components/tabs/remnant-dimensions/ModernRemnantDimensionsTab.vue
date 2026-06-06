@@ -23,7 +23,7 @@ export default {
   methods: {
     update() {
       this.shatterPower.copyFrom(Currency.shatterpower);
-      this.shatterPowerPerSecond.copyFrom(RemnantDimension(1).productionPerRealSecond);
+      this.shatterPowerPerSecond.copyFrom(RemnantDimension(1).productionPerSecond);
      // this.areAutobuyersUnlocked = Autobuyer.remnantDimension(1).isUnlocked;
      this.conversionRate.copyFrom(Currency.shatterpowerconversionrate);
      this.effect = this.shatterPower.pow(this.conversionRate).max(1)
