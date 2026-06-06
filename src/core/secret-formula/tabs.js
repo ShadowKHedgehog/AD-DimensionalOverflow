@@ -1,3 +1,5 @@
+import { PlayerProgress } from "../player-progress";
+
 export const tabs = [
   {
     key: "dimensions",
