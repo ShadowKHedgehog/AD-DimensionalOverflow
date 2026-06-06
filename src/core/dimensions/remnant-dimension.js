@@ -132,7 +132,7 @@ class RemnantDimensionState extends DimensionState {
 
   buyMax(auto) {
     if (!this.isAvailableForPurchase) return false;
-
+    let purchasesUntilHardcap = this.purchaseCap.sub(this.purchases);
     const costScaling = new LinearCostScaling(
       Currency.shattershards.value,
       this.cost,
