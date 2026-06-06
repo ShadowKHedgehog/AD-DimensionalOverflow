@@ -58,8 +58,8 @@ export default {
     update() {
       const tier = this.tier;
       const dimension = RemnantDimension(tier);
-      this.isUnlocked = dimension.isUnlocked;
-      this.canUnlock = dimension.canUnlock;
+      //this.isUnlocked = dimension.isUnlocked;
+      //this.canUnlock = dimension.canUnlock;
       this.multiplier.copyFrom(dimension.multiplier);
       this.baseAmount.copyFrom(dimension.baseAmount);
       this.purchases.copyFrom(dimension.purchases);
