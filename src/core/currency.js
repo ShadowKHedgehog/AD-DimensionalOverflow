@@ -214,6 +214,7 @@ Currency.antimatter = new class extends DecimalCurrency {
     player.records.thisEternity.maxAM = player.records.thisEternity.maxAM.max(value);
     player.records.thisReality.maxAM = player.records.thisReality.maxAM.max(value);
     player.records.thisShatter.maxAM = player.records.thisShatter.maxAM.max(value);
+    player.records.bestShatter.maxAM = player.records.bestShatter.maxAM.max(value);
     
 
     if (Pelle.isDoomed) {
