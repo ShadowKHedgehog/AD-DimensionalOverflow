@@ -24,7 +24,7 @@ class GalaxyRequirement {
 
 export class Galaxy {
   static get extremeStart() {
-       new Decimal(5e6)
+     return new Decimal(5e6)
   }
   static get remoteStart() {
     return new Decimal(800).plusEffectsOf(
@@ -202,6 +202,9 @@ export class Galaxy {
   }
 
   static typeAt(galaxies) {
+    if (galaxies.gte(Galaxy.extremeStart)) {
+      return GALAXY_TYPE.EXTREME;
+    }
     if (galaxies.gte(Galaxy.remoteStart)) {
       return GALAXY_TYPE.REMOTE;
     }

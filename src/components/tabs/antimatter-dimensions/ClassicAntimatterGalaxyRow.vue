@@ -21,6 +21,7 @@ export default {
       canBeBought: false,
       distantStart: new Decimal(),
       remoteStart: new Decimal(),
+      extremeStart: new Decimal(),
       lockText: null,
       canBulkBuy: false,
       creditsClosed: false,
@@ -60,6 +61,7 @@ export default {
         case GALAXY_TYPE.NORMAL: return "Antimatter Galaxies";
         case GALAXY_TYPE.DISTANT: return "Distant Antimatter Galaxies";
         case GALAXY_TYPE.REMOTE: return "Remote Antimatter Galaxies";
+        case GALAXY_TYPE.EXTREME: return "Condensed Antimatter Galaxies";
       }
       return undefined;
     },
@@ -73,7 +75,8 @@ export default {
         case GALAXY_TYPE.REMOTE: {
           const scalings = [
             { type: "distant", function: "quadratic", amount: this.distantStart },
-            { type: "remote", function: "exponential", amount: this.remoteStart }
+            { type: "remote", function: "exponential", amount: this.remoteStart },
+            { type: "remote", function: "High Exponential", amount: this.extremeStart }
           ];
           return `Increased Galaxy cost scaling: ${scalings.sort((a, b) => a.amount.compare(b.amount))
             .map(scaling => `${scaling.function} scaling past ${this.formatGalaxies(scaling.amount)} (${scaling.type})`)
@@ -102,6 +105,7 @@ export default {
       this.canBeBought = requirement.isSatisfied && Galaxy.canBeBought;
       this.distantStart.copyFrom(Galaxy.costScalingStart);
       this.remoteStart.copyFrom(Galaxy.remoteStart);
+      this.extremeStart.copyFrom(Galaxy.extremeStart);
       this.lockText = Galaxy.lockText;
       this.canBulkBuy = EternityMilestone.autobuyMaxGalaxies.isReached;
       this.creditsClosed = GameEnd.creditsEverClosed;
