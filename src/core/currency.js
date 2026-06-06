@@ -213,6 +213,8 @@ Currency.antimatter = new class extends DecimalCurrency {
     player.records.thisInfinity.maxAM = player.records.thisInfinity.maxAM.max(value);
     player.records.thisEternity.maxAM = player.records.thisEternity.maxAM.max(value);
     player.records.thisReality.maxAM = player.records.thisReality.maxAM.max(value);
+    player.records.thisShatter.maxAM = player.records.thisShatter.maxAM.max(value);
+    
 
     if (Pelle.isDoomed) {
       player.celestials.pelle.records.totalAntimatter = player.celestials.pelle.records.totalAntimatter.max(value);
