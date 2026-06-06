@@ -363,6 +363,14 @@ window.player = {
       iMCapSet: [],
       laitelaSet: [],
     },
+    thisShatter: {
+      time: DC.BEMAX,
+      realTime: DC.BEMAX,
+      trueTime: 0,
+      shattershards: DC.D0,
+      maxAM: DC.D0,
+      bestEP: DC.D0,
+    },
     bestShatter: {
       time: DC.BEMAX,
       realTime: DC.BEMAX,
