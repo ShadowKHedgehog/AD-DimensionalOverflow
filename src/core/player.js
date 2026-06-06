@@ -367,7 +367,6 @@ window.player = {
       time: DC.BEMAX,
       realTime: DC.BEMAX,
       trueTime: 0,
-      shattershards: DC.D0,
       maxAM: DC.D0,
       bestEP: DC.D0,
     },
