@@ -101,7 +101,7 @@ export function totalIPMult() {
       DilationUpgrade.ipMultDT,
       GlyphEffect.ipMult
     );
-  ipMult = ipMult.times(Replicanti.amount.powEffectOf(AlchemyResource.exponential));
+  if (Replicanti.areUnlocked) ipMult = ipMult.times(Replicanti.amount.powEffectOf(AlchemyResource.exponential));
   return ipMult;
 }
 
