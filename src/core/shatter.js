@@ -20,7 +20,7 @@ function shatterUpdateStatistics() {
   player.records.bestShatter.time = Decimal.min(player.records.thisShatter.time, player.records.bestShatter.time);
   player.records.bestShatter.trueTime = Decimal.min(player.records.thisShatter.trueTime, player.records.bestShatter.time).toNumber();
   player.records.bestShatter.realTime = Decimal.min(player.records.thisShatter.realTime, player.records.bestShatter.time);
-  player.records.bestShatter.shattershards = Decimal.max(player.records.bestShatter.shattershards, gainedShatterShards();
+  player.records.bestShatter.shattershards = Decimal.max(player.records.bestShatter.shattershards, gainedShatterShards());
   player.records.thisShatter = {
       time: new Decimal(0),
       realTime: new Decimal(0),
