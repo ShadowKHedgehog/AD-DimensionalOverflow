@@ -1,6 +1,6 @@
 export function shatterResetRequest {
   if (!Player.canShatter) return;
-  bigCrunchReset();
+  shatterReset();
 }
 export function shatterReset {
   if (!Player.canShatter) return;
