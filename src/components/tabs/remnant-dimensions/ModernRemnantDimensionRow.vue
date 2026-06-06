@@ -18,8 +18,8 @@ export default {
   },
   data() {
     return {
-      isUnlocked: false,
-      canUnlock: false,
+      //isUnlocked: false,
+      //canUnlock: false,
       multiplier: new Decimal(0),
       baseAmount: new Decimal(0),
       amount: new Decimal(0),
@@ -86,7 +86,7 @@ export default {
 <template>
   <div
     class="c-dimension-row l-dimension-row-remnant-dim l-dimension-single-row"
-    :class="{ 'c-dim-row--not-reached': !isUnlocked && !canUnlock }"
+    :class="{ 'c-dim-row--not-reached': false/*!isUnlocked && !canUnlock */}"
   >
     <GenericDimensionRowText
       :tier="tier"
