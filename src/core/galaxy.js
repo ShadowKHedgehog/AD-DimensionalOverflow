@@ -202,6 +202,9 @@ export class Galaxy {
   }
 
   static typeAt(galaxies) {
+    if (galaxies.gte(Galaxy.extremeStart)) {
+      return GALAXY_TYPE.EXTREME;
+    }
     if (galaxies.gte(Galaxy.remoteStart)) {
       return GALAXY_TYPE.REMOTE;
     }
