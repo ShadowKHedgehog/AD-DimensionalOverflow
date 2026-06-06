@@ -24,8 +24,8 @@ class GalaxyRequirement {
 
 export class Galaxy {
   static get extremeStart() {
-       new Decimal(5e6)
-  };
+     return new Decimal(5e6)
+  }
   static get remoteStart() {
     return new Decimal(800).plusEffectsOf(
       RealityUpgrade(21),
