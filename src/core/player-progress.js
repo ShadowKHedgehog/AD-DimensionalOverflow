@@ -55,7 +55,7 @@ export class PlayerProgress {
     return PlayerProgress.current.isRealityUnlocked;
   }
 
-  static ShatterUnlocked() {
+  static shatterUnlocked() {
     return PlayerProgress.current.isShatterUnlocked;
   }
 

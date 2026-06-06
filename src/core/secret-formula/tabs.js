@@ -1,5 +1,3 @@
-import { PlayerProgress } from "../player-progress";
-
 export const tabs = [
   {
     key: "dimensions",
@@ -45,7 +43,7 @@ export const tabs = [
         hideAt: 2.5,
         symbol: "♆",
         component: "RemnantDimensionsTab",
-        condition: () => PlayerProgress.ShatterUnlocked(),
+        condition: () => PlayerProgress.shatterUnlocked(),
         id: 3,
         hidable: false,
       },
