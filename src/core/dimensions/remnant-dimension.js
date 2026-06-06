@@ -111,9 +111,10 @@ class RemnantDimensionState extends DimensionState {
     this.isUnlocked = false;
   }
   unlock() {
+    /*
     if (this.isUnlocked) return true;
     if (!this.canUnlock) return false;
-    this.isUnlocked = true;
+    this.isUnlocked = true;*/
     return true
   }
 
