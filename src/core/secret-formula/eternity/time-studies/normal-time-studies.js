@@ -554,9 +554,9 @@ export const normalTimeStudies = [
     description() {
       const effect = TimeStudy(224).effectValue;
       return `Distant Galaxy cost scaling starts ${quantifyInt("Galaxy", effect)} later
-        (${formatInt(1)} per ${formatInt(2000)} Dim Boosts)`;
+        (${formatInt(1)} per ${formatInt(3000)} Dim Boosts)`;
     },
-    effect: () => Decimal.floor(DimBoost.totalBoosts.div(2000))
+    effect: () => Decimal.floor(DimBoost.totalBoosts.div(3000))
   },
   {
     id: 225,

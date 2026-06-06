@@ -6,7 +6,8 @@ import { Achievement } from "./globals";
 export const GALAXY_TYPE = {
   NORMAL: 0,
   DISTANT: 1,
-  REMOTE: 2
+  REMOTE: 2,
+  EXTREME: 3,
 };
 
 class GalaxyRequirement {
@@ -22,6 +23,9 @@ class GalaxyRequirement {
 }
 
 export class Galaxy {
+  static get extremeStart() {
+       new Decimal(5e6)
+  }
   static get remoteStart() {
     return new Decimal(800).plusEffectsOf(
       RealityUpgrade(21),
@@ -57,6 +61,14 @@ export class Galaxy {
       const a = DC.D1;
       const b = scale.add(1).sub(dis.mul(2));
       const c = base.add(dis.pow(2)).sub(dis).sub(scale).sub(currency.div(alter));
+      const quad = decimalQuadraticSolution(a, b, c).floor();
+      return Decimal.max(quad, minVal);
+    }
+    if (currency.lt(Galaxy.requirementAt(Galaxy.extremeStart).amount)) {
+      // Quadratic equation https://discord.com/channels/351476683016241162/1131505261903880244/1261706311901511691
+      const a = DC.D5;
+      const b = scale.add(1.7).sub(dis.mul(2.8));
+      const c = base.add(dis.pow(2.5)).sub(dis).sub(scale).sub(currency.div(alter));
       const quad = decimalQuadraticSolution(a, b, c).floor();
       return Decimal.max(quad, minVal);
     }
