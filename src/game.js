@@ -556,11 +556,14 @@ export function gameLoop(passedDiff, options = {}) {
     }
     player.records.thisReality.realTime = player.records.thisReality.realTime.add(realDiff);
     player.records.thisReality.time = player.records.thisReality.time.add(diff);
+    player.records.thisShatter.realTime = player.records.thisShatter.realTime.add(realDiff);
+    player.records.thisShatter.time = player.records.thisShatter.time.add(diff);
 
     player.records.trueTimePlayed += trueDiff;
     player.records.thisInfinity.trueTime += trueDiff;
     player.records.thisEternity.trueTime += trueDiff;
     player.records.thisReality.trueTime += trueDiff;
+    player.records.thisShatter.trueTime += trueDiff;
   }
 
   DeltaTimeState.update(trueDiff, realDiff, diff);
