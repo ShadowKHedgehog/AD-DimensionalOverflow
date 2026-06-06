@@ -7,7 +7,7 @@ export function shatterReset {
   EventHub.dispatch(GAME_EVENT.SHATTER_RESET_BEFORE);
   shatterGiveRewards();
   restartWithCarryoverPostShatter();
-  EventHub.dispatch(GAME_EVENT.SHATTER_RESET_AFTER)!
+  EventHub.dispatch(GAME_EVENT.SHATTER_RESET_AFTER);
 }
 function shatterGiveRewards {
   shatterUpdateStatistics();
