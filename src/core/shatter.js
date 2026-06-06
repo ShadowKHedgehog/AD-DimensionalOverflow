@@ -6,7 +6,7 @@ export function shatterReset() {
   if (!Player.canShatter) return;
   EventHub.dispatch(GAME_EVENT.SHATTER_RESET_BEFORE);
   shatterGiveRewards();
-  restartWithCarryoverPostShatter();
+  NG.restartWithCarryoverPostShatter();
   EventHub.dispatch(GAME_EVENT.SHATTER_RESET_AFTER);
 }
 function shatterGiveRewards() {
