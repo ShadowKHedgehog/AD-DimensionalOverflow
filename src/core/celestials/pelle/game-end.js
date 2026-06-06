@@ -2,18 +2,51 @@ import { isDecimal } from "../../../utility/type-check";
 
 export const END_STATE_MARKERS = {
   // Tab zalgoification starts as soon as endState > 0
-  GAME_END: 1,
-  TAB_START_HIDE: 1.5,
-  INTERACTIVITY_DISABLED: 2.5,
-  FADE_AWAY: 2.5,
-  SAVE_DISABLED: 1,
-  END_NUMBERS: 4.2,
-  CREDITS_START: 4.5,
-  SHOW_NEW_GAME: 15.8,
-  SPECTATE_GAME: 16.1,
-  // The song is 3:04 and the credits increment by 1 every 20 seconds. Needs changing if the song is changed.
-  SONG_END: 14.9,
-  CREDITS_END: 15.7,
+  get GAME_END() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 1;
+  },
+  get TAB_START_HIDE() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 1.5;
+  },
+  get INTERACTIVITY_DISABLED() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 2.5;
+  },
+  get FADE_AWAY() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 2.5;
+  },
+  get SAVE_DISABLED() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 4;
+  },
+  get END_NUMBERS() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 4.2;
+  },
+  get CREDITS_START() {
+    if (player.endgames >= 1) return 1e308;
+    return 4.5;
+  },
+  get SHOW_NEW_GAME() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 15.5;
+  },
+  get SPECTATE_GAME() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 15.9;
+  },
+  // The song is 4:27 and the credits increment by 1 every 20 seconds. Needs changing if the song is changed.
+  get SONG_END() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 17.9;
+  },
+  get CREDITS_END() {
+    if (player.exposes.gte(1)) return 1e308;
+    return 160;
+  },
 };
 
 export const GameEnd = {

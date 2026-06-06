@@ -351,8 +351,16 @@ export const Pelle = {
     return zalgo(str, Math.floor(stage ** 2 * 7));
   },
 
-  endTabNames: "End Comes For All Time Is Gone Now Good Bye Forever".split(" "),
 
+  get endTabNames() {
+    if (player.exposes.gte(1)) {
+      return "Thus We Go Again I Have Fallen You Have Won Again".split(" ");
+    } else {
+      return "End Comes For All Time Is Gone Now Good Bye Forever".split(" ");
+    }
+  },
+
+  
   quotes: Quotes.pelle,
 
   reset() {

@@ -20,7 +20,7 @@ export const GameEnd2 = {
   get endState() {
     if (this.removeAdditionalEnd || player.bypassEnd) return this.additionalEnd;
     return Math.max(player.celestials.sercanote.records.totalAntimatter.add(1).log10().add(1).log10().sub(8.7)
-      .div(Math.log10(1e300) - 8.7).min(1).toNumber() + this.additionalEnd + Achievement(288).effectOrDefault(0));
+      .div(Math.log10(1e300) - 8.7).min(1).toNumber() + this.additionalEnd + Achievement(318).effectOrDefault(0));
   },
 
   _additionalEnd: 0,
