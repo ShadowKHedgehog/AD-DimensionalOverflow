@@ -1460,9 +1460,9 @@ export const normalAchievements = [
     name: "Explosion",
     description: `Unlock Ra's Auto Memory Gain.`,
     get reward() {
-      return `Galaxy Remote Start Delayed by ${format(DC.E7)} galaxies.`;
+      return `Galaxy Remote Start Delayed by ${format(DC.E5)} galaxies.`;
     },
-    effect: DC.E7
+    effect: DC.E5
   },
   {
     id: 202,
