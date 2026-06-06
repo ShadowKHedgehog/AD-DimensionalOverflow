@@ -42,7 +42,7 @@ export default {
     },
     adjustSliderNegative(value) {
       this.negativeSlider = -value;
-      player.blackHoleNegative = Decimal.pow10(-this.negativeSlider);
+      player.blackHoleNegative = Decimal.pow10(this.negativeSlider);
       player.requirementChecks.reality.slowestBH = Decimal.max(
         player.requirementChecks.reality.slowestBH,
         player.blackHoleNegative
