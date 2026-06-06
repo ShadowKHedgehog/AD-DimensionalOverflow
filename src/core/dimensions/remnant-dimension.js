@@ -110,6 +110,12 @@ class RemnantDimensionState extends DimensionState {
     this.baseAmount = DC.D0;
     this.isUnlocked = false;
   }
+  unlock() {
+    if (this.isUnlocked) return true;
+    if (!this.canUnlock) return false;
+    this.isUnlocked = true;
+    return true
+  }
 
   // Only ever called from manual actions
   buySingle() {
