@@ -43,7 +43,7 @@ export const GalaxyGenerator = {
     if (production.gt(this.softcapStarts[0])){
       production = production.div(this.softcapStarts[0]).pow(this.softcapMags[0]).times(this.softcapStarts[0])
   }
-  if (production.gt(softcapStarts[1])){
+  if (production.gt(this.softcapStarts[1])){
       production = production.div(this.softcapStarts[1]).pow(this.softcapMags[1]).times(this.softcapStarts[1])
   }
   if (production.gt(this.softcapStarts[2])){
