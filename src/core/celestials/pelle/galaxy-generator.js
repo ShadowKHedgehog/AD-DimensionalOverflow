@@ -26,17 +26,30 @@ export const GalaxyGenerator = {
   get galaxies() {
     return this.generatedGalaxies.sub(this.spentGalaxies);
   },
-
+  get softcapStarts() {
+    return [new Decimal(1e15), new Decimal(1e24), new Decimal (5e27)]
+  },
+  get softcapMags() {
+    return [new Decimal(0.75), new Decimal(0.65), new Decimal(0.95)]
+  },
   get gainPerSecond() {
     if (!Pelle.hasGalaxyGenerator) return DC.D0;
-    return new Decimal(GalaxyGeneratorUpgrades.additive.effectValue).timesEffectsOf(
+    let production = new Decimal(GalaxyGeneratorUpgrades.additive.effectValue).timesEffectsOf(
       GalaxyGeneratorUpgrades.multiplicative,
       GalaxyGeneratorUpgrades.antimatterMult,
       GalaxyGeneratorUpgrades.IPMult,
       GalaxyGeneratorUpgrades.EPMult,
     );
+    if (production.gt(this.softcapStarts[0])){
+      production = production.div(this.softcapStarts[0]).pow(this.softcapMags[0]).times(this.softcapStarts[0])
+  }
+  if (production.gt(softcapStarts[1])){
+      production = production.div(this.softcapStarts[1]).pow(this.softcapMags[1]).times(this.softcapStarts[1])
+  }
+  if (production.gt(this.softcapStarts[2])){
+      production = production.div(this.softcapStarts[2]).log10().pow(this.softcapMags[2]).pow10().times(this.softcapStarts[2])
+  }
   },
-
   get capObj() {
     return this.generationCaps[player.celestials.pelle.galaxyGenerator.phase];
   },
