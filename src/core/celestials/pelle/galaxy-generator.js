@@ -42,14 +42,14 @@ export const GalaxyGenerator = {
     );
     if (production.gt(softcapStarts[0])){
       production = production.div(softcapStarts[0]).pow(softcapMags[0]).times(softcapStarts[0])
-  },
+  }
   if (production.gt(softcapStarts[1]){
       production = production.div(softcapStarts[1]).pow(softcapMags[1]).times(softcapStarts[1])
-  },
+  }
   if (production.gt(softcapStarts[2]){
       production = production.div(softcapStarts[2]).log10().pow(softcapMags[2]).pow10().times(softcapStarts[2])
+  }
   },
-
   get capObj() {
     return this.generationCaps[player.celestials.pelle.galaxyGenerator.phase];
   },
