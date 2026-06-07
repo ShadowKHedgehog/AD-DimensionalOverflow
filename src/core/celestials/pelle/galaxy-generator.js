@@ -26,15 +26,28 @@ export const GalaxyGenerator = {
   get galaxies() {
     return this.generatedGalaxies.sub(this.spentGalaxies);
   },
-
+  get softcapStarts() {
+    return [new Decimal(1e15), new Decimal(1e24), new Decimal (5e27)]
+  },
+  get softcapMags() {
+    return [new Decimal(0.75), new Decimal(0.65), new Decimal(0.95)]
+  },
   get gainPerSecond() {
     if (!Pelle.hasGalaxyGenerator) return DC.D0;
-    return new Decimal(GalaxyGeneratorUpgrades.additive.effectValue).timesEffectsOf(
+    let production = new Decimal(GalaxyGeneratorUpgrades.additive.effectValue).timesEffectsOf(
       GalaxyGeneratorUpgrades.multiplicative,
       GalaxyGeneratorUpgrades.antimatterMult,
       GalaxyGeneratorUpgrades.IPMult,
       GalaxyGeneratorUpgrades.EPMult,
     );
+    if (production.gt(softcapStarts[0]){
+      production = production.div(softcapStarts[0]).pow(softcapMags[0]).times(softcapStarts[0])
+  },
+  if (production.gt(softcapStarts[1]){
+      production = production.div(softcapStarts[1]).pow(softcapMags[1]).times(softcapStarts[1])
+  },
+  if (production.gt(softcapStarts[2]){
+      production = production.div(softcapStarts[2]).log10().pow(softcapMags[2]).pow10().times(softcapStarts[2])
   },
 
   get capObj() {
