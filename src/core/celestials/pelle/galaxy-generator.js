@@ -40,7 +40,7 @@ export const GalaxyGenerator = {
       GalaxyGeneratorUpgrades.IPMult,
       GalaxyGeneratorUpgrades.EPMult,
     );
-    if (production.gt(softcapStarts[0]){
+    if (production.gt(softcapStarts[0])){
       production = production.div(softcapStarts[0]).pow(softcapMags[0]).times(softcapStarts[0])
   },
   if (production.gt(softcapStarts[1]){
