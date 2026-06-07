@@ -153,7 +153,7 @@ export function gainedEternityPoints() {
 }
 
 export function gainedShatterShards() {
-  return player.exposes.gte(1) ? DC.D1 : player.antimatter.log10().div(DC.NUMSAFE).max(1).times(player.antimatter.log10().div(DC.NUMMAX.div(DC.NUMSAFE)).max(1))
+  return !player.exposes.gte(1) ? DC.D1 : player.antimatter.log10().div(DC.NUMSAFE).max(1).times(player.antimatter.log10().div(DC.NUMMAX.div(DC.NUMSAFE)).max(1))
 }
 
 export function requiredIPForEP(epAmount) {
