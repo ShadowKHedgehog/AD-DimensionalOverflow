@@ -41,7 +41,7 @@ export default {
   >
     <h2>
       Reset the entire game up to this point, but keep Automator Scripts, Study Presets, Secret Themes, Secret Achievements, Options,
-      Companion Glyphs, and Perks. It will also unlock a new Prestige Layer.
+      Companion Glyphs, and Perks. It will also unlock a new Prestige Layer, and by your 25th reset, you will keep everything before Pelle, You keep every achievement after 188 during this reset layer at all times.
     </h2>
     <h3>You can use the button in the top-right to view the game as it is right now.</h3>
     <div class="c-new-game-button-container">
@@ -72,7 +72,7 @@ export default {
     </h3>
     <br>
     <h3>
-      You can also import "speedrun" to start the game again with additional tracking for speedrunning purposes.
+      importing "speedrun" is highly advised against as Speedrun Mode will reset everything including the shatter layer because it creates a new game without any carryover.
     </h3>
   </div>
 </template>
