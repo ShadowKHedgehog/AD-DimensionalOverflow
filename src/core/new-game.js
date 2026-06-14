@@ -839,7 +839,7 @@ restartWithCarryoverPostShatter() {
     AntimatterDimensions.reset();
     Currency.antimatter.reset();
     initializeChallengeCompletions(true);
-    if (player.exposes.gte(25)){
+    if (player.exposes.lt(25)){
     Achievement(188).lock();
     }
     Achievement(318).lock();
