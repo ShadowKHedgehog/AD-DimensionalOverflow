@@ -45,7 +45,7 @@ export default {
       if (!this.hasRealityButton) this.antimatterPerSec.copyFrom(Currency.antimatter.productionPerSecond);
       this.shattershards.copyFrom(Currency.shattershards);
       this.showShatter = PlayerProgress.shatterUnlocked();
-      this.canShatter = player.antimatter.gte("e9e15") && Pelle.isDoomed;
+      this.canShatter = player.antimatter.gte("e9e15");
     },
   },
 };
@@ -57,7 +57,7 @@ export default {
     class="c-prestige-button-container"
   >
     <div
-      v-if="showEndgame"
+      v-if="showShatter"
     >
       You have <span class="ss-text">{{ format(shattershards, 2) }}</span> {{ pluralize("Shattershards", shattershards) }}.
     <br>
