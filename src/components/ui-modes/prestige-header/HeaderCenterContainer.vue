@@ -61,6 +61,7 @@ export default {
     >
       You have <span class="ss-text">{{ format(shattershards, 2) }}</span> {{ pluralize("Shattershards", shattershards) }}.
     <br>
+    </div>
     <span>You have <span class="c-game-header__antimatter">{{ format(antimatter, 2, 1) }}</span> antimatter.</span>
     <div
       v-if="hasRealityButton"
