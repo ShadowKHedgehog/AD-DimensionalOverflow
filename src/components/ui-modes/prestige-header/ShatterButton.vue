@@ -30,7 +30,7 @@ export default {
     },
     handleClick() {
       if (this.canShatter) {
-        shatter();
+        shatterResetRequest();
       }
     }
   }
