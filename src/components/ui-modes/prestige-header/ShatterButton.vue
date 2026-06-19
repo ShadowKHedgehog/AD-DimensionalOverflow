@@ -26,7 +26,7 @@ export default {
         this.gainedSS = 0;
         return;
       }
-      this.gainedSS = gainedShattershards();
+      this.gainedSS = gainedShatterShards();
     },
     handleClick() {
       if (this.canShatter) {
