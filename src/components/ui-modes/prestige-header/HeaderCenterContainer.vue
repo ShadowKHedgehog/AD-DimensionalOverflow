@@ -67,13 +67,15 @@ export default {
       v-if="hasRealityButton"
       class="c-reality-container"
     >
+      <span v-if="showShatter && canShatter">
+        <ShatterButton
+          :is-header="true"
+        />
+        <br>
+      </span>
       <RealityCurrencyHeader />
       <ArmageddonButton
-        v-if="isDoomed && (!canShatter || !showShatter)"
-        :is-header="true"
-      />
-      <ShatterButton
-        v-if="showShatter && canShatter"
+        v-if="isDoomed"
         :is-header="true"
       />
       <RealityButton v-else />
