@@ -9,7 +9,7 @@ export default {
   },
   computed: {
     formatSSGain() {
-      return `Shattershards gained: ${format(this.gainedSS, 2)}`;
+      return `ShatterShards gained: ${format(this.gainedSS, 2)}`;
     },
     classObject() {
       return {
