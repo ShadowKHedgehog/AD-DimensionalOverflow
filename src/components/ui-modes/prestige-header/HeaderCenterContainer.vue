@@ -59,7 +59,7 @@ export default {
     <div
       v-if="showShatter"
     >
-      You have <span class="ss-text">{{ format(shattershards, 2) }}</span> {{ pluralize("Shattershards", shattershards) }}.
+      You have <span class="ss-text">{{ format(shattershards, 2) }}</span> {{ pluralize("ShatterShards", shattershards) }}.
     <br>
     </div>
     <span>You have <span class="c-game-header__antimatter">{{ format(antimatter, 2, 1) }}</span> antimatter.</span>
