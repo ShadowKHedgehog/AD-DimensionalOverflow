@@ -1,3 +1,6 @@
+export function isShatterAvailable() {
+  return player.antimatter.add(1).log10().gte(9e15);
+}
 export function shatterResetRequest() {
   if (!Player.canShatter) return;
   shatterReset();
