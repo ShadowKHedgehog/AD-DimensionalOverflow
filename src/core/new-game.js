@@ -512,7 +512,14 @@ restartWithCarryoverPostShatter() {
     Glyphs.autoClean(0);
     player.reality.glyphs.protectedRows = rowProtect;
     }
-    
+    if (player.exposes.gte(25)){
+
+      player.reality.upgReqs = 67108800;
+      player.reality.imaginaryUpgReqs = 67108800;
+      player.reality.upgradeBits = 67108800;
+      player.reality.imaginaryUpgradeBits = 67108800;
+      player.realities = new Decimal(10000);
+    }
     if (player.exposes.lt(25)){
       player.realities = DC.D0;
       player.partSimulatedReality = DC.D0;
