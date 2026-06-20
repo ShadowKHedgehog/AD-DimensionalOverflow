@@ -554,6 +554,7 @@ restartWithCarryoverPostShatter() {
       4: new Decimal(),
       5: new Decimal(),
     };
+    if (player.exposes.gte(25)) {
     player.reality.upgradeBits = 0;
     player.reality.upgReqs = 0;
     player.reality.imaginaryUpgradeBits = 0;
@@ -573,6 +574,7 @@ restartWithCarryoverPostShatter() {
     player.reality.reqLock = {
       reality: 0,
       imaginary: 0,
+    };
     };
     player.reality.respec = false;
     player.reality.showGlyphSacrifice = false;
