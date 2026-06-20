@@ -585,7 +585,7 @@ restartWithCarryoverPostShatter() {
     player.reality.moveGlyphsOnProtection = false;
     player.reality.unlockedEC = 0;
     player.reality.autoEC = true;
-    player.reality.lastAutoEC = 0;
+    player.reality.lastAutoEC = DC.D0;
     player.reality.partEternitied = DC.D0;
     player.reality.autoAchieve = true;
     player.reality.gainedAutoAchievements = true;
