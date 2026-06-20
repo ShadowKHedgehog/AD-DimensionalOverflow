@@ -1,6 +1,5 @@
 import * as ADNotations from "adnot-beport-small";
 import { DC } from "./constants";
-import { Player } from "./player";
 export const NG = {
   startNewGame() {
     GameEnd.creditsClosed = false;
