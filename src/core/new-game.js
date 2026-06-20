@@ -554,7 +554,6 @@ restartWithCarryoverPostShatter() {
       4: new Decimal(),
       5: new Decimal(),
     };
-    if (player.exposes.lt(25)) {
     player.reality.upgradeBits = 0;
     player.reality.upgReqs = 0;
     player.reality.imaginaryUpgradeBits = 0;
@@ -855,4 +854,4 @@ restartWithCarryoverPostShatter() {
     sercanote.isTrapped = false;
     sercanote.isGameEnd2 = false;
   }
-};
+},
