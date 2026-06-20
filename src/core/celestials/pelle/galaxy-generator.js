@@ -49,6 +49,7 @@ export const GalaxyGenerator = {
   if (production.gt(this.softcapStarts[2])){
       production = production.div(this.softcapStarts[2]).log10().pow(this.softcapMags[2]).pow10().times(this.softcapStarts[2])
   }
+    return production;
   },
   get capObj() {
     return this.generationCaps[player.celestials.pelle.galaxyGenerator.phase];
