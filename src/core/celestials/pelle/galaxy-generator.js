@@ -27,10 +27,10 @@ export const GalaxyGenerator = {
     return this.generatedGalaxies.sub(this.spentGalaxies);
   },
   get softcapStarts() {
-    return [new Decimal(1e15), new Decimal(1e24), new Decimal (5e27)]
+    return [new Decimal(1e15), new Decimal(1e24), new Decimal (5e27), new Decimal(1e30)]
   },
   get softcapMags() {
-    return [new Decimal(0.75), new Decimal(0.65), new Decimal(0.95)]
+    return [new Decimal(0.75), new Decimal(0.65), new Decimal(0.95), new Decimal(0.98)]
   },
   get gainPerSecond() {
     if (!Pelle.hasGalaxyGenerator) return DC.D0;
@@ -48,6 +48,9 @@ export const GalaxyGenerator = {
   }
   if (production.gt(this.softcapStarts[2])){
       production = production.div(this.softcapStarts[2]).log10().pow(this.softcapMags[2]).pow10().times(this.softcapStarts[2])
+  }
+  if (production.gt(this.softcapStarts[3])){
+      production = production.div(this.softcapStarts[3]).log10().pow(this.softcapMags[3]).pow10().times(this.softcapStarts[3])
   }
     return production;
   },
