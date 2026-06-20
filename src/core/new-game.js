@@ -617,7 +617,6 @@ restartWithCarryoverPostShatter() {
     
 
     Autobuyers.reset();
-
     player.reality.partEternitied = DC.D0;
     if (player.exposes.lt(25)){
     player.celestials.teresa.pouredAmount = 0;
@@ -820,7 +819,6 @@ restartWithCarryoverPostShatter() {
     player.respec = false;
     player.eterc8ids = 50;
     player.eterc8repl = 40;
-    
     InfinityDimensions.fullReset();
     InfinityDimensions.resetAmount();
     fullResetTimeDimensions();
@@ -854,4 +852,4 @@ restartWithCarryoverPostShatter() {
     sercanote.isTrapped = false;
     sercanote.isGameEnd2 = false;
   }
-},
+}

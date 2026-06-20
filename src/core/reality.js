@@ -639,7 +639,7 @@ export function finishProcessReality(realityProps) {
   player.galaxies = DC.D0;
   player.partInfinityPoint = 0;
   player.partInfinitied = 0;
-  if (player.exposes.lt(25)) {
+  if (player.exposes.lt(15)) {
   player.break = false;
   }
   player.IPMultPurchases = DC.D0;
