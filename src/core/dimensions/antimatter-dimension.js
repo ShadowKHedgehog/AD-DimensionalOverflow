@@ -612,15 +612,31 @@ class AntimatterDimensionState extends DimensionState {
     if (!Pelle.isDoomed) {
       if (production.gt(new Decimal("1e9e18"))) {
         const log10 = production.log10();
-        production = Decimal.pow10(Decimal.pow(log10.div(9e18), 0.9998).times(9e18))
+        production = Decimal.pow10(Decimal.pow(log10.div(9e18), 0.95).times(9e18))
       }
       if (production.gt(DC.EE50)) {
         const log10 = production.log10();
-        production = Decimal.pow10(Decimal.pow(log10.div(1e50), 0.9992).times(1e50))
+        production = Decimal.pow10(Decimal.pow(log10.div(1e50), 0.90).times(1e50))
       }
       if (production.gt(DC.EE100)) {
         const log10 = production.log10();
-        production = Decimal.pow10(Decimal.pow(log10.div(1e100), 0.9989).times(1e100))
+        production = Decimal.pow10(Decimal.pow(log10.div(1e100), 0.84).times(1e100))
+      }
+      if (production.gt(new Decimal("1e1e125"))) {
+        const log10 = production.log10();
+        production = Decimal.pow10(Decimal.pow(log10.div(1e125), 0.69).times(1e125))
+      }
+      if (production.gt(new Decimal("1e1e150"))) {
+        const log10 = production.log10();
+        production = Decimal.pow10(Decimal.pow(log10.div(1e150), 0.43).times(1e150))
+      }
+      if (production.gt(new Decimal("1e1e151"))) {
+        const log10 = production.log10();
+        production = Decimal.pow10(Decimal.pow(log10.div(1e151), 0.40).times(1e151))
+      }
+      if (production.gt(new Decimal("1e1e152"))) {
+        const log10 = production.log10();
+        production = Decimal.pow10(Decimal.pow(log10.div(1e152), 0.37).times(1e152))
       }
     }
     return production;
