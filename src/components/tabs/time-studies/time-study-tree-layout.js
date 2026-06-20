@@ -143,7 +143,7 @@ export class TimeStudyTreeLayout {
       normalRow(                              TS(251)                                 ),
       normalRow(                      TS(261),       TS(262)                          ),
       normalRow(                 TS(271),TS(272), TS(273),TS(274)                     ),
-      normalRow(                              TS(281)                                 )
+      normalRow(                     TS(283), TS(281), TS(282)                        )
     );
     /* eslint-enable no-multi-spaces, space-in-parens, func-call-spacing */
 

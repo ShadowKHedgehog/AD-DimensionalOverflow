@@ -737,7 +737,7 @@ export const normalTimeStudies = [
     requirement: [261],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Replicanti based on Best Antimatter per Shatter`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.records.bestShatter.maxAM), 1.01), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log2(player.records.bestShatter.maxAM), 40), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
@@ -756,8 +756,8 @@ export const normalTimeStudies = [
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `Delay Antimatter Galaxy Scaling based on Best Antimatter per Shatter`,
     effect: () => {
-      let doubleExponent = Decimal.log10(player.records.bestShatter.maxAM).log10();
-      return Decimal.max(doubleExponent.mul(1000), 1);
+      let doubleExponent = Decimal.log10(player.records.bestShatter.maxAM).log2();
+      return Decimal.max(doubleExponent.mul(1400), 1);
     },
     formatEffect: value => `Both Antimatter Galaxy Scaling Tiers are Delayed by ${format(value)} Galaxies`
   },
@@ -768,6 +768,24 @@ export const normalTimeStudies = [
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `Raise Gamespeed based on Best Antimatter per Shatter`,
     effect: () => Decimal.log2(player.records.bestShatter.maxAM).log10().div(4),
+    formatEffect: value => formatPow(value,2,2)
+  },
+  {
+    id: 282,
+    cost: new Decimal("1e6000"),
+    requirement: [281],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `Raise Imaginary Machines based on Best Antimatter Per Shatter`,
+    effect: () => Decimal.log2(player.records.bestShatter.maxAM).log2().div(29.90),
+    formatEffect: value => formatPow(value,2,2)
+  },
+  {
+    id: 283,
+    cost: new Decimal("1e4000"),
+    requirement: [281],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `Raise Remnant Dimensions based on Best Antimatter Per Shatter`,
+    effect: () => Decimal.log2(player.records.bestShatter.maxAM).log2().div(39.45),
     formatEffect: value => formatPow(value,2,2)
   },
 ];

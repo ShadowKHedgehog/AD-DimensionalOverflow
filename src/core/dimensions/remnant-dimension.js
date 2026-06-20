@@ -62,6 +62,7 @@ class RemnantDimensionState extends DimensionState {
         tier >= 1 && tier <= 8 ? Achievement(217) : null,
       );
     mult = mult.times(Decimal.pow(this.powerMultiplier, Decimal.floor(this.baseAmount.div(DC.E1))));
+    mult = mult.pow(TimeStudy(283).effectOrDefault(0))
 
     return mult;
   }
