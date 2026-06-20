@@ -612,15 +612,15 @@ class AntimatterDimensionState extends DimensionState {
     if (!Pelle.isDoomed) {
       if (production.gt(new Decimal("1e9e18"))) {
         const log10 = production.log10();
-        production = Decimal.pow10(Decimal.pow(log10.div(9e18), 0.95).times(9e18))
+        production = Decimal.pow10(Decimal.pow(log10.div(9e18), 0.98).times(9e18))
       }
       if (production.gt(DC.EE50)) {
         const log10 = production.log10();
-        production = Decimal.pow10(Decimal.pow(log10.div(1e50), 0.90).times(1e50))
+        production = Decimal.pow10(Decimal.pow(log10.div(1e50), 0.86).times(1e50))
       }
       if (production.gt(DC.EE100)) {
         const log10 = production.log10();
-        production = Decimal.pow10(Decimal.pow(log10.div(1e100), 0.84).times(1e100))
+        production = Decimal.pow10(Decimal.pow(log10.div(1e100), 0.74).times(1e100))
       }
       if (production.gt(new Decimal("1e1e125"))) {
         const log10 = production.log10();
