@@ -638,6 +638,9 @@ class AntimatterDimensionState extends DimensionState {
         const log10 = production.log10();
         production = Decimal.pow10(Decimal.pow(log10.div(1e152), 0.37).times(1e152))
       }
+      if (production.gt(new Decimal("1e1.79e308"))) {
+        production = DC.D0;
+      }
     }
     return production;
   }
