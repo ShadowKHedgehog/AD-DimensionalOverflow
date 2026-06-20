@@ -554,7 +554,7 @@ restartWithCarryoverPostShatter() {
       4: new Decimal(),
       5: new Decimal(),
     };
-    if (player.exposes.gte(25)) {
+    if (player.exposes.lt(25)) {
     player.reality.upgradeBits = 0;
     player.reality.upgReqs = 0;
     player.reality.imaginaryUpgradeBits = 0;
@@ -592,7 +592,7 @@ restartWithCarryoverPostShatter() {
     player.reality.gainedAutoAchievements = true;
     player.reality.achTimer = new Decimal();
     player.reality.hasCheckedFilter = false;
-    if (player.exposes.gte(25)) {
+    if (player.exposes.lt(25)) {
     player.reality.glyphs.sac.power = DC.D0;
     player.reality.glyphs.sac.infinity = DC.D0;
     player.reality.glyphs.sac.time = DC.D0;
