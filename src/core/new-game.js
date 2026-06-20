@@ -841,6 +841,7 @@ restartWithCarryoverPostShatter() {
     player.partInfinitied = 0;
     player.dimensionBoosts = DC.D0;
     player.galaxies = DC.D0;
+    
     if (player.exposes.gte(15)){
     player.break = true;
     elseif (player.exposes.lt(15)) 
@@ -858,5 +859,7 @@ restartWithCarryoverPostShatter() {
     pelle.isDoomed = false;
     sercanote.isTrapped = false;
     sercanote.isGameEnd2 = false;
+    currency.eternityPoints.reset();
+    currency.eternities.reset();
   }
 }
