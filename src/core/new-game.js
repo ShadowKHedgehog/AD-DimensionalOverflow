@@ -55,6 +55,8 @@ export const NG = {
   // Reset the game, but carry over some post-completion stats. We also call this when starting a speedrun, so make sure
   // any stats which are updated due to completion happen in startNewGame() instead of in here
   restartWithCarryover() {
+    let rowProtect = 0;
+    rowProtect = player.reality.glyphs.protectedRows;
     player.isGameEnd = false;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
@@ -89,11 +91,11 @@ export const NG = {
     });
     player.reality.glyphs.protectedRows = 0;
     Glyphs.autoClean(0);
-    player.reality.glyphs.protectedRows = 2;
+    player.reality.glyphs.protectedRows = rowProtect;
     Glyphs.unequipAll();
     player.reality.glyphs.protectedRows = 0;
     Glyphs.autoClean(0);
-    player.reality.glyphs.protectedRows = 2;
+    player.reality.glyphs.protectedRows = rowProtect;
     player.reality.glyphs.filter = {
       select: AUTO_GLYPH_SCORE.LOWEST_SACRIFICE,
       trash: AUTO_GLYPH_REJECT.SACRIFICE,
@@ -151,7 +153,7 @@ export const NG = {
     player.reality.moveGlyphsOnProtection = false;
     player.reality.unlockedEC = 0;
     player.reality.autoEC = true;
-    player.reality.lastAutoEC = 0;
+    player.reality.lastAutoEC = DC.D0;
     player.reality.partEternitied = DC.D0;
     player.reality.autoAchieve = true;
     player.reality.gainedAutoAchievements = true;
@@ -166,7 +168,7 @@ export const NG = {
     player.reality.glyphs.sac.reality = DC.D0;
     player.blackHole = Array.range(0, 2).map(id => ({
       id,
-      intervalUpgrades: 0,
+      intervalUpgrades: DC.D0,
       powerUpgrades: DC.D0,
       durationUpgrades: DC.D0,
       phase: DC.D0,
@@ -486,6 +488,8 @@ export const NG = {
     pelle.isDoomed = false;
   },
 restartWithCarryoverPostShatter() {
+    let rowProtect = 0;
+    rowProtect = player.reality.glyphs.protectedRows;
     player.isGameEnd = false;
     player.isGameEnd2 = false;
     Tab.dimensions.antimatter.show();
@@ -501,13 +505,13 @@ restartWithCarryoverPostShatter() {
     if (player.exposes.lt(25)){
     player.reality.glyphs.protectedRows = 0;
     Glyphs.autoClean(0);
-    player.reality.glyphs.protectedRows = 2;
+    player.reality.glyphs.protectedRows = rowProtect;
     };
     Glyphs.unequipAll();
     if (player.exposes.lt(25)){
     player.reality.glyphs.protectedRows = 0;
     Glyphs.autoClean(0);
-    player.reality.glyphs.protectedRows = 2;
+    player.reality.glyphs.protectedRows = rowProtect;
     }
     
     if (player.exposes.lt(25)){
@@ -596,7 +600,7 @@ restartWithCarryoverPostShatter() {
     player.reality.glyphs.sac.reality = DC.D0;
     player.blackHole = Array.range(0, 2).map(id => ({
       id,
-      intervalUpgrades: 0,
+      intervalUpgrades: DC.D0,
       powerUpgrades: DC.D0,
       durationUpgrades: DC.D0,
       phase: DC.D0,
