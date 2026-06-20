@@ -169,7 +169,6 @@ export const RemnantDimensions = {
   HARDCAP_PURCHASES: DC.E500000,
 
   resetAmount() {
-    Currency.shatterPower.reset();
     for (const dimension of RemnantDimensions.all) {
       dimension.resetAmount();
     }

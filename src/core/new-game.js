@@ -1,5 +1,6 @@
 import * as ADNotations from "adnot-beport-small";
 import { DC } from "./constants";
+import { pelle } from "./celestials/pelle/pelle"
 export const NG = {
   startNewGame() {
     GameEnd.creditsClosed = false;
@@ -554,18 +555,25 @@ restartWithCarryoverPostShatter() {
       player.reality.secondGaussian = 1e6;
       player.reality.musicSeed = Math.floor(Date.now() * Math.random() + 0xBCDDECCB);
       player.reality.musicSecondGaussian = 1e6;
-      player.reality.rebuyables = {
+      
+      player.reality.upgradeBits = 0;
+      player.reality.upgReqs = 0;
+      player.reality.imaginaryUpgradeBits = 0;
+      player.reality.imaginaryUpgReqs = 0;
+      
+      player.reality.reqLock = {
+        reality: 0,
+        imaginary: 0,
+      };
+    };
+    player.reality.rebuyables = {
         1: new Decimal(),
         2: new Decimal(),
         3: new Decimal(),
         4: new Decimal(),
         5: new Decimal(),
       };
-      player.reality.upgradeBits = 0;
-      player.reality.upgReqs = 0;
-      player.reality.imaginaryUpgradeBits = 0;
-      player.reality.imaginaryUpgReqs = 0;
-      player.reality.imaginaryRebuyables = {
+    player.reality.imaginaryRebuyables = {
         1: new Decimal(),
         2: new Decimal(),
         3: new Decimal(),
@@ -577,11 +585,6 @@ restartWithCarryoverPostShatter() {
         9: new Decimal(),
         10: new Decimal(),
       };
-      player.reality.reqLock = {
-        reality: 0,
-        imaginary: 0,
-      };
-    };
     player.reality.respec = false;
     player.reality.showGlyphSacrifice = false;
     player.reality.showSidebarPanel = GLYPH_SIDEBAR_MODE.INVENTORY_MANAGEMENT;
@@ -813,7 +816,7 @@ restartWithCarryoverPostShatter() {
     Currency.infinityPower.reset();
     player.postC4Tier = 0;
     Currency.timeShards.reset();
-    Replicanti.reset(true);
+    
     Currency.eternityPoints.reset();
     EternityUpgrade.epMult.reset();
     Currency.eternities.reset();
@@ -844,9 +847,10 @@ restartWithCarryoverPostShatter() {
     
     if (player.exposes.gte(15)){
     player.break = true;
-    elseif (player.exposes.lt(15)) 
-      player.break = false;
     };
+    if (player.exposes.lt(15)) {
+      player.break = false
+    }
     resetTickspeed();
     AntimatterDimensions.reset();
     Currency.antimatter.reset();
@@ -855,11 +859,31 @@ restartWithCarryoverPostShatter() {
     Achievement(188).lock();
     };
     Achievement(318).lock();
-    pelle.isGameEnd = false;
-    pelle.isDoomed = false;
-    sercanote.isTrapped = false;
-    sercanote.isGameEnd2 = false;
-    currency.eternityPoints.reset();
-    currency.eternities.reset();
+    Currency.eternityPoints.reset();
+    Currency.antimatter.reset();
+    Currency.timeTheorems.reset();
+    Currency.timeShards.reset();
+    Currency.dilatedTime.reset();
+    Currency.tachyonParticles.reset();
+    Currency.imaginaryMachines.reset();
+    Currency.realityMachines.reset();
+    AntimatterDimensions.reset();
+    player.reality.maxAM = DC.D0;
+    player.reality.maxIP = DC.D0;
+    player.reality.maxEP = DC.D0;
+    player.reality.maxDT = DC.D0;
+    player.infinities = DC.D0;
+    if (player.exposes.gte(25)) {
+    player.eternities = new Decimal(1000);
+    };
+    if (player.exposes.lt(25)) {
+    player.eternities = DC.D0;
+    };
+    RemnantDimensions.resetAmount();
+    player.expose.shatterPower = DC.D0;
+    Replicanti.reset();
+    player.isGameEnd = false;
+    GameEnd.removeAdditionalEnd = true;
+    GameEnd.additionalEnd = 15;
   }
 }
