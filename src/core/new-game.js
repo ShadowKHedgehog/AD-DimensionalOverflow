@@ -514,66 +514,66 @@ restartWithCarryoverPostShatter() {
     }
     
     if (player.exposes.lt(25)){
-    player.realities = DC.D0;
-    player.partSimulatedReality = DC.D0;
-    player.reality.realityMachines = DC.D0;
-    player.reality.maxRM = DC.D0;
-    player.reality.imaginaryMachines = DC.D0;
-    player.reality.iMCap = DC.D0;
-    player.reality.glyphs.sac.power = DC.D0;
-    player.reality.glyphs.sac.infinity = DC.D0;
-    player.reality.glyphs.sac.time = DC.D0;
-    player.reality.glyphs.sac.replication = DC.D0;
-    player.reality.glyphs.sac.dilation = DC.D0;
-    player.reality.glyphs.sac.effarig = DC.D0;
-    player.reality.glyphs.sac.reality = DC.D0;
-    player.reality.glyphs.undo = [];
-    player.reality.glyphs.sets = new Array(7).fill({
-      name: "",
-      glyphs: []
-    });
-    player.reality.respec = false;
-    player.reality.showGlyphSacrifice = false;
-    player.reality.showSidebarPanel = GLYPH_SIDEBAR_MODE.INVENTORY_MANAGEMENT;
-    player.reality.autoSort = 0;
-    player.reality.autoCollapse = false;
-    player.reality.autoAutoClean = false;
-    player.reality.applyFilterToPurge = false;
-    player.reality.moveGlyphsOnProtection = false;
-    player.reality.autoEC = true;
-     player.reality.glyphs.createdRealityGlyph = false;
-    player.reality.initialSeed = Math.floor(Date.now() * Math.random() + 1);
-    player.reality.seed = 1;
-    player.reality.secondGaussian = 1e6;
-    player.reality.musicSeed = Math.floor(Date.now() * Math.random() + 0xBCDDECCB);
-    player.reality.musicSecondGaussian = 1e6;
-    player.reality.rebuyables = {
-      1: new Decimal(),
-      2: new Decimal(),
-      3: new Decimal(),
-      4: new Decimal(),
-      5: new Decimal(),
-    };
-    player.reality.upgradeBits = 0;
-    player.reality.upgReqs = 0;
-    player.reality.imaginaryUpgradeBits = 0;
-    player.reality.imaginaryUpgReqs = 0;
-    player.reality.imaginaryRebuyables = {
-      1: new Decimal(),
-      2: new Decimal(),
-      3: new Decimal(),
-      4: new Decimal(),
-      5: new Decimal(),
-      6: new Decimal(),
-      7: new Decimal(),
-      8: new Decimal(),
-      9: new Decimal(),
-      10: new Decimal(),
-    };
-    player.reality.reqLock = {
-      reality: 0,
-      imaginary: 0,
-    };
+      player.realities = DC.D0;
+      player.partSimulatedReality = DC.D0;
+      player.reality.realityMachines = DC.D0;
+      player.reality.maxRM = DC.D0;
+      player.reality.imaginaryMachines = DC.D0;
+      player.reality.iMCap = DC.D0;
+      player.reality.glyphs.sac.power = DC.D0;
+      player.reality.glyphs.sac.infinity = DC.D0;
+      player.reality.glyphs.sac.time = DC.D0;
+      player.reality.glyphs.sac.replication = DC.D0;
+      player.reality.glyphs.sac.dilation = DC.D0;
+      player.reality.glyphs.sac.effarig = DC.D0;
+      player.reality.glyphs.sac.reality = DC.D0;
+      player.reality.glyphs.undo = [];
+      player.reality.glyphs.sets = new Array(7).fill({
+        name: "",
+        glyphs: []
+      });
+      player.reality.respec = false;
+      player.reality.showGlyphSacrifice = false;
+      player.reality.showSidebarPanel = GLYPH_SIDEBAR_MODE.INVENTORY_MANAGEMENT;
+      player.reality.autoSort = 0;
+      player.reality.autoCollapse = false;
+      player.reality.autoAutoClean = false;
+      player.reality.applyFilterToPurge = false;
+      player.reality.moveGlyphsOnProtection = false;
+      player.reality.autoEC = true;
+      player.reality.glyphs.createdRealityGlyph = false;
+      player.reality.initialSeed = Math.floor(Date.now() * Math.random() + 1);
+      player.reality.seed = 1;
+      player.reality.secondGaussian = 1e6;
+      player.reality.musicSeed = Math.floor(Date.now() * Math.random() + 0xBCDDECCB);
+      player.reality.musicSecondGaussian = 1e6;
+      player.reality.rebuyables = {
+        1: new Decimal(),
+        2: new Decimal(),
+        3: new Decimal(),
+        4: new Decimal(),
+        5: new Decimal(),
+      };
+      player.reality.upgradeBits = 0;
+      player.reality.upgReqs = 0;
+      player.reality.imaginaryUpgradeBits = 0;
+      player.reality.imaginaryUpgReqs = 0;
+      player.reality.imaginaryRebuyables = {
+        1: new Decimal(),
+        2: new Decimal(),
+        3: new Decimal(),
+        4: new Decimal(),
+        5: new Decimal(),
+        6: new Decimal(),
+        7: new Decimal(),
+        8: new Decimal(),
+        9: new Decimal(),
+        10: new Decimal(),
+      };
+      player.reality.reqLock = {
+        reality: 0,
+        imaginary: 0,
+      };
     };
     player.reality.respec = false;
     player.reality.showGlyphSacrifice = false;
@@ -618,7 +618,7 @@ restartWithCarryoverPostShatter() {
 
     Autobuyers.reset();
 
-     player.reality.partEternitied = DC.D0;
+    player.reality.partEternitied = DC.D0;
     if (player.exposes.lt(25)){
     player.celestials.teresa.pouredAmount = 0;
     player.celestials.teresa.quoteBits = 0;
@@ -734,7 +734,7 @@ restartWithCarryoverPostShatter() {
     player.celestials.laitela.singularityCapIncreases = DC.D0;
     player.celestials.laitela.lastCheckedMilestones = DC.D0;
     player.celestials.laitela.milestoneGlow = true;
-    }
+    };
     player.celestials.pelle.doomed = false;
     player.celestials.pelle.upgrades = new Set();
     player.celestials.pelle.remnants = DC.D0;
@@ -840,14 +840,14 @@ restartWithCarryoverPostShatter() {
     player.break = true;
     elseif (player.exposes.lt(15)) 
       player.break = false;
-    }
+    };
     resetTickspeed();
     AntimatterDimensions.reset();
     Currency.antimatter.reset();
     initializeChallengeCompletions(true);
     if (player.exposes.lt(25)){
     Achievement(188).lock();
-    }
+    };
     Achievement(318).lock();
     pelle.isGameEnd = false;
     pelle.isDoomed = false;
