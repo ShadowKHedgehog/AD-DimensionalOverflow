@@ -746,7 +746,7 @@ export const normalTimeStudies = [
     requirement: [262],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain more Eternity Points based on Best Antimatter per Shatter`,
-    effect: () => Decimal.max(Decimal.pow(Decimal.log10(player.records.bestShatter.maxAM), 4), 1),
+    effect: () => Decimal.max(Decimal.pow(Decimal.log2(player.records.bestShatter.maxAM), 90), 1),
     formatEffect: value => formatX(value,2,2)
   },
   {
