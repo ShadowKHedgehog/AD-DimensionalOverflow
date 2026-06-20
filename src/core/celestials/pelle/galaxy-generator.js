@@ -30,7 +30,7 @@ export const GalaxyGenerator = {
     return [new Decimal(1e15), new Decimal(1e24), new Decimal (5e27), new Decimal(1e30)]
   },
   get softcapMags() {
-    return [new Decimal(0.75), new Decimal(0.75), new Decimal(1.05), new Decimal(1.32)]
+    return [new Decimal(0.75), new Decimal(0.95), new Decimal(1.15), new Decimal(1.32)]
   },
   get gainPerSecond() {
     if (!Pelle.hasGalaxyGenerator) return DC.D0;
