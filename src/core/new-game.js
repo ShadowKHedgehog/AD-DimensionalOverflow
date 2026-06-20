@@ -70,7 +70,7 @@ export const NG = {
     Notations.all.find(n => n.name === player.options.notation).setAsCurrent();
     ADNotations.Settings.exponentCommas.min = 10 ** player.options.notationDigits.comma;
     ADNotations.Settings.exponentCommas.max = 10 ** player.options.notationDigits.notation;
-    player.realities = DC.D0;
+    player.realities = DC.D1;
     player.partSimulatedReality = DC.D0;
     player.reality.realityMachines = DC.D0;
     player.reality.maxRM = DC.D0;
