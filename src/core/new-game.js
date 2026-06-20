@@ -592,6 +592,7 @@ restartWithCarryoverPostShatter() {
     player.reality.gainedAutoAchievements = true;
     player.reality.achTimer = new Decimal();
     player.reality.hasCheckedFilter = false;
+    if (player.exposes.gte(25)) {
     player.reality.glyphs.sac.power = DC.D0;
     player.reality.glyphs.sac.infinity = DC.D0;
     player.reality.glyphs.sac.time = DC.D0;
@@ -610,10 +611,11 @@ restartWithCarryoverPostShatter() {
       activations: DC.D0,
     }));
     player.blackHolePause = false;
+    };
     player.blackHoleAutoPauseMode = 0;
     player.blackHolePauseTime = DC.D0;
     player.blackHoleNegative = DC.D1;
-    }
+    
 
     Autobuyers.reset();
 
