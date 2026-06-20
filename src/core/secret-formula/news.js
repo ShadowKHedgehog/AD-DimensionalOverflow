@@ -3284,13 +3284,31 @@ export const news = [
     get unlocked() { return Pelle.isDoomed; }
   },
   {
+    id: "l90",
+    text: "Every copy of Antimatter Dimensions Dimensional Overflow is not personalized",
+    get unlocked() { return PlayerProgress.shatterUnlocked(); }
+  },
+  {
+    id: "l91",
+    text: "Shatter that, Shatter this, when is Pelle going to give up?",
+    get unlocked() { return PlayerProgress.shatterUnlocked(); }
+  },
+  {
+    id: "l92",
+    text: `oh yeah, i forgot. excess consumption of ShatterShards™️ may lead to an explusion of data from your heart, 
+    thus sending you into cardiac arrest™️ and promptly killing you afterwards, and consumption of ShatterPower™️ may lead
+    to a very very horrible demise of your entire reality™️. Please do not consume the catgirl media™️, wait Pelle™️ STOP, PELLE™️ STOP!
+    GAH! Pelle™️!! Stop WATCHING THE CATGIRL MEDIA™️ AND CONSUMING IT. I'll get back to you later.`,
+    get unlocked() { return PlayerProgress.shatterUnlocked(); }
+  },
+  {
     id: "r1",
     text: "This news message is 100x rarer than all the others.",
     get unlocked() { return Math.random() < 0.01; }
   },
   {
     id: "p1",
-    text: "Is this a jojo reference?",
+    text: "Is this a jojo™️ reference?",
   },
   /* eslint-disable max-len */
   {

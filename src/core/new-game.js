@@ -613,12 +613,12 @@ restartWithCarryoverPostShatter() {
     player.blackHolePauseTime = DC.D0;
     player.blackHoleNegative = DC.D1;
     }
-    if (player.exposes.lt(25)) {
-      Autobuyers.reset();
-    }
-    player.reality.partEternitied = DC.D0;
+
+    Autobuyers.reset();
+
+     player.reality.partEternitied = DC.D0;
     if (player.exposes.lt(25)){
-   player.celestials.teresa.pouredAmount = 0;
+    player.celestials.teresa.pouredAmount = 0;
     player.celestials.teresa.quoteBits = 0;
     player.celestials.teresa.unlockBits = 0;
     player.celestials.teresa.run = false;
