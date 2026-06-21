@@ -524,10 +524,6 @@ restartWithCarryoverPostShatter() {
     if (player.exposes.lt(25)){
       player.realities = DC.D0;
       player.partSimulatedReality = DC.D0;
-      player.reality.realityMachines = DC.D0;
-      player.reality.maxRM = DC.D0;
-      player.reality.imaginaryMachines = DC.D0;
-      player.reality.iMCap = DC.D0;
       player.reality.glyphs.sac.power = DC.D0;
       player.reality.glyphs.sac.infinity = DC.D0;
       player.reality.glyphs.sac.time = DC.D0;
@@ -566,6 +562,10 @@ restartWithCarryoverPostShatter() {
         imaginary: 0,
       };
     };
+    player.reality.realityMachines = DC.D0;
+    player.reality.maxRM = DC.D0;
+    player.reality.imaginaryMachines = DC.D0;
+    player.reality.iMCap = DC.D0;
     player.reality.rebuyables = {
         1: new Decimal(),
         2: new Decimal(),
@@ -884,6 +884,6 @@ restartWithCarryoverPostShatter() {
     Replicanti.reset();
     player.isGameEnd = false;
     GameEnd.removeAdditionalEnd = true;
-    GameEnd.additionalEnd = 15;
+    
   }
 }
