@@ -444,4 +444,12 @@ export const pelleQuotes = {
       "HA! I NERFED THEM HERE! GOOD LUCK!"
     ],
   },
+  returnagain: {
+    id: 13,
+    lines: [
+      "..Let us dance once more.",
+      "I hope you're ready for another round, Destroyer.",
+      "Do your worst."
+    ],
+  },
 };

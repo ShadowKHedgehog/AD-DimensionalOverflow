@@ -677,6 +677,12 @@ export const Glyphs = {
   get hyperInstabilityThreshold() {
     return this.instabilityThreshold.add(3000);
   },
+  get ultraInstabilityThreshold() {
+    return this.hyperInstabilityThreshold.add(300000);
+  },
+  get godInstabilityThreshold() {
+    return this.ultraInstabilityThreshold.add(300000000);
+  },
   clearUndo() {
     player.reality.glyphs.undo = [];
   },

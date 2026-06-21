@@ -6,6 +6,9 @@ export const MachineHandler = {
   get hardcapRM() {
     return this.baseRMCap.times(ImaginaryUpgrade(6).effectOrDefault(1));
   },
+  get hardcapIM() {
+    return new Decimal("1e1000");
+  },
 
   get distanceToRMCap() {
     return this.hardcapRM.minus(Currency.realityMachines.value);
@@ -38,8 +41,8 @@ export const MachineHandler = {
   },
 
   get baseIMCap() {
-    return (Decimal.pow(Decimal.clampMin(this.uncappedRM.max(1).log10().sub(1000), 0), 2))
-      .times((Decimal.pow(Decimal.clampMin(this.uncappedRM.max(1).log10().sub(100000), 1), 0.2))).pow(TimeStudy(282).effectOrDefault(1));
+    return (Decimal.clampMax(Decimal.pow(Decimal.clampMin(this.uncappedRM.max(1).log10().sub(1000), 0), 2))
+      .times((Decimal.pow(Decimal.clampMin(this.uncappedRM.max(1).log10().sub(100000), 1), 0.2))).pow(TimeStudy(282).effectOrDefault(1)),new Decimal("1e1000"));
   },
 
   get currentIMCap() {
@@ -57,6 +60,10 @@ export const MachineHandler = {
       if (this.baseIMCap.gt(player.reality.iMCap)) {
         player.records.bestReality.iMCapSet = Glyphs.copyForRecords(Glyphs.active.filter(g => g !== null));
         player.reality.iMCap = this.baseIMCap;
+        if (this.baseIMCap.gt(new Decimal("1e1000"))) {
+          player.baseIMCap = new Decimal("1e1000");
+          player.reality.iMCap = this.baseIMCap;
+        } 
       }
     }
   },

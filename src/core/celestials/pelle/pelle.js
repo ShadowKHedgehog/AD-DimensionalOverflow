@@ -116,6 +116,12 @@ export const Pelle = {
       player.options.hiddenSubtabBits[tabIndex] &= ignoredIDs.includes(tabIndex) ? -1 : 0;
     }
     Pelle.quotes.initial.show();
+    if (player.exposes.gte(1) && player.exposes.lt(2)) {
+        Pelle.quotes.return.show();
+    }
+    if (player.exposes.gte(2)) {
+       Pelle.quotes.returnagain.show();
+    }
     GameStorage.save(true);
   },
 
