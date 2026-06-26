@@ -140,7 +140,7 @@ export const Pelle = {
     if (!mechanic) return true;
     if (!disabledMechanicUnlocks[mechanic]) {
       // eslint-disable-next-line
-      if (mechanic !== "Continuum") {
+      if (mechanic !== "continuum") {
         console.error(`Mechanic ${mechanic} isn't present in the disabledMechanicUnlocks!`);
       }
       return true;
