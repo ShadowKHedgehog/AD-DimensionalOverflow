@@ -788,4 +788,13 @@ export const normalTimeStudies = [
     effect: () => Decimal.log2(player.records.bestShatter.maxAM).log2().div(39.45),
     formatEffect: value => formatPow(value,2,2)
   },
+  {
+    id: 284,
+    cost: new Decimal("1e37000"),
+    requirement: [283],
+    reqType: TS_REQUIREMENT_TYPE.ALL,
+    description: () => `Dark Matter Dimension Production Boosted Based on Singularity Count`,
+    effect: () => player.celestials.laitela.singularities.pow(0.15),
+    formatEffect: value => formatPow(value,2,2)
+  },
 ];
