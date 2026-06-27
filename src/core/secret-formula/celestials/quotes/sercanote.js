@@ -1,3 +1,21 @@
+// These entries describe the special flash-between-celestial effect on some quotes, with the numbers being
+// durations of each celestial in seconds
+const flashCelestial = [
+  ["teresa", 0.8],
+  ["effarig", 0.8],
+  ["enslaved", 0.8],
+  ["v", 0.8],
+  ["ra", 0.8],
+  ["laitela", 0.8],
+  ["pelle", 0.8]
+];
+/** @param {string} cel */
+const primaryBackground = cel => [["sercanote", 1.5], [cel, 1.5]];
+
+/* eslint-disable no-multi-spaces */
+const lesser =       ["Lesser",        "Deity",         "Monarch"];
+const tired =        ["Tired",         "Deity",         "Monarch"];
+/* eslint-enable no-multi-spaces */
 export const sercQuotes = {
   initial: {
     id: 0,
