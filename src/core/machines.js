@@ -54,14 +54,17 @@ export const MachineHandler = {
     return this.baseIMCap.times(ImaginaryUpgrade(13).effectOrDefault(1));
   },
 
+  get IMshatterBoostCap() {
+    return new Decimal("1e1000").times(Decimal.pow(1e50, player.exposes.sub(100).div(15).max(0)));
+  },
   // Use iMCap to store the base cap; applying multipliers separately avoids some design issues the 3xTP upgrade has
   updateIMCap() {
     if (this.uncappedRM.gte(this.baseRMCap)) {
       if (this.baseIMCap.gt(player.reality.iMCap)) {
         player.records.bestReality.iMCapSet = Glyphs.copyForRecords(Glyphs.active.filter(g => g !== null));
         player.reality.iMCap = this.baseIMCap;
-        if (this.baseIMCap.gt(new Decimal("1e1000"))) {
-          player.baseIMCap = new Decimal("1e1000");
+        if (this.baseIMCap.gt(this.IMshatterBoostCap)) {
+          player.baseIMCap = this.IMshatterBoostCap;
           player.reality.iMCap = this.baseIMCap;
         } 
       }
