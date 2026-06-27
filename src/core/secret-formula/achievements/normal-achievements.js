@@ -1573,7 +1573,7 @@ export const normalAchievements = [
   {
     id: 218,
     name: "Singularity Exposition",
-    description: `Find the way to raise the Dark Matter hardcap to 3.2e616`,
+    description: `Find the way to raise the Dark Matter hardcap to 3.2e616 (Hint: Shatter 100)`,
     get reward() {
       return `Increase ShatterPower Conversion Rate by ${formatPercents(0.18)}`;
     },
