@@ -66,6 +66,12 @@ export const Laitela = {
   get darkMatterMultRatio() {
     return (this.celestial.darkMatterMult.add(this.darkMatterMultGain)).div(this.celestial.darkMatterMult);
   },
+  get darkMatterCap() {
+    let baseCap = DC.NUMMAX;
+    const exposePow = player.exposes.lt(100) ? DC.D1 : Decimal.pow(2, Decimal.floor(Decimal.log2(player.exposes.div(100)).add(1)));
+    const cap = Decimal.pow(baseCap, exposePow);
+    return cap;
+  },
   get annihilationUnlocked() {
     return ImaginaryUpgrade(19).isBought;
   },
