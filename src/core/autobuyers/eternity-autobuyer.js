@@ -6,7 +6,7 @@ export class EternityAutobuyerState extends AutobuyerState {
   }
 
   get name() {
-    return i18n("auto", "eterAuto");
+    return `Eternity`;
   }
 
   get isUnlocked() {
@@ -89,12 +89,12 @@ export class EternityAutobuyerState extends AutobuyerState {
 
     switch (this.mode) {
       case AUTO_ETERNITY_MODE.AMOUNT:
-        return Currency.eternityPoints.gain.gte(this.amount);
+        return gainedEternityPoints().gte(this.amount);
       case AUTO_ETERNITY_MODE.TIME:
         return Time.thisEternityTrueTime.totalSeconds.toNumber() > this.time;
       case AUTO_ETERNITY_MODE.X_HIGHEST:
       default:
-        return Currency.eternityPoints.gain.gte(this.highestPrevPrestige.times(this.xHighest));
+        return gainedEternityPoints().gte(this.highestPrevPrestige.times(this.xHighest));
     }
   }
 

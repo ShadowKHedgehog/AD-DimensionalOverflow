@@ -6,7 +6,7 @@ export class SingularityAutobuyerState extends AutobuyerState {
   }
 
   get name() {
-    return i18n("auto", "singAuto");
+    return `Singularity`;
   }
 
   get isUnlocked() {
@@ -18,7 +18,7 @@ export class SingularityAutobuyerState extends AutobuyerState {
   }
 
   tick() {
-    if (Currency.darkEnergy.value.gte(Singularity.cap.mul(SingularityMilestone.autoCondense.effectValue))) {
+    if (Currency.darkEnergy.value.gte(Singularity.cap.times(SingularityMilestone.autoCondense.effectValue))) {
       Singularity.perform();
     }
   }

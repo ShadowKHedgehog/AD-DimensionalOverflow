@@ -6,7 +6,7 @@ export class AnnihilationAutobuyerState extends AutobuyerState {
   }
 
   get name() {
-    return i18n("auto", "annihilationAuto");
+    return `Annihilation`;
   }
 
   get isUnlocked() {

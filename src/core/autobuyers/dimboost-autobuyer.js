@@ -6,7 +6,7 @@ export class DimBoostAutobuyerState extends UpgradeableAutobuyerState {
   }
 
   get name() {
-    return i18n("auto", "dimboostAuto");
+    return `Dimension Boost`;
   }
 
   get isUnlocked() {

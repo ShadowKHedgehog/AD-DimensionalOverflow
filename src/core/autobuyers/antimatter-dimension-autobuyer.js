@@ -1,3 +1,5 @@
+import { DC } from "../constants";
+
 import { UpgradeableAutobuyerState } from "./autobuyer";
 
 export class AntimatterDimensionAutobuyerState extends UpgradeableAutobuyerState {
@@ -10,7 +12,7 @@ export class AntimatterDimensionAutobuyerState extends UpgradeableAutobuyerState
   }
 
   get fullName() {
-    return i18n("auto", "adXauto", [this.name]);
+    return `${this.name} Antimatter Dimension`;
   }
 
   get data() {
@@ -149,7 +151,7 @@ export class AntimatterDimensionAutobuyerState extends UpgradeableAutobuyerState
   }
 
   static get entryCount() { return 8; }
-  static get autobuyerGroupName() { return i18n("auto", "adXgroup"); }
+  static get autobuyerGroupName() { return "Antimatter Dimension"; }
 
   // These are toggled on and off from the group autobuyer checkbox
   static get isActive() { return player.auto.antimatterDims.isActive; }

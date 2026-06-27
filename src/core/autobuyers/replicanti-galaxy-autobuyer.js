@@ -6,7 +6,7 @@ export class ReplicantiGalaxyAutobuyerState extends AutobuyerState {
   }
 
   get name() {
-    return i18n("auto", "rgAuto");
+    return `Replicanti Galaxy`;
   }
 
   get isUnlocked() {

@@ -1,5 +1,5 @@
 import { UpgradeableAutobuyerState } from "./autobuyer";
-
+import { DC } from "@/core/"
 export class GalaxyAutobuyerState extends UpgradeableAutobuyerState {
   get data() {
     return player.auto.galaxy;

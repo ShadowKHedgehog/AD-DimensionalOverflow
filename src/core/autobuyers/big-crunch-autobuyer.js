@@ -6,7 +6,7 @@ export class BigCrunchAutobuyerState extends UpgradeableAutobuyerState {
   }
 
   get name() {
-    return i18n("auto", "crunchAuto");
+    return `Infinity`;
   }
 
   get isUnlocked() {
@@ -112,12 +112,12 @@ export class BigCrunchAutobuyerState extends UpgradeableAutobuyerState {
 
     switch (this.mode) {
       case AUTO_CRUNCH_MODE.AMOUNT:
-        return Currency.infinityPoints.gain.gte(this.amount);
+        return gainedInfinityPoints().gte(this.amount);
       case AUTO_CRUNCH_MODE.TIME:
         return Time.thisInfinityRealTime.totalSeconds.toNumber() > this.time;
       case AUTO_CRUNCH_MODE.X_HIGHEST:
       default:
-        return Currency.infinityPoints.gain.gte(this.highestPrevPrestige.times(this.xHighest));
+        return gainedInfinityPoints().gte(this.highestPrevPrestige.times(this.xHighest));
     }
   }
 

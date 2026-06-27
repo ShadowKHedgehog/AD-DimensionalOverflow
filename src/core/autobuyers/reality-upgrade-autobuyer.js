@@ -19,11 +19,11 @@ export class RealityUpgradeAutobuyerState extends AutobuyerState {
 
   tick() {
     const upg = RealityUpgrade(this.id);
-    while (Currency.realityMachines.gte(upg.cost)) upg.purchase();
+    upg.bulkPurchase();
   }
 
   static get entryCount() { return 5; }
-  static get autobuyerGroupName() { return i18n("auto", "ruAuto"); }
+  static get autobuyerGroupName() { return "Reality Upgrade"; }
   static get isActive() { return player.auto.realityUpgrades.isActive; }
   static set isActive(value) { player.auto.realityUpgrades.isActive = value; }
 }

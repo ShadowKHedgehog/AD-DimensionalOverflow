@@ -10,7 +10,7 @@ export class TimeDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   get fullName() {
-    return i18n("auto", "tdXauto", [this.name]);
+    return `${this.name} Time Dimension`;
   }
 
   get data() {
@@ -22,7 +22,7 @@ export class TimeDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   get isUnlocked() {
-    return RealityUpgrade(13).isBought && (!Pelle.isDoomed || PelleUpgrade.TDAutobuyers.canBeApplied);
+    return RealityUpgrade(13).isBought && !Pelle.isDoomed ;
   }
 
   get resetTickOn() {
@@ -51,7 +51,7 @@ export class TimeDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   static get entryCount() { return 8; }
-  static get autobuyerGroupName() { return i18n("auto", "tdXgroup"); }
+  static get autobuyerGroupName() { return "Time Dimension"; }
   static get isActive() { return player.auto.timeDims.isActive; }
   static set isActive(value) { player.auto.timeDims.isActive = value; }
 }
