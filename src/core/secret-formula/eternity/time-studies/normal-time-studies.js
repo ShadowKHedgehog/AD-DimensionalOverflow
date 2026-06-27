@@ -795,6 +795,6 @@ export const normalTimeStudies = [
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `Dark Matter Dimension Production Boosted Based on Singularity Count`,
     effect: () => player.celestials.laitela.singularities.pow(0.15),
-    formatEffect: value => formatPow(value,2,2)
+    formatEffect: value => formatX(value,2,2)
   },
 ];
