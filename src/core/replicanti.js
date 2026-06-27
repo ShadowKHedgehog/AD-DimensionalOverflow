@@ -428,7 +428,7 @@ export const ReplicantiUpgrade = {
     }
 
     get cost() {
-      return this.baseCost.dividedByEffectsOf(TimeStudy(233), PelleRifts.vacuum.milestones[1]);
+      return this.baseCost.dividedByEffectsOf(PelleRifts.vacuum.milestones[1]);
     }
 
     get baseCost() { return player.replicanti.galCost; }
@@ -474,7 +474,7 @@ export const ReplicantiUpgrade = {
       const logDistantScaling = new Decimal(50);
       const logRemoteScaling = DC.D5;
 
-      const cur = Currency.infinityPoints.value.times(TimeStudy(233).effectOrDefault(1)).max(1).log10();
+      const cur = Currency.infinityPoints.value.max(1).log10();
 
       if (logBase.gt(cur)) return;
       let a = logCostScaling.div(2);

@@ -632,8 +632,8 @@ export const normalTimeStudies = [
     requirement: [225, 226],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
     requiresST: [234],
-    description: "Max Replicanti Galaxy upgrade is cheaper based on current Replicanti",
-    effect: () => Replicanti.amount.pow(0.07),
+    description: "Dimboost Multiplier based on Replicanti Amount",
+    effect: () => Replicanti.amount.log10().div(10),
     formatEffect: value => `/ ${format(value, 1, 2)}`
   },
   {

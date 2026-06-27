@@ -31,6 +31,7 @@ export class DimBoost {
       .timesEffectsOf(
         TimeStudy(83),
         TimeStudy(231),
+        TimeStudy(233),
         Achievement(117),
         Achievement(142),
         GlyphEffect.dimBoostPower,
