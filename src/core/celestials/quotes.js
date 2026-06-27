@@ -177,6 +177,6 @@ export const Quotes = {
   ),
   serc: mapGameDataToObject(
     GameDatabase.celestials.quotes.sercanote,
-    config => new CelQuotes(config, "serc")
+    config => new CelQuotes(config, "sercanote")
   ),
 };
