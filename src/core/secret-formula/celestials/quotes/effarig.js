@@ -62,5 +62,14 @@ export const effarigQuotes = {
       "And for what purpose? You could have joined, we could have cooperated.",
       "But no. It is over. Leave while I cling onto what is left.",
     ]
+  },
+  firstShatter: {
+    id: 8,
+    lines: [
+      "So this is the fabled Shatter Mechanic...",
+      "How will Pelle react to your return?",
+      "And now that my Reality is reset back to normal, I offer that you join us and stop Pelle from overtaking the Celestialverse.",
+      "What do you say about it?",
+    ]
   }
 };

@@ -27,5 +27,14 @@ export const teresaQuotes = {
       "You are still no match for us.",
       "I hope the others succeed where I have failed."
     ]
-  }
+  },
+  shatter15: {
+    id: 4,
+    lines: [
+      "Huh. You've already got everything pre-reality unlocked!?",
+      "I'm impressed.",
+      "You must be very powerful.",
+      "Keep going. We must stop Pelle."
+    ]
+  },
 };

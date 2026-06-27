@@ -444,7 +444,7 @@ export const pelleQuotes = {
       "HA! I NERFED THEM HERE! GOOD LUCK!"
     ],
   },
-  returnagain: {
+  returnAgain: {
     id: 13,
     lines: [
       "..Let us dance once more.",

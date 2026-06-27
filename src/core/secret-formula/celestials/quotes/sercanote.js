@@ -1,4 +1,4 @@
-export const sercquotes = {
+export const sercQuotes = {
   initial: {
     id: 0,
     lines: [

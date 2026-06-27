@@ -175,4 +175,8 @@ export const Quotes = {
     GameDatabase.celestials.quotes.pelle,
     config => new CelQuotes(config, "pelle")
   ),
+  serc: mapGameDataToObject(
+    GameDatabase.celestials.quotes.sercanote,
+    config => new CelQuotes(config, "serc")
+  ),
 };

@@ -1,6 +1,5 @@
 import * as ADNotations from "adnot-beport-small";
 import { DC } from "./constants";
-import { pelle } from "./celestials/pelle/pelle"
 export const NG = {
   startNewGame() {
     GameEnd.creditsClosed = false;
@@ -58,6 +57,8 @@ export const NG = {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
     player.isGameEnd = false;
+    GameEnd = false;
+    GameEnd.removeAdditionalEnd = true;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
     player.tabNotifications = new Set();
@@ -484,14 +485,18 @@ export const NG = {
     player.records.bestReality.speedSet = [];
     player.records.bestReality.iMCapSet = [];
     player.records.bestReality.laitelaSet = [];
-    pelle.isGameEnd = false;
-    pelle.isDoomed = false;
+    Pelle.isGameEnd = false;
+    Pelle.isDoomed = false;
   },
 restartWithCarryoverPostShatter() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
+    GameEnd = false;
+    GameEnd.removeAdditionalEnd = true;
     player.isGameEnd = false;
     player.isGameEnd2 = false;
+    Pelle.isGameEnd = false;
+    Pelle.isDoomed = false;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
     player.tabNotifications = new Set();
@@ -882,8 +887,12 @@ restartWithCarryoverPostShatter() {
     RemnantDimensions.resetAmount();
     player.expose.shatterPower = DC.D0;
     Replicanti.reset();
-    player.isGameEnd = false;
-    GameEnd.removeAdditionalEnd = true;
-    
+    if (player.exposes.gte(1)) {
+      Effarig.quotes.firstShatter.show();
+      Sercanote.quotes.initial.show();
+    };
+    if (player.exposes.gte(15)) {
+      Teresa.quotes.shatter15.show();
+    };
   }
 }
