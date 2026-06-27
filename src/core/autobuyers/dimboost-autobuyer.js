@@ -6,11 +6,10 @@ export class DimBoostAutobuyerState extends UpgradeableAutobuyerState {
   }
 
   get name() {
-    return `Dimension Boost`;
+    return i18n("auto", "dimboostAuto");
   }
 
   get isUnlocked() {
-    if (LHC.voidRunning && NullUpgrade.limerick5.isBought) return true;
     if (Pelle.isDisabled("dimBoostAutobuyer")) return false;
     return this.canBeUpgraded;
   }

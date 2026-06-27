@@ -6,7 +6,7 @@ export class DarkMatterDimensionAutobuyerState extends IntervaledAutobuyerState 
   }
 
   get name() {
-    return `Dark Matter Dimensions`;
+    return i18n("auto", "dmdAuto");
   }
 
   get isUnlocked() {
@@ -14,7 +14,7 @@ export class DarkMatterDimensionAutobuyerState extends IntervaledAutobuyerState 
   }
 
   get interval() {
-    return SingularityMilestone.darkAutobuyerSpeed.effectValue * 1000;
+    return 1000 * SingularityMilestone.darkAutobuyerSpeed.effectValue;
   }
 
   get hasUnlimitedBulk() {
@@ -23,6 +23,6 @@ export class DarkMatterDimensionAutobuyerState extends IntervaledAutobuyerState 
 
   tick() {
     super.tick();
-    Laitela.maxAllDMDimensions(SingularityMilestone.darkDimensionAutobuyers.effectValue + SingularityMilestone.darkDimAuto5to8.effectValue);
+    Laitela.maxAllDMDimensions(SingularityMilestone.darkDimensionAutobuyers.effectValue);
   }
 }

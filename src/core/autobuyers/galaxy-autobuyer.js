@@ -6,11 +6,10 @@ export class GalaxyAutobuyerState extends UpgradeableAutobuyerState {
   }
 
   get name() {
-    return `Antimatter Galaxy`;
+    return i18n("auto", "agAuto");
   }
 
   get isUnlocked() {
-    if (LHC.voidRunning && NullUpgrade.limerick5.isBought) return true;
     if (Pelle.isDisabled("galaxyAutobuyer")) return false;
     return this.canBeUpgraded;
   }
@@ -67,7 +66,7 @@ export class GalaxyAutobuyerState extends UpgradeableAutobuyerState {
 
   tick() {
     super.tick();
-    const limit = this.limitGalaxies ? new Decimal(this.maxGalaxies) : DC.BEMAX;
+    const limit = this.limitGalaxies ? this.maxGalaxies : DC.BEMAX;
     requestGalaxyReset(this.isBuyMaxUnlocked, limit);
   }
 }

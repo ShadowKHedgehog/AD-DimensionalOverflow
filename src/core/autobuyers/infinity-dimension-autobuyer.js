@@ -14,7 +14,7 @@ export class InfinityDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   get fullName() {
-    return `${this.name} Infinity Dimension`;
+    return i18n("auto", "idXauto", [this.name]);
   }
 
   get data() {
@@ -26,8 +26,7 @@ export class InfinityDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   get isUnlocked() {
-    return EternityMilestone[`autobuyerID${this.tier}`].isReached || PelleUpgrade.IDAutobuyers.canBeApplied ||
-      (LHC.voidRunning && NullUpgrade.limerick5.isBought);
+    return EternityMilestone[`autobuyerID${this.tier}`].isReached || PelleUpgrade.IDAutobuyers.canBeApplied;
   }
 
   get resetTickOn() {
@@ -48,7 +47,7 @@ export class InfinityDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   static get entryCount() { return 8; }
-  static get autobuyerGroupName() { return "Infinity Dimension"; }
+  static get autobuyerGroupName() { return i18n("auto", "idXgroup"); }
   static get isActive() { return player.auto.infinityDims.isActive; }
   static set isActive(value) { player.auto.infinityDims.isActive = value; }
 }

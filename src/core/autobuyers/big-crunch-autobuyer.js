@@ -6,11 +6,10 @@ export class BigCrunchAutobuyerState extends UpgradeableAutobuyerState {
   }
 
   get name() {
-    return `Infinity`;
+    return i18n("auto", "crunchAuto");
   }
 
   get isUnlocked() {
-    if (LHC.voidRunning && NullUpgrade.limerick5.isBought) return true;
     return Pelle.isDoomed
       ? PelleStrikes.infinity.hasStrike
       : this.canBeUpgraded;
@@ -113,12 +112,12 @@ export class BigCrunchAutobuyerState extends UpgradeableAutobuyerState {
 
     switch (this.mode) {
       case AUTO_CRUNCH_MODE.AMOUNT:
-        return gainedInfinityPoints().gte(this.amount);
+        return Currency.infinityPoints.gain.gte(this.amount);
       case AUTO_CRUNCH_MODE.TIME:
         return Time.thisInfinityRealTime.totalSeconds.toNumber() > this.time;
       case AUTO_CRUNCH_MODE.X_HIGHEST:
       default:
-        return gainedInfinityPoints().gte(this.highestPrevPrestige.times(this.xHighest));
+        return Currency.infinityPoints.gain.gte(this.highestPrevPrestige.times(this.xHighest));
     }
   }
 

@@ -3,7 +3,7 @@
  */
 export class AutobuyerState {
   constructor(id = null) {
-    this._id = id;
+    this.id = id;
   }
 
   /**
@@ -15,8 +15,6 @@ export class AutobuyerState {
    * @abstract
    */
   get isUnlocked() { throw new NotImplementedError(); }
-
-  get id() { return this._id; }
 
   get canTick() {
     const isDisabled = !player.auto.autobuyersOn || !this.constructor.isActive;
@@ -97,6 +95,9 @@ export class IntervaledAutobuyerState extends AutobuyerState {
   }
 
   get timeSinceLastTick() {
+    if (this.data.lastTick > (player.records.trueTimePlayed * this.interval * 100)) {
+      this.data.lastTick = player.records.trueTimePlayed;
+    }
     return player.records.trueTimePlayed - this.data.lastTick;
   }
 

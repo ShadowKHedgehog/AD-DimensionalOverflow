@@ -4,7 +4,7 @@ export class ReplicantiUpgradeAutobuyerState extends IntervaledAutobuyerState {
   get _upgradeName() { return ["chance", "interval", "galaxies"][this.id - 1]; }
 
   get name() {
-    return `Replicanti ${[`Chance`, `Interval`, `Max Galaxies`][this.id - 1]}`;
+    return [i18n("auto", "repCauto"), i18n("auto", "repIauto"), i18n("auto", "repMGauto")][this.id - 1];
   }
 
   get data() {
@@ -35,7 +35,7 @@ export class ReplicantiUpgradeAutobuyerState extends IntervaledAutobuyerState {
   }
 
   static get entryCount() { return 3; }
-  static get autobuyerGroupName() { return "Replicanti Upgrade"; }
+  static get autobuyerGroupName() { return i18n("auto", "repGroup"); }
   static get isActive() { return player.auto.replicantiUpgrades.isActive; }
   static set isActive(value) { player.auto.replicantiUpgrades.isActive = value; }
 }

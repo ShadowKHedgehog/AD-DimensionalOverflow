@@ -6,12 +6,11 @@ export class IPMultAutobuyerState extends AutobuyerState {
   }
 
   get name() {
-    return `Infinity Point Multiplier`;
+    return i18n("auto", "ipxAuto");
   }
 
   get isUnlocked() {
-    return (EternityMilestone.autobuyerIPMult.isReached && (!Pelle.isDoomed || PelleDestructionUpgrade.x2IPUpgrade.canBeApplied)) ||
-      (LHC.voidRunning && NullUpgrade.limerick5.isBought);
+    return EternityMilestone.autobuyerIPMult.isReached && !Pelle.isDoomed;
   }
 
   get hasUnlimitedBulk() {
@@ -29,7 +28,7 @@ export class EPMultAutobuyerState extends AutobuyerState {
   }
 
   get name() {
-    return `Eternity Point Multiplier`;
+    return i18n("auto", "epxAuto");
   }
 
   get isUnlocked() {

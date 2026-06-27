@@ -6,7 +6,7 @@ export class AnnihilationAutobuyerState extends AutobuyerState {
   }
 
   get name() {
-    return `Annihilation`;
+    return i18n("auto", "annihilationAuto");
   }
 
   get isUnlocked() {
@@ -25,16 +25,12 @@ export class AnnihilationAutobuyerState extends AutobuyerState {
     return 0;
   }
 
-  get mode() {
-    return this.data.mode;
-  }
-
   get hasInput() {
     return true;
   }
 
   get inputType() {
-    return "float";
+    return "decimal";
   }
 
   get inputEntry() {
@@ -42,11 +38,7 @@ export class AnnihilationAutobuyerState extends AutobuyerState {
   }
 
   tick() {
-    if (this.mode === 0 && Laitela.darkMatterMultGain.gte(this.multiplier)) {
-      Laitela.annihilate();
-    }
-
-    if (this.mode === 1 && Laitela.darkMatterMultGain.gte(Laitela.darkMatterMult.times(this.multiplier))) {
+    if (Laitela.darkMatterMultGain.gte(this.multiplier)) {
       Laitela.annihilate();
     }
   }
