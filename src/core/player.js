@@ -716,6 +716,7 @@ window.player = {
     },
     laitela: {
       darkMatter: DC.D0,
+      unnerfedDarkMatter: DC.D0,
       maxDarkMatter: DC.D0,
       run: false,
       quoteBits: 0,
