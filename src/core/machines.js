@@ -55,7 +55,7 @@ export const MachineHandler = {
   },
 
   get IMshatterBoostCap() {
-    return new Decimal("1e50").times(Decimal.pow(1e50, Decimal.floor(player.exposes.sub(100).div(15).max(0))));
+    return new Decimal("1e50").times(Decimal.pow(1e10, Decimal.floor(player.exposes.sub(100).div(15).max(0))));
   },
   // Use iMCap to store the base cap; applying multipliers separately avoids some design issues the 3xTP upgrade has
   updateIMCap() {
