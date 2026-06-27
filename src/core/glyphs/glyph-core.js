@@ -675,10 +675,10 @@ export const Glyphs = {
     return DC.E3.add(getAdjustedGlyphEffect("effarigglyph")).add(ImaginaryUpgrade(7).effectOrDefault(0));
   },
   get hyperInstabilityThreshold() {
-    return this.instabilityThreshold.add(3000);
+    return this.instabilityThreshold.add(40000);
   },
   get ultraInstabilityThreshold() {
-    return this.hyperInstabilityThreshold.add(300000);
+    return this.hyperInstabilityThreshold.add(600000);
   },
   get godInstabilityThreshold() {
     return this.ultraInstabilityThreshold.add(300000000);
