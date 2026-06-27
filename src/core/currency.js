@@ -434,13 +434,9 @@ Currency.imaginaryMachines = new class extends DecimalCurrency {
 Currency.darkMatter = new class extends DecimalCurrency {
   get value() { return player.celestials.laitela.darkMatter; }
   set value(value) {
-    const exposePow = player.exposes.lt(100) ? DC.D1 : Decimal.pow(2, Decimal.floor(Decimal.log2(player.exposes.div(100)).add(1)));
-    const cap = Decimal.pow(DC.NUMMAX, exposePow);
-
-    const capped = Decimal.min(value, cap);
-
-    player.celestials.laitela.darkMatter = capped;
-    player.celestials.laitela.maxDarkMatter = player.celestials.laitela.maxDarkMatter.max(capped);
+    const newValue = new Decimal(value);
+    player.celestials.laitela.darkMatter = newValue;
+    player.celestials.laitela.maxDarkMatter = player.celestials.laitela.maxDarkMatter.max(newValue);
   }
 
   get max() { return player.celestials.laitela.maxDarkMatter; }
