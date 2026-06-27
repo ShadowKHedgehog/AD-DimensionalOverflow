@@ -636,6 +636,12 @@ export function gameLoop(passedDiff, options = {}) {
   const teresa25 = !isInCelestialReality() && Ra.unlocks.unlockDilationStartingTP.canBeApplied;
   if ((teresa1 || teresa25) && !Pelle.isDoomed) rewardTP();
 
+  let darkMatterProd = DC.D1;
+  const unnerfedDM = player.celestials.laitela.unnerfedDarkMatter;
+  darkMatterProd = unnerfedDM;
+  player.celestials.laitela.darkMatter = Decimal.min(darkMatterProd, Laitela.darkMatterCap);
+  player.celestials.laitela.maxDarkMatter = Decimal.max(player.celestials.laitela.darkMatter, player.celestials.laitela.maxDarkMatter);
+
   if (Enslaved.canTickHintTimer) {
     player.celestials.enslaved.hintUnlockProgress += Enslaved.isRunning ? realDiff.clampMax(1e10).toNumber()
       : realDiff.mul(0.4).clampMax(1e10).toNumber();
