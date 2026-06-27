@@ -1,5 +1,3 @@
-import { DC } from "../constants";
-
 import { UpgradeableAutobuyerState } from "./autobuyer";
 
 export class AntimatterDimensionAutobuyerState extends UpgradeableAutobuyerState {
@@ -25,7 +23,7 @@ export class AntimatterDimensionAutobuyerState extends UpgradeableAutobuyerState
 
   get isUnlocked() {
     if (Pelle.isDisabled(`antimatterDimAutobuyer${this.tier}`)) return false;
-    return this.data.isBought || this.canBeUpgraded;
+    return this.data.isBought || this.canBeUpgraded || (LHC.voidRunning && NullUpgrade.limerick5.isBought);
   }
 
   get isBought() {
@@ -138,7 +136,8 @@ export class AntimatterDimensionAutobuyerState extends UpgradeableAutobuyerState
   }
 
   get resetTickOn() {
-    return Perk.antimatterNoReset.canBeApplied ? PRESTIGE_EVENT.ANTIMATTER_GALAXY : PRESTIGE_EVENT.DIMENSION_BOOST;
+    return (Perk.antimatterNoReset.canBeApplied)
+      ? PRESTIGE_EVENT.ANTIMATTER_GALAXY : PRESTIGE_EVENT.DIMENSION_BOOST;
   }
 
   reset() {

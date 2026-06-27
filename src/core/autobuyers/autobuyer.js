@@ -97,11 +97,11 @@ export class IntervaledAutobuyerState extends AutobuyerState {
   }
 
   get timeSinceLastTick() {
-    return player.records.trueTimePlayed - this.data.lastTick;
+    return player.records.realTimePlayed - this.data.lastTick;
   }
 
   tick() {
-    this.data.lastTick = player.records.trueTimePlayed;
+    this.data.lastTick = player.records.realTimePlayed;
   }
 
   /**
@@ -143,7 +143,8 @@ export class UpgradeableAutobuyerState extends IntervaledAutobuyerState {
   upgradeInterval(free) {
     if (this.hasMaxedInterval) return;
     if (!free && !Currency.infinityPoints.purchase(this.cost)) return;
-    this.data.cost *= 2;
+    if (!this.data.hasIncreasedAlphaCosts || !Alpha.isRunning) this.data.cost *= 2;
+    if (this.data.hasIncreasedAlphaCosts && Alpha.isRunning) this.data.cost *= AlphaUnlocks.autoCrunchChallenge.effects.nerf.effectOrDefault(2);
     this.data.interval = Math.clampMin(this.data.interval * 0.6, 100);
     Achievement(52).tryUnlock();
     Achievement(53).tryUnlock();

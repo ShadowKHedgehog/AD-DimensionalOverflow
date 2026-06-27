@@ -10,7 +10,8 @@ export class IPMultAutobuyerState extends AutobuyerState {
   }
 
   get isUnlocked() {
-    return EternityMilestone.autobuyerIPMult.isReached && !Pelle.isDoomed;
+    return (EternityMilestone.autobuyerIPMult.isReached && (!Pelle.isDoomed || PelleDestructionUpgrade.x2IPUpgrade.canBeApplied)) ||
+      (LHC.voidRunning && NullUpgrade.limerick5.isBought);
   }
 
   get hasUnlimitedBulk() {
