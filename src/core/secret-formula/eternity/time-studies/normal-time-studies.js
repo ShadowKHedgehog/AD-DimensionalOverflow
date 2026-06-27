@@ -634,7 +634,7 @@ export const normalTimeStudies = [
     requiresST: [234],
     description: "Dimboost Multiplier based on Replicanti Amount",
     effect: () => Replicanti.amount.log10().div(10),
-    formatEffect: value => `/ ${format(value, 1, 2)}`
+    formatEffect: value => `${formatX(value, 2, 2)}`
   },
   {
     id: 234,
