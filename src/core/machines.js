@@ -42,7 +42,7 @@ export const MachineHandler = {
 
   get baseIMCap() {
     return (Decimal.clampMax(Decimal.pow(Decimal.clampMin(this.uncappedRM.max(1).log10().sub(1000), 0), 2))
-      .times((Decimal.pow(Decimal.clampMin(this.uncappedRM.max(1).log10().sub(100000), 1), 0.2))).pow(TimeStudy(282).effectOrDefault(1)),new Decimal("1e1000"));
+      .times((Decimal.pow(this.uncappedRM.max(1).log10().sub(100000), 1), 0.2))).pow(TimeStudy(282).effectOrDefault(1));
   },
 
   get currentIMCap() {
