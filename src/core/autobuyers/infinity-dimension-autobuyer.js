@@ -14,7 +14,7 @@ export class InfinityDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   get fullName() {
-    return i18n("auto", "idXauto", [this.name]);
+    return `${this.name} Infinity Dimension`;
   }
 
   get data() {
@@ -47,7 +47,7 @@ export class InfinityDimensionAutobuyerState extends IntervaledAutobuyerState {
   }
 
   static get entryCount() { return 8; }
-  static get autobuyerGroupName() { return i18n("auto", "idXgroup"); }
+  static get autobuyerGroupName() { return "Infinity Dimension"; }
   static get isActive() { return player.auto.infinityDims.isActive; }
   static set isActive(value) { player.auto.infinityDims.isActive = value; }
 }

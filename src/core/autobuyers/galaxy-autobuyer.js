@@ -1,12 +1,14 @@
+import { DC } from "../constants";
+
 import { UpgradeableAutobuyerState } from "./autobuyer";
-import { DC } from "@/core/"
+
 export class GalaxyAutobuyerState extends UpgradeableAutobuyerState {
   get data() {
     return player.auto.galaxy;
   }
 
   get name() {
-    return i18n("auto", "agAuto");
+    return `Antimatter Galaxy`;
   }
 
   get isUnlocked() {
