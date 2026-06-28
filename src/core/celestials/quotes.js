@@ -1,5 +1,4 @@
 import { BitUpgradeState } from "../game-mechanics";
-import { Unnamed } from "../globals";
 import wordShift from "../word-shift";
 
 export const Quote = {
