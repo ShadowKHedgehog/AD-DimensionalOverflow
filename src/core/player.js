@@ -813,7 +813,20 @@ window.player = {
       },
       showBought: false,
     },
-    sercanote: {
+    josearthu: {
+      run: false,
+      progressBits: 0,
+      galaxyGenerator: {
+        unlocked: false,
+        spentGalaxies: DC.D0,
+        generatedGalaxies: DC.D0,
+        phase: 0,
+        sacrificeActive: false
+      },
+      quoteBits: 0,
+      showBought: false,
+    },
+  sercanote: {
       trapped: false,
    },
    eternalpelle: {
