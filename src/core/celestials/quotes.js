@@ -180,7 +180,7 @@ export const Quotes = {
     GameDatabase.celestials.quotes.sercanote,
     config => new CelQuotes(config, "sercanote")
   ),
-  Unnamed: mapGameDataToObject(
+  unnamed: mapGameDataToObject(
     GameDatabase.celestials.quotes.unnamed,
     config => new CelQuotes(config, "unnamed")
   ),
