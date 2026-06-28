@@ -16,7 +16,7 @@ const primaryBackground = cel => [["sercanote", 1.5], [cel, 1.5]];
 const lesser =       ["Lesser",        "Deity",         "Monarch"];
 const tired =        ["Tired",         "Deity",         "Monarch"];
 /* eslint-enable no-multi-spaces */
-export const sercQuotes = {
+export const sercanoteQuotes = {
   initial: {
     id: 0,
     lines: [
