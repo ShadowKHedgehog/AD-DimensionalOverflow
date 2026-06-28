@@ -1,4 +1,5 @@
 import { BitUpgradeState } from "../game-mechanics";
+import { Unnamed } from "../globals";
 import wordShift from "../word-shift";
 
 export const Quote = {
@@ -175,8 +176,12 @@ export const Quotes = {
     GameDatabase.celestials.quotes.pelle,
     config => new CelQuotes(config, "pelle")
   ),
-  serc: mapGameDataToObject(
+  sercanote: mapGameDataToObject(
     GameDatabase.celestials.quotes.sercanote,
     config => new CelQuotes(config, "sercanote")
+  ),
+  Unnamed: mapGameDataToObject(
+    GameDatabase.celestials.quotes.unnamed,
+    config => new CelQuotes(config, "unnamed")
   ),
 };
