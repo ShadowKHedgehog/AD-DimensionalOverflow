@@ -1,6 +1,5 @@
 import * as ADNotations from "adnot-beport-small";
 import { DC } from "./constants";
-import { GameEnd } from ".celestias/pelle/game-end";
 export const NG = {
   startNewGame() {
     GameEnd.creditsClosed = false;
@@ -58,8 +57,6 @@ export const NG = {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
     player.isGameEnd = false;
-    GameEnd.removeAdditionalEnd = true;
-    GameEnd.additionalEnd = 15;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
     player.tabNotifications = new Set();
