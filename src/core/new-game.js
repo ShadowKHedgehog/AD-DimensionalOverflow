@@ -490,7 +490,6 @@ restartWithCarryoverPostShatter() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
     GameEnd = false;
-    GameEnd.removeAdditionalEnd = 15;
     player.isGameEnd = false;
     player.isGameEnd2 = false;
     Pelle.isGameEnd = false;
