@@ -19,7 +19,7 @@ export class RealityUpgradeAutobuyerState extends AutobuyerState {
 
   tick() {
     const upg = RealityUpgrade(this.id);
-    upg.bulkPurchase();
+    while (Currency.realityMachines.gte(upg.cost)) upg.purchase();
   }
 
   static get entryCount() { return 5; }
