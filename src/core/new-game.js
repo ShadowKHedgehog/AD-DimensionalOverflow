@@ -57,8 +57,8 @@ export const NG = {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
     player.isGameEnd = false;
-    GameEnd = false;
     GameEnd.removeAdditionalEnd = true;
+    GameEnd.additionalEnd = 15;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
     player.tabNotifications = new Set();
