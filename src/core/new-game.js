@@ -1,5 +1,6 @@
 import * as ADNotations from "adnot-beport-small";
 import { DC } from "./constants";
+import { GameEnd } from ".celestias/pelle/game-end";
 export const NG = {
   startNewGame() {
     GameEnd.creditsClosed = false;
