@@ -1003,7 +1003,7 @@ button:focus {
 .c-shatter-button--unlocked:hover,
 .c-shatter-button--unlocked.force-hover {
   color: purple;
-  background: linear-gradient(45deg, var(--color-pelle--base), black, var(--color-pelle--base), black, var(--color-pelle--base));
+  background: linear-gradient(-45deg, var(--color-pelle--base), black, var(--color-pelle--base), black, var(--color-pelle--base));
 }
 
 .c-shatter-button--locked:hover {
