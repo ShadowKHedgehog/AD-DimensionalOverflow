@@ -484,16 +484,16 @@ export const NG = {
     player.records.bestReality.iMCapSet = [];
     player.records.bestReality.laitelaSet = [];
     Pelle.isGameEnd = false;
-    Pelle.isDoomed = false;
+    player.celestials.pelle.doomed = false;
   },
-restartWithCarryoverPostShatter() {
+  restartWithCarryoverPostShatter() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
     GameEnd = false;
     player.isGameEnd = false;
     player.isGameEnd2 = false;
     Pelle.isGameEnd = false;
-    Pelle.isDoomed = false;
+    player.celestials.pelle.doomed = false;
     Tab.dimensions.antimatter.show();
     AchievementTimers.marathon2.reset();
     player.tabNotifications = new Set();
