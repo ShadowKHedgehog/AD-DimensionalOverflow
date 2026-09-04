@@ -49,7 +49,7 @@ export default {
           <div class="c-shatter-button__header">
             Shatter
           </div>
-          <div>{{ formatSSGain }}</div>
+          <div class="c-shatter-button__header">{{ formatSSGain }}</div>
         </template>
         <template v-else>
           <div>Reach {{ format("1e9000000000000000") }} Antimatter to unlock the ability to Shatter</div>
