@@ -986,6 +986,7 @@ button:focus {
 .c-shatter-button--unlocked {
   border-color: purple;
   cursor: pointer;
+  background: linear-gradient(45deg, black, var(--color-pelle--base), black, var(--color-pelle--base), black);
 }
 
 .c-shatter-button--locked {
