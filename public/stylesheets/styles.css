@@ -943,10 +943,11 @@ button:focus {
 .c-shatter-button__header {
   font-size: 1.2rem;
   line-height: 1.6;
+  color: purple;
 }
 
 .c-shatter-button--unlocked:hover .c-shatter-button__header {
-  background: linear-gradient(red, orange, yellow, green, blue, purple, red);
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red);
   background-clip: text;
 
   -webkit-text-fill-color: transparent;
