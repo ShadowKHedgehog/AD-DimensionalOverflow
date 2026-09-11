@@ -335,6 +335,7 @@ export const NG = {
     player.celestials.pelle.collapsed.rifts = false;
     player.celestials.pelle.collapsed.galaxies = false;
     player.celestials.pelle.showBought = false;
+    player.celestials.pelle.records.totalAntimatterThisShatter = DC.D0;
     player.dilation.studies = [];
     player.dilation.active = false;
     player.dilation.upgrades.clear();
@@ -789,6 +790,7 @@ export const NG = {
     player.celestials.pelle.collapsed.rifts = false;
     player.celestials.pelle.collapsed.galaxies = false;
     player.celestials.pelle.showBought = false;
+    player.celestials.pelle.records.totalAntimatterThisShatter = DC.D0;
     player.dilation.studies = [];
     player.dilation.active = false;
     player.dilation.upgrades.clear();
