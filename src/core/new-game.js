@@ -489,7 +489,8 @@ export const NG = {
   restartWithCarryoverPostShatter() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
-    GameEnd = false;
+    GameEnd.creditsClosed = false;
+    GameEnd.creditsEverClosed = false;
     player.isGameEnd = false;
     player.isGameEnd2 = false;
     Pelle.isGameEnd = false;
