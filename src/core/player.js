@@ -754,6 +754,7 @@ window.player = {
       realityShards: DC.D0,
       records: {
         totalAntimatter: DC.D0,
+        totalAntimatterThisShatter: DC.D0,
         totalInfinityPoints: DC.D0,
         totalEternityPoints: DC.D0,
       },
