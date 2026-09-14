@@ -144,6 +144,10 @@ export function eternity(force, auto, specialConditions = {}) {
   PelleStrikes.eternity.trigger();
 
   EventHub.dispatch(GAME_EVENT.ETERNITY_RESET_AFTER);
+
+  if (player.exposes.gte(1)) {
+    Achievement(194).unlock();
+  }
   return true;
 }
 

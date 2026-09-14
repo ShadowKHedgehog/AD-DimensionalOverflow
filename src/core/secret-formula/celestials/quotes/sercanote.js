@@ -15,6 +15,10 @@ const primaryBackground = cel => [["sercanote", 1.5], [cel, 1.5]];
 /* eslint-disable no-multi-spaces */
 const lesser =       ["Lesser",        "Deity",         "Monarch"];
 const tired =        ["Tired",         "Deity",         "Monarch"];
+const usurper =      ["Usurper",       "Deity",         "Monarch"];
+const pride =        ["Pride",         "Deity",         "Monarch"];
+const forgotten =    ["Forgotten",     "Deity",         "Monarch"];
+const paramount =    ["Paramount",     "Deity",         "Monarch"];
 /* eslint-enable no-multi-spaces */
 export const sercanoteQuotes = {
   initial: {
@@ -108,7 +112,7 @@ export const sercanoteQuotes = {
         text: "You decided to finally stop ignoring them, and destroy their reality",
         background: primaryBackground("effarig"),
       }, {
-        text: "And you beat their true reality/",
+        text: "And you beat their true reality.",
         background: primaryBackground("effarig"),
       }, {
         text: "You triumphed his challenge.",
@@ -132,6 +136,7 @@ export const sercanoteQuotes = {
       }, {
         text: "But $1 is punished for it all the same.",
         background: primaryBackground("enslaved"),
+        1: usurper,
       }, {
         text: "The other one",
         background: primaryBackground("enslaved"),
@@ -193,8 +198,10 @@ export const sercanoteQuotes = {
         text: "You Delved into my memories.",
         background: primaryBackground("ra"),
       }, {
-        text: "I am the true usurper.",
+        text: "I am the true $1.",
         background: primaryBackground("ra"),
+        1: usurper,
+        
       }, {
         text: "The Sixth one.",
         background: primaryBackground("laitela"),

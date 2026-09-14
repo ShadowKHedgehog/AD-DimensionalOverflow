@@ -128,6 +128,7 @@ class RemnantDimensionState extends DimensionState {
     this.amount = this.amount.plus(1);
     this.baseAmount = this.baseAmount.add(1);
     Effarig.quotes.remnantDimQuote.show();
+    Achievement(192).unlock();
     return true;
   }
 
@@ -149,6 +150,7 @@ class RemnantDimensionState extends DimensionState {
     this.amount = this.amount.plus(costScaling.purchases);
     this.baseAmount = DC.D1.times(costScaling.purchases).add(this.baseAmount);
     Effarig.quotes.remnantDimQuote.show();
+    Achievement(192).unlock();
     return true;
   }
 }

@@ -25,6 +25,9 @@ export function buySingleTimeDimension(tier, auto = false) {
   dim.amount = dim.amount.add(1);
   dim.bought = dim.bought.add(1);
   dim.cost = dim.nextCost(dim.bought);
+  if (dim.tier === 1 && dim.amount.gte(30) && player.exposes.gte(1)) {
+    Achievement(195).unlock();
+  };
   return true;
 }
 
@@ -90,6 +93,9 @@ export function calcHighestPurchaseableTD(tier, currency) {
 export function buyMaxTimeDimension(tier, portionToSpend = 1, isMaxAll = false) {
   const canSpend = Currency.eternityPoints.value.times(portionToSpend);
   const dim = TimeDimension(tier);
+  if (dim.tier === 1 && dim.amount.gte(30) && player.exposes.gte(1)) {
+    Achievement(195).unlock();
+  };
   if (canSpend.lt(dim.cost)) return false;
   if (tier > 4) {
     if (!TimeStudy.timeDimension(tier).isBought) return false;
@@ -134,6 +140,10 @@ export function maxAllTimeDimensions() {
   for (let stop = 0; stop < 1000; stop++) {
     const cheapestDim = purchasableDimensions.reduce((a, b) => (b.cost.gte(a.cost) ? a : b));
     if (!buySingleTimeDimension(cheapestDim.tier, true)) break;
+  }
+
+  if (dim.tier == 1 && dim.amount.gte(30) && player.exposes.gte(1)) {
+    Achievement(195).unlock();
   }
 }
 
