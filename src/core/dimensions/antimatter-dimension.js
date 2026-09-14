@@ -641,9 +641,6 @@ class AntimatterDimensionState extends DimensionState {
         production = DC.D0;
       }
     }
-    if (Pelle.isDoomed && player.Exposes.lt(1) && production.gte(DC.BIMAX)) {
-      production = DC.D0 
-    }
     return production;
   }
 }
