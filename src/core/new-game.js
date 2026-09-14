@@ -535,7 +535,6 @@ export const NG = {
       Achievement(146).lock();
       Achievement(147).lock();
       Achievement(148).lock();
-      Achievement(149).lock();
       Achievement(151).lock();
       Achievement(152).lock();
       Achievement(153).lock();
@@ -544,7 +543,6 @@ export const NG = {
       Achievement(156).lock();
       Achievement(157).lock();
       Achievement(158).lock();
-      Achievement(159).lock();
       Achievement(161).lock();
       Achievement(162).lock();
       Achievement(163).lock();
@@ -553,7 +551,6 @@ export const NG = {
       Achievement(166).lock();
       Achievement(167).lock();
       Achievement(168).lock();
-      Achievement(169).lock();
       Achievement(171).lock();
       Achievement(172).lock();
       Achievement(173).lock();
@@ -562,7 +559,6 @@ export const NG = {
       Achievement(176).lock();
       Achievement(177).lock();
       Achievement(178).lock();
-      Achievement(179).lock();
       Achievement(181).lock();
       Achievement(182).lock();
       Achievement(183).lock();
@@ -905,7 +901,6 @@ export const NG = {
       Achievement(36).lock();
       Achievement(37).lock();
       Achievement(38).lock();
-      Achievement(39).lock();
       Achievement(41).lock();
       Achievement(42).lock();
       Achievement(43).lock();
@@ -914,7 +909,6 @@ export const NG = {
       Achievement(46).lock();
       Achievement(47).lock();
       Achievement(48).lock();
-      Achievement(49).lock();
       Achievement(51).lock();
       Achievement(52).lock();
       Achievement(53).lock();
@@ -923,7 +917,6 @@ export const NG = {
       Achievement(56).lock();
       Achievement(57).lock();
       Achievement(58).lock();
-      Achievement(59).lock();
       Achievement(61).lock();
       Achievement(62).lock();
       Achievement(63).lock();
@@ -932,7 +925,6 @@ export const NG = {
       Achievement(66).lock();
       Achievement(67).lock();
       Achievement(68).lock();
-      Achievement(69).lock();
       Achievement(71).lock();
       Achievement(72).lock();
       Achievement(73).lock();
@@ -941,7 +933,6 @@ export const NG = {
       Achievement(76).lock();
       Achievement(77).lock();
       Achievement(78).lock();
-      Achievement(79).lock();
       Achievement(81).lock();
       Achievement(82).lock();
       Achievement(83).lock();
@@ -979,7 +970,6 @@ export const NG = {
     if (player.exposes.lt(20)) {
     player.eternities = DC.D0;
     Achievement(88).lock();
-    Achievement(89).lock();
     Achievement(91).lock();
     Achievement(92).lock();
     Achievement(93).lock();
@@ -988,7 +978,6 @@ export const NG = {
     Achievement(96).lock();
     Achievement(97).lock();
     Achievement(98).lock();
-    Achievement(99).lock();
     Achievement(101).lock();
     Achievement(102).lock();
     Achievement(103).lock();
@@ -997,7 +986,6 @@ export const NG = {
     Achievement(106).lock();
     Achievement(107).lock();
     Achievement(108).lock();
-    Achievement(109).lock();
     Achievement(111).lock();
     Achievement(112).lock();
     Achievement(113).lock();
@@ -1006,7 +994,6 @@ export const NG = {
     Achievement(116).lock();
     Achievement(117).lock();
     Achievement(118).lock();
-    Achievement(119).lock();
     Achievement(121).lock();
     Achievement(122).lock();
     Achievement(123).lock();
@@ -1015,7 +1002,6 @@ export const NG = {
     Achievement(126).lock();
     Achievement(127).lock();
     Achievement(128).lock();
-    Achievement(129).lock();
     Achievement(131).lock();
     Achievement(132).lock();
     Achievement(133).lock();
@@ -1024,7 +1010,6 @@ export const NG = {
     Achievement(136).lock();
     Achievement(137).lock();
     Achievement(138).lock();
-    Achievement(139).lock();
     };
     RemnantDimensions.resetAmount();
     player.expose.shatterPower = DC.D0;
