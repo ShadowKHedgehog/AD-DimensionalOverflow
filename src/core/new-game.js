@@ -55,7 +55,7 @@ export const NG = {
 
   // Reset the game, but carry over some post-completion stats. We also call this when starting a speedrun, so make sure
   // any stats which are updated due to completion happen in startNewGame() instead of in here
- restartWithCarryover() {
+  restartWithCarryover() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
     GameEnd.creditsClosed = false;
@@ -508,7 +508,7 @@ export const NG = {
       Achievement(86).lock();
       Achievement(87).lock();
 
-    }
+    };
     resetTickspeed();
     AntimatterDimensions.reset();
     Currency.antimatter.reset();
@@ -597,9 +597,7 @@ export const NG = {
     if (player.exposes.gte(50)) {
       Sercanote.quotes.shatter50.show();
     };
-  }
-}
-
+  },
   restartWithCarryoverPostShatter() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
@@ -1053,7 +1051,7 @@ export const NG = {
       Achievement(86).lock();
       Achievement(87).lock();
 
-    }
+    };
     resetTickspeed();
     AntimatterDimensions.reset();
     Currency.antimatter.reset();
