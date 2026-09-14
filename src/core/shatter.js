@@ -14,7 +14,7 @@ export function shatterReset() {
 }
 function shatterGiveRewards() {
   shatterUpdateStatistics();
-
+  Achievement(191).unlock();
   const shatterShards = gainedShatterShards();
   Currency.shattershards.add(shatterShards);
   player.exposes = player.exposes.add(gainedExposes());
