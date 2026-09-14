@@ -1,5 +1,7 @@
 import * as ADNotations from "adnot-beport-small";
 import { DC } from "./constants";
+import { Perk } from "./perks";
+import { Achievement } from "./globals";
 export const NG = {
   startNewGame() {
     GameEnd.creditsClosed = false;
@@ -518,7 +520,6 @@ export const NG = {
     player.reality.glyphs.protectedRows = rowProtect;
     }
     if (player.exposes.gte(25)){
-
       player.reality.upgReqs = 67108800;
       player.reality.imaginaryUpgReqs = 67108800;
       player.reality.upgradeBits = 67108800;
@@ -526,6 +527,50 @@ export const NG = {
       player.realities = new Decimal(10000);
     }
     if (player.exposes.lt(25)){
+      Achievement(141).lock();
+      Achievement(142).lock();
+      Achievement(143).lock();
+      Achievement(144).lock();
+      Achievement(145).lock();
+      Achievement(146).lock();
+      Achievement(147).lock();
+      Achievement(148).lock();
+      Achievement(149).lock();
+      Achievement(151).lock();
+      Achievement(152).lock();
+      Achievement(153).lock();
+      Achievement(154).lock();
+      Achievement(155).lock();
+      Achievement(156).lock();
+      Achievement(157).lock();
+      Achievement(158).lock();
+      Achievement(159).lock();
+      Achievement(161).lock();
+      Achievement(162).lock();
+      Achievement(163).lock();
+      Achievement(164).lock();
+      Achievement(165).lock();
+      Achievement(166).lock();
+      Achievement(167).lock();
+      Achievement(168).lock();
+      Achievement(169).lock();
+      Achievement(171).lock();
+      Achievement(172).lock();
+      Achievement(173).lock();
+      Achievement(174).lock();
+      Achievement(175).lock();
+      Achievement(176).lock();
+      Achievement(177).lock();
+      Achievement(178).lock();
+      Achievement(179).lock();
+      Achievement(180).lock();
+      Achievement(181).lock();
+      Achievement(182).lock();
+      Achievement(183).lock();
+      Achievement(184).lock();
+      Achievement(185).lock();
+      Achievement(186).lock();
+      Achievement(187).lock();
       player.realities = DC.D0;
       player.partSimulatedReality = DC.D0;
       player.reality.glyphs.sac.power = DC.D0;
@@ -854,7 +899,58 @@ export const NG = {
     player.break = true;
     };
     if (player.exposes.lt(15)) {
-      player.break = false
+      player.break = false;
+      Achievement(33).lock();
+      Achievement(34).lock();
+      Achievement(35).lock();
+      Achievement(36).lock();
+      Achievement(37).lock();
+      Achievement(38).lock();
+      Achievement(39).lock();
+      Achievement(41).lock();
+      Achievement(42).lock();
+      Achievement(43).lock();
+      Achievement(44).lock();
+      Achievement(45).lock();
+      Achievement(46).lock();
+      Achievement(47).lock();
+      Achievement(48).lock();
+      Achievement(49).lock();
+      Achievement(51).lock();
+      Achievement(52).lock();
+      Achievement(53).lock();
+      Achievement(54).lock();
+      Achievement(55).lock();
+      Achievement(56).lock();
+      Achievement(57).lock();
+      Achievement(58).lock();
+      Achievement(59).lock();
+      Achievement(61).lock();
+      Achievement(62).lock();
+      Achievement(63).lock();
+      Achievement(64).lock();
+      Achievement(65).lock();
+      Achievement(66).lock();
+      Achievement(67).lock();
+      Achievement(68).lock();
+      Achievement(69).lock();
+      Achievement(71).lock();
+      Achievement(72).lock();
+      Achievement(73).lock();
+      Achievement(74).lock();
+      Achievement(75).lock();
+      Achievement(76).lock();
+      Achievement(77).lock();
+      Achievement(78).lock();
+      Achievement(79).lock();
+      Achievement(81).lock();
+      Achievement(82).lock();
+      Achievement(83).lock();
+      Achievement(84).lock();
+      Achievement(85).lock();
+      Achievement(86).lock();
+      Achievement(87).lock();
+
     }
     resetTickspeed();
     AntimatterDimensions.reset();
@@ -878,11 +974,58 @@ export const NG = {
     player.reality.maxEP = DC.D0;
     player.reality.maxDT = DC.D0;
     player.infinities = DC.D0;
-    if (player.exposes.gte(25)) {
+    if (player.exposes.gte(20)) {
     player.eternities = new Decimal(1000);
     };
-    if (player.exposes.lt(25)) {
+    if (player.exposes.lt(20)) {
     player.eternities = DC.D0;
+    Achievement(88).lock();
+    Achievement(89).lock();
+    Achievement(91).lock();
+    Achievement(92).lock();
+    Achievement(93).lock();
+    Achievement(94).lock();
+    Achievement(95).lock();
+    Achievement(96).lock();
+    Achievement(97).lock();
+    Achievement(98).lock();
+    Achievement(99).lock();
+    Achievement(101).lock();
+    Achievement(102).lock();
+    Achievement(103).lock();
+    Achievement(104).lock();
+    Achievement(105).lock();
+    Achievement(106).lock();
+    Achievement(107).lock();
+    Achievement(108).lock();
+    Achievement(109).lock();
+    Achievement(111).lock();
+    Achievement(112).lock();
+    Achievement(113).lock();
+    Achievement(114).lock();
+    Achievement(115).lock();
+    Achievement(116).lock();
+    Achievement(117).lock();
+    Achievement(118).lock();
+    Achievement(119).lock();
+    Achievement(121).lock();
+    Achievement(122).lock();
+    Achievement(123).lock();
+    Achievement(124).lock();
+    Achievement(125).lock();
+    Achievement(126).lock();
+    Achievement(127).lock();
+    Achievement(128).lock();
+    Achievement(129).lock();
+    Achievement(131).lock();
+    Achievement(132).lock();
+    Achievement(133).lock();
+    Achievement(134).lock();
+    Achievement(135).lock();
+    Achievement(136).lock();
+    Achievement(137).lock();
+    Achievement(138).lock();
+    Achievement(139).lock();
     };
     RemnantDimensions.resetAmount();
     player.expose.shatterPower = DC.D0;
@@ -893,6 +1036,12 @@ export const NG = {
     };
     if (player.exposes.gte(15)) {
       Teresa.quotes.shatter15.show();
+    };
+    if (player.exposes.gte(20)) {
+      Enslaved.quotes.shatter20.show();
+    };
+    if (player.exposes.gte(25)) {
+      Teresa.quotes.shatter25.show();
     };
     if (player.exposes.gte(50)) {
       Sercanote.quotes.shatter50.show();

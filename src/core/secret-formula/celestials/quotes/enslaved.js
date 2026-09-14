@@ -47,4 +47,11 @@ export const enslavedQuotes = {
       "Freedom from torture... is torture itself.",
     ]
   },
+  shatter20: {
+    id: 6,
+    lines: [
+      "We have given... Contribution.. To your Efforts... Keep Going...",
+      "Pelle... Must Go....",
+    ]
+  },
 };

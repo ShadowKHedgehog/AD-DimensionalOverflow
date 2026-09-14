@@ -31,9 +31,18 @@ export const teresaQuotes = {
   shatter15: {
     id: 4,
     lines: [
-      "Huh. You've already got everything pre-reality unlocked!?",
+      "Huh. You've already got everything pre-eternity unlocked!?",
       "I'm impressed.",
       "You must be very powerful.",
+      "Keep going. We must stop Pelle."
+    ]
+  },
+  shatter25: {
+    id: 5,
+    lines: [
+      "Everything is Unlocked already!?",
+      "I'm impressed.",
+      "You are very powerful.",
       "Keep going. We must stop Pelle."
     ]
   },
