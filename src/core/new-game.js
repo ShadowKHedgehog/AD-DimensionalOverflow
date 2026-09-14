@@ -650,7 +650,7 @@ export const NG = {
     player.reality.glyphs.sac.infinity = DC.D0;
     player.reality.glyphs.sac.time = DC.D0;
     player.reality.glyphs.sac.replication = DC.D0;
-    player.reality.perks = {}
+    player.reality.perks.reset();
     player.reality.glyphs.sac.dilation = DC.D0;
     player.reality.glyphs.sac.effarig = DC.D0;
     player.reality.glyphs.sac.reality = DC.D0;
