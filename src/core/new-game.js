@@ -563,7 +563,6 @@ export const NG = {
       Achievement(177).lock();
       Achievement(178).lock();
       Achievement(179).lock();
-      Achievement(180).lock();
       Achievement(181).lock();
       Achievement(182).lock();
       Achievement(183).lock();
