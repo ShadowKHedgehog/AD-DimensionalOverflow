@@ -247,4 +247,10 @@ export const sercanoteQuotes = {
       "THANK YOU COME BACK SOON TO PLAY WITH US AGAIN."
     ]
   },
+  shatter50: {
+    id: 9,
+    lines: [
+     { text: "I have seen your journey. I am impressed. You know, I shall see you one day. But not today. Good luck.", showCelestialName: false },
+    ]
+  },
 };

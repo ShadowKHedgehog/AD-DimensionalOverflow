@@ -71,5 +71,14 @@ export const effarigQuotes = {
       "And now that my Reality is reset back to normal, I offer that you join us and stop Pelle from overtaking the Celestialverse.",
       "What do you say about it?",
     ]
-  }
+  },
+  remnantDimQuote: {
+    id: 9,
+    lines: [
+      "So. You've found Pelle's Dimensions.. Huh.",
+      "How will he react to this?",
+      "My offer is still up. You can still join us.",
+      "What do you say, Destroyer?",
+    ]
+  },
 };

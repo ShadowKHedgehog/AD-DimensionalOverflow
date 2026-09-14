@@ -894,5 +894,8 @@ export const NG = {
     if (player.exposes.gte(15)) {
       Teresa.quotes.shatter15.show();
     };
+    if (player.exposes.gte(50)) {
+      Sercanote.quotes.shatter50.show();
+    };
   }
 }

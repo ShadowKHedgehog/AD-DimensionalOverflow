@@ -38,7 +38,7 @@ const disabledMechanicUnlocks = {
 };
 
 export const Sercanote = {
-  symbol: "♅",
+  symbol: "♆",
   // Suppress the randomness for this form
   possessiveName: "Sercanote's",
 
