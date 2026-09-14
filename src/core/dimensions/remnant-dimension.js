@@ -123,12 +123,11 @@ class RemnantDimensionState extends DimensionState {
   buySingle() {
     if (!this.isUnlocked) return this.unlock();
     if (!this.isAvailableForPurchase) return false;
-    if (this.tier == 1 && !this.amount.gte(1)) { Effarig.quotes.remnantDimQuote.show(); }
     Currency.shattershards.purchase(this.cost);
     this.cost = Decimal.round(this.cost.times(this.costMultiplier));
     this.amount = this.amount.plus(1);
     this.baseAmount = this.baseAmount.add(1);
-
+    Effarig.quotes.remnantDimQuote.show();
     return true;
   }
 
@@ -149,7 +148,7 @@ class RemnantDimensionState extends DimensionState {
     this.bought = this.bought.plus(costScaling.purchases);
     this.amount = this.amount.plus(costScaling.purchases);
     this.baseAmount = DC.D1.times(costScaling.purchases).add(this.baseAmount);
-
+    Effarig.quotes.remnantDimQuote.show();
     return true;
   }
 }
