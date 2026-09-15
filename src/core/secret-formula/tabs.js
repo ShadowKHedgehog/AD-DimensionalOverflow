@@ -47,7 +47,7 @@ export const tabs = [
         component: "RemnantDimensionsTab",
         condition: () => PlayerProgress.shatterUnlocked(),
         id: 3,
-        hidable: false,
+        hidable: true,
       },
     ]
   },
