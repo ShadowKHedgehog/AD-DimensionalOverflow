@@ -58,6 +58,7 @@ export const NG = {
   restartWithCarryover() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
+    player.records.bestShatter.maxAM = player.celestials.pelle.records.totalAntimatterThisShatter;
     GameEnd.creditsClosed = false;
     GameEnd.creditsEverClosed = false;
     player.isGameEnd = false;
@@ -529,6 +530,12 @@ export const NG = {
     player.reality.maxAM = DC.D0;
     player.reality.maxIP = DC.D0;
     player.reality.maxEP = DC.D0;
+    player.records.thisInfinity.bestIPmin = DC.D0;
+    player.records.bestInfinity.bestIPminEternity = DC.D0;
+    player.records.thisEternity.bestEPmin = DC.D0;
+    player.records.bestEternity.bestEPminReality = DC.D0;
+    player.records.maxAM = DC.D0;
+    player.records.bestRunAM = DC.D0;
     player.reality.maxDT = DC.D0;
     player.infinities = DC.D0;
     if (player.exposes.gte(20)) {
@@ -536,6 +543,7 @@ export const NG = {
     };
     if (player.exposes.lt(20)) {
     player.eternities = DC.D0;
+
     Achievement(88).lock();
     Achievement(91).lock();
     Achievement(92).lock();
@@ -601,6 +609,7 @@ export const NG = {
   restartWithCarryoverPostShatter() {
     let rowProtect = 0;
     rowProtect = player.reality.glyphs.protectedRows;
+    player.records.bestShatter.maxAM = player.celestials.pelle.records.totalAntimatterThisShatter;
     GameEnd.creditsClosed = false;
     GameEnd.creditsEverClosed = false;
     player.isGameEnd = false;
@@ -697,7 +706,7 @@ export const NG = {
       player.reality.autoAutoClean = false;
       player.reality.applyFilterToPurge = false;
       player.reality.moveGlyphsOnProtection = false;
-      player.reality.autoEC = true;
+      player.reality.autoEC = false;
       player.reality.glyphs.createdRealityGlyph = false;
       player.reality.initialSeed = Math.floor(Date.now() * Math.random() + 1);
       player.reality.seed = 1;
@@ -747,7 +756,7 @@ export const NG = {
     player.reality.applyFilterToPurge = false;
     player.reality.moveGlyphsOnProtection = false;
     player.reality.unlockedEC = 0;
-    player.reality.autoEC = true;
+    player.reality.autoEC = false;
     player.reality.lastAutoEC = DC.D0;
     player.reality.partEternitied = DC.D0;
     player.reality.autoAchieve = true;
@@ -961,8 +970,6 @@ export const NG = {
     resetChallengeStuff();
     player.eternityChalls = {};
     player.reality.unlockedEC = 0;
-    player.autoEC = false;
-    Currency.perkPoints = DC.D0;
     player.reality.lastAutoEC = DC.D0;
     player.challenge.eternity.current = 0;
     player.challenge.eternity.unlocked = 0;
@@ -1074,6 +1081,12 @@ export const NG = {
     player.reality.maxAM = DC.D0;
     player.reality.maxIP = DC.D0;
     player.reality.maxEP = DC.D0;
+    player.records.thisInfinity.bestIPmin = DC.D0;
+    player.records.bestInfinity.bestIPminEternity = DC.D0;
+    player.records.thisEternity.bestEPmin = DC.D0;
+    player.records.bestEternity.bestEPminReality = DC.D0;
+    player.records.maxAM = DC.D0;
+    player.records.bestRunAM = DC.D0;
     player.reality.maxDT = DC.D0;
     player.infinities = DC.D0;
     if (player.exposes.gte(20)) {
@@ -1081,7 +1094,7 @@ export const NG = {
     };
     if (player.exposes.lt(20)) {
     player.eternities = DC.D0;
-    player.eternityChalls = {};
+
     Achievement(88).lock();
     Achievement(91).lock();
     Achievement(92).lock();
