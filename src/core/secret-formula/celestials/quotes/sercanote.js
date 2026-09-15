@@ -167,6 +167,7 @@ export const sercanoteQuotes = {
       }, {
         text: "The $1 focuses on their achievements.",
         background: primaryBackground("v"),
+        1: pride,
       }, {
         text: "Meaningless to you or I, but paramount to them.",
         background: primaryBackground("v"),
