@@ -605,6 +605,7 @@ export const NG = {
     if (player.exposes.gte(50)) {
       Sercanote.quotes.shatter50.show();
     };
+    Achievement(191).unlock();
   },
   restartWithCarryoverPostShatter() {
     let rowProtect = 0;
@@ -1156,5 +1157,6 @@ export const NG = {
     if (player.exposes.gte(50)) {
       Sercanote.quotes.shatter50.show();
     };
+    Achievement(191).unlock();
   }
 }
