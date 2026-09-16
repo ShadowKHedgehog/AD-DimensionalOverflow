@@ -61,6 +61,8 @@ export const NG = {
     player.records.bestShatter.maxAM = player.celestials.pelle.records.totalAntimatterThisShatter;
     GameEnd.creditsClosed = false;
     GameEnd.creditsEverClosed = false;
+    player.records.thisEternity.bestEPminValue = DC.D0;
+    player.records.thisEternity.bestIPMsWithoutMaxAll = DC.D0;
     player.isGameEnd = false;
     player.isGameEnd2 = false;
     Pelle.isGameEnd = false;
@@ -71,6 +73,7 @@ export const NG = {
     player.triggeredTabNotificationBits = 0;
     ui.view.newUI = player.options.newUI;
     ui.view.news = player.options.news.enabled;
+    player.records.thisEternity.bestIPMsWithoutMaxAll = DC.D0;
     Themes.find(Theme.currentName()).set();
     Notations.all.find(n => n.name === player.options.notation).setAsCurrent();
     ADNotations.Settings.exponentCommas.min = 10 ** player.options.notationDigits.comma;
@@ -613,6 +616,8 @@ export const NG = {
     player.records.bestShatter.maxAM = player.celestials.pelle.records.totalAntimatterThisShatter;
     GameEnd.creditsClosed = false;
     GameEnd.creditsEverClosed = false;
+    player.records.thisEternity.bestEPminValue = DC.D0;
+    player.records.thisEternity.bestIPMsWithoutMaxAll = DC.D0;
     player.isGameEnd = false;
     player.isGameEnd2 = false;
     Pelle.isGameEnd = false;

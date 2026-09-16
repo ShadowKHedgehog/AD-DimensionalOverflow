@@ -27,7 +27,7 @@ export const END_STATE_MARKERS = {
     return 4.2;
   },
   get CREDITS_START() {
-    if (player.endgames >= 1) return 1e308;
+    if (player.exposes.gte(1)) return 1e308;
     return 4.5;
   },
   get SHOW_NEW_GAME() {
