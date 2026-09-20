@@ -131,8 +131,9 @@ export const GalaxyGenerator = {
     );
 
     if (!this.capRift) {
-      PelleRifts.all.forEach(r => r.reducedTo = diff.div(1e5).mul(3).add(r.reducedTo).clampMax((2 + Decimal.clampMax(player.exposes,35))).toNumber());
-      if (PelleRifts.vacuum.milestones[0].canBeApplied && !this.hasReturnedGlyphSlot) {
+    PelleRifts.all.forEach(r => 
+    r.reducedTo = diff.div(1e5).mul(3).add(r.reducedTo) .clampMax(Decimal.clampMax(player.exposes, 35).add(2)).toNumber()
+   ); if (PelleRifts.vacuum.milestones[0].canBeApplied && !this.hasReturnedGlyphSlot) {
         Glyphs.refreshActive();
         EventHub.dispatch(GAME_EVENT.GLYPHS_EQUIPPED_CHANGED);
         this.hasReturnedGlyphSlot = true;
