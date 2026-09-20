@@ -136,7 +136,7 @@ export const laitelaQuotes = {
   },
   darkmatterHardcapRaise: {
     id: 10,
-    requirement: () => Currency.darkmatter.gte(new Decimal("1.9e308")),
+    requirement: () => player.celestials.laitela.darkmatter.gte(new Decimal("1.9e308")),
     lines: [
       "What.... You.... No. No. NO! This shouldnt be possible! Just.. what are you, Destroyer?",
       "You are breaking everything I know.",
