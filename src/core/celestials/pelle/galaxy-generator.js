@@ -137,22 +137,22 @@ export const GalaxyGenerator = {
     if (player.exposes.lt(300)) {
       PelleRifts.all.forEach(r =>
         r.reducedTo = diff.div(1e5).mul(3).add(r.reducedTo)
-          .clampMax(Decimal.clampMax(player.exposes, 22).add(2))
+          .clampMax(Decimal.clampMax(player.exposes, 22).add(2)).toNumber()
       );
     } else if (player.exposes.lt(200)) {
       PelleRifts.all.forEach(r =>
         r.reducedTo = diff.div(1e5).mul(3).add(r.reducedTo)
-          .clampMax(Decimal.clampMax(player.exposes, 20).add(2))
+          .clampMax(Decimal.clampMax(player.exposes, 20).add(2)).toNumber()
       );
     } else if (player.exposes.lt(100)) {
       PelleRifts.all.forEach(r =>
         r.reducedTo = diff.div(1e5).mul(3).add(r.reducedTo)
-          .clampMax(Decimal.clampMax(player.exposes, 15).add(2))
+          .clampMax(Decimal.clampMax(player.exposes, 15).add(2)).toNumber()
       );
     } else {
       PelleRifts.all.forEach(r =>
         r.reducedTo = diff.div(1e5).mul(3).add(r.reducedTo)
-          .clampMax(Decimal.clampMax(player.exposes, 23).add(2))
+          .clampMax(Decimal.clampMax(player.exposes, 23).add(2)).toNumber()
       );
     }
 
