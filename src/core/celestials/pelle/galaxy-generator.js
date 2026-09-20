@@ -97,10 +97,10 @@ export const GalaxyGenerator = {
   }
   if (this.sacrificeActive) {
     this.capRift.reducedTo = Decimal.max(
-      Decimal.sub(this.capRift.reducedTo, diff.div(1e5).mul(3)),
+      Decimal.sub(this.capRift.reducedTo, diff.div(1e5).mul(3)).toNumber(),
       0
     );
-    if (this.capRift.reducedTo.eq(0)) {
+    if (this.capRift.reducedTo === 0) {
       player.celestials.pelle.galaxyGenerator.sacrificeActive = false;
       player.celestials.pelle.galaxyGenerator.phase++;
 
@@ -117,9 +117,6 @@ export const GalaxyGenerator = {
     }
     PelleRifts.all.forEach(x => x.checkMilestoneStates());
 
-    // Force-unequip glyphs when the player loses the respective milestone. We call the respec option as normally
-    // except for one particular case - when we want to respec into protected slots but have no room to do so. In
-    // that case, we force-respec into the inventory instead
     if (!PelleRifts.vacuum.milestones[0].canBeApplied && Glyphs.active.filter(g => g).length > 0) {
       Glyphs.unequipAll(player.options.respecIntoProtected && Glyphs.findFreeIndex(true) === -1);
       Glyphs.refreshActive();
