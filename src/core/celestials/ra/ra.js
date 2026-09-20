@@ -384,7 +384,7 @@ export const Ra = {
     this.updateAlchemyFlow(realityRealTime);
   },
   get alchemyResourceCap() {
-    return (25000 + new Decimal(2.13).times(Decimal.floor(player.exposes.sub(30).div(15).max(0))).toNumber());
+    return (25000 + new Decimal(35).times(Decimal.floor(player.exposes.sub(30).div(15).max(0))).toNumber());
   },
   get momentumValue() {
     const hoursFromUnlock = TimeSpan.fromMilliseconds(player.celestials.ra.momentumTime).totalHours;
