@@ -1,11 +1,15 @@
 import { GameMechanicState } from "../../utils";
 
+function toNum(value) {
+  return value instanceof Decimal ? value.toNumber() : value;
+}
+
 class RiftMilestoneState extends GameMechanicState {
 
   lastChecked = false;
 
   get requirement() {
-    return this.config.requirement;
+    return toNum(this.config.requirement);
   }
 
   get resource() {
@@ -66,7 +70,7 @@ class RiftState extends GameMechanicState {
   }
 
   set reducedTo(value) {
-    this.rift.reducedTo = value;
+    this.rift.reducedTo = toNum(value);
   }
 
   get rift() {
@@ -86,17 +90,17 @@ class RiftState extends GameMechanicState {
   }
 
   get realPercentage() {
-    return this.config.percentage(this.totalFill);
+    return toNum(this.config.percentage(this.totalFill));
   }
 
   get spentPercentage() {
-    return this.rift.percentageSpent || 0;
+    return toNum(this.rift.percentageSpent) || 0;
   }
 
   get percentage() {
     if (this.reducedTo > 1) return this.reducedTo;
     if (!this.config.spendable) return Math.min(this.realPercentage, this.reducedTo);
-    return Math.min(this.config.percentage(this.totalFill) - this.spentPercentage, this.reducedTo);
+    return Math.min(this.realPercentage - this.spentPercentage, this.reducedTo);
   }
 
   get milestones() {
@@ -168,7 +172,7 @@ class RiftState extends GameMechanicState {
       const afterTickAmount = this.fillCurrency.value * (Decimal.pow(1 - Pelle.riftDrainPercent, diff.div(1e3))).toNumber();
       const spent = this.fillCurrency.value - afterTickAmount;
       this.fillCurrency.value = Math.max(this.fillCurrency.value - spent, 0);
-      this.totalFill = Math.clampMax(this.totalFill + spent, this.maxValue);
+      this.totalFill = Math.min(this.totalFill + spent, toNum(this.maxValue));
     }
     if (PelleRifts.vacuum.milestones[0].canBeApplied) Glyphs.refreshActive();
     this.checkMilestoneStates();
